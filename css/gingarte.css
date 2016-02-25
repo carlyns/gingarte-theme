@@ -290,8 +290,8 @@ footer a {
     color: rgba(251,252,255,1);
 }
 
-footer p {
-    margin-bottom: 0;
+footer {
+  padding-bottom: 2%;
 }
 
 .largerftr {
@@ -303,13 +303,16 @@ footer img {
 }
 .buttonelist {
   background-color: rgba(3,94,123,1);
-  padding: 2%;
   text-align: center;
   width: 50%;
   margin: 0 auto;
   border: 1px solid white;
 }
 
+.sfsi_widget {
+  width: 35%;
+  margin: 0 auto;
+}
 .author {
   font-size: 0.8em;
 }
@@ -418,6 +421,9 @@ footer img {
   footer {
     font-size: 1em;
     padding-bottom: 2%;
+  }
+  .sfsi_widget {
+    width: 100%;
   }
   .mainftrinfo {
     width: 50%;

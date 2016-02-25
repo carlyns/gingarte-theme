@@ -64,7 +64,10 @@ RESUS doesn't have php yet, so have to add the code manually.
   ?>
   <?php $category_link = get_category_link( $category_id );
   ?>
-    <a href="<?php echo esc_url( $category_link ); ?>"><h2><span class="smallnewstext">news for </span></br>Fans</h2></a>
+  <!-- ADD THIS A TAG IF A LINK TO THE CATEGORY ARCHIVE IS NECESSARY:
+<a href="<?php echo esc_url( $category_link ); ?>">  -->
+
+    <h2><span class="smallnewstext">news for </span></br>Fans</h2>
 
     <!-- This loop needs to be added if the page isn't the index.php page.  Otherwise the loop will return the content of the Home Page, not show the actual blog posts -->
     <!-- ALSO THE SOURCE OF THIS CODE IS SUPER COOL BECAUSE ADDING &CAT=3 ALLOWS ME TO ONLY DISPLAY A CERTAIN CATEGORY.  THAT WAS COMPLETE LUCK IT WAS IN THE SAME THREAD.  WOW.
