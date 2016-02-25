@@ -1,0 +1,212 @@
+/*.contents {
+	background-color: rgba(237,234,255,1);
+}
+*/
+h2 {
+	text-align: center;
+	font-size: 3em;
+}
+h3 {
+	font-weight: 500;
+}
+body {
+}
+.section-collapsed {
+	padding: 3%;
+	overflow: auto;
+	clear: both;
+	color: rgba(3,94,123,1);
+	text-align: center;
+}
+
+.section-title {
+	width: 200px;
+	margin: 0 auto;
+	clear: both;
+}
+.titleicon img {
+	width: 150px;
+	margin: 0 auto;
+	display: block;
+}
+.fliparrow {
+	clear: both;
+	font-size: 3em;
+	margin: 0 auto;
+	display: block;
+}
+
+a .fa-chevron-down {
+	clear: both;
+	color: rgba(3,94,123,1);
+}
+a:hover .fa-chevron-down {
+	text-decoration: none;
+}
+
+
+.bluebkgrd {
+	background-color: rgba(3,94,123,1);
+	color: rgba(237,234,255,1);
+}
+.bluebkgrd .section-collapsed {
+	background-color: rgba(3,94,123,1);
+	color: rgba(237,234,255,1);
+}
+.bluebkgrd .section-collapsed a {
+	color: rgba(237,234,255,1);
+}
+.bluebkgrd a .fa-chevron-down {
+	color: rgba(237,234,255,1);
+}
+
+.brazil {
+	display: none;
+	padding: 0 3%;
+	font-size: 1.1em;
+}
+.group {
+	display: none;
+	padding: 0 3% 5% 3%;
+	clear: both;
+	font-size: 1.1em;
+}
+.group a {
+	color: white;
+}
+.chicago {
+	display: none;
+	padding: 0 3%;
+	font-size: 1.1em;
+}
+
+
+
+.description {
+	font-size: 1.3em;
+	font-style: italic;
+	clear: both;
+}
+hr {
+	clear: both;
+}
+
+
+.dances {
+	clear: both;
+	overflow: auto; /* THIS PREVENTS THE BLUE BACKGROUND FROM THE LOWER SECTION TO BLEED INTO THIS SECTION. */
+}
+.dance img {
+	height: 90px;
+	max-width: 100px;
+	border-radius: 25px;
+}
+.dance p {
+	padding-top: 3%;
+}
+
+
+.marisa img{
+	float: none;
+	margin: 0 auto;
+	display: block;
+	border-radius: 25px;
+}
+.teacher {
+	text-align: center;
+}
+
+.teacher .headshot{
+	display: none;
+}
+.students {
+	clear: both;
+}
+.troupe {
+}
+.chicago .partnerlogos {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.chicago .plogo {
+	padding: 2%;
+	flex: none;
+	width: 20%;
+}
+.chicago img {
+	width: 100%;
+}
+.chicago .alsopartners {
+	clear: both;
+}
+
+.button {
+	border: 1px solid rgba(3,94,123,1);
+  margin: 0 auto;
+  width: 50%;
+	padding: 2%;
+}
+
+/*------MEDIA QUERIES START HERE ----------*/
+
+@media screen and (max-width: 410px) {
+	.chicago .plogo {
+		width: 40%;
+}
+}
+
+@media screen and (min-width: 550px) {
+	.description {
+	}
+	.titleicon {
+		float: left;
+		padding-top: 5%;
+	}
+	.section-title {
+		clear: none;
+		float: right;
+		margin-bottom: 10%;
+	}
+	.section-collapsed h2 {
+
+	}
+	.section-collapsed {
+		width: 350px;
+		margin: 0 auto;
+	}
+
+	.dance{
+		width: 22%;
+		float: left;
+		padding-right: 3%;
+	}
+
+	.teacher {
+		width: 30%;
+		float: left;
+		height: 200px;
+	}
+	.teacher .headshot {
+		display: block;
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
+		border-radius: 25px;
+		margin: 0 auto;
+}
+	.teacher img {
+		min-height: 100%;
+		max-width: 100%;
+		object-fit: cover;
+	}
+}
+
+
+@media screen and (min-width: 770px) {
+	.chicago .plogo {
+		width: 12%;
+	}
+}

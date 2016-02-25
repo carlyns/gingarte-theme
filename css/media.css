@@ -1,0 +1,61 @@
+
+.videos, .art {
+	border-top: 3px double rgba(3,94,123,1);
+	margin-top: 3%;
+}
+.art {
+	padding-bottom: 10%;
+}
+
+.photos, .videos, .art {
+	text-align: center;
+}
+.container h1 {
+	margin: 5%;
+}
+.fliparrow {
+	font-size: 2em;
+	clear: both;
+}
+.thumbnails {
+	overflow: auto;
+	margin: 0 auto;
+	width: 95%;
+}
+
+.one {
+	width: 20%;
+	float: left;
+	padding: 2%;
+	overflow: hidden;
+}
+.one img {
+	border-radius: 50%;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+	box-shadow: 5px 5px 10px 5px rgba(1,1,1,0.5);
+}
+.more {
+	display: none;
+}
+.videos {
+}
+
+.art {
+}
+
+
+
+/*------MEDIA QUERIES START HERE ----------*/
+@media screen and (min-width: 770px) {
+	.container {
+	}
+	.more {
+		display: inline;
+	}
+	.one {
+		width: 10%;
+	}
+
+}

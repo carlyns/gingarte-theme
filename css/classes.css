@@ -1,0 +1,333 @@
+/* UNDERSTAND BOX SIZING!! */
+* {
+  box-sizing: border-box;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Basically means if there's a border, it is included in the width of the box. */
+
+/* This is to allow for the full-width image in the middle of the page. */
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
+
+.locations .grid3 {
+  border-top: 3px double rgba(3,94,123,1);
+  border-bottom: 3px double rgba(3,94,123,1);
+  margin-bottom: 10%;
+  background-color: rgba(3,94,123,0.1);
+}
+
+.locations .neighborhood {
+	text-align: center;
+	font-weight: 400;
+	margin-right: 5%;
+  font-family: Ostrich, Helvetica Neue, sans-serif;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+
+.locations .info { /* ALL THE CONTENT THAT SHOWS/HIDES ON CLICK*/
+  display: none;
+}
+.locations i {
+  color: rgba(3,94,123,1);
+}
+
+
+.info p {
+  /* line height does not change spacing between p tags.  but it's too messy to use a bunch of </br> tags.  padding does't reduce it either.  */
+}
+
+.days {
+  font-weight: 500;
+}
+.important {
+  font-size: 0.8em;
+  font-style: italic;
+}
+.info {
+}
+.fineprint {
+  font-size: 0.8em;
+}
+#information-hp {
+  display: none;
+}
+
+
+.payment {
+	clear: both;
+}
+.payment h1 {
+  padding-bottom: 2%;
+  border-bottom: 3px double rgba(3,94,123,1);
+  width: 100%;
+  margin: 0 auto;
+}
+.payment .grid4 {
+  margin-bottom: 8%;
+  background-color: rgba(3,94,123,1);
+  color: white;
+  /* background-image: url(sneaker_mesh.png);*/
+  box-shadow: 1px 5px 5px rgba(1,1,1,1);
+}
+.option {
+  font-size: 1.3em;
+  text-align: center;
+}
+.option h5 {
+  font-family: Ostrich, Helvetica Neue, sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 5%;
+}
+.option p {
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+}
+.notes p {
+  text-align: left;
+  font-size: 1.2em;
+}
+.payment ul {
+  text-align: left;
+}
+.button {
+  margin: 0 auto;
+  width: 50%;
+  border-color: white;
+}
+.payment .grid4 {
+  padding-bottom: 5%;
+}
+
+.notes {
+  clear: both;
+  font-size: .8em;
+}
+
+
+.special{
+	clear: both;
+  text-align: center;
+}
+.special h1 {
+  padding-bottom: 2%;
+  border-bottom: 3px double rgba(3,94,123,1);
+  margin: 0 10%;
+}
+.special img {
+  width: 80%;
+  height: 50px;
+	object-fit: cover;
+}
+
+.stacked h3 {
+  font-family: Ostrich, Helvetica Neue, sans-serif;
+  text-align: left;
+  font-size: 2em;
+  font-weight: 300;
+  margin: 8% 10% 2% 10%;
+}
+.stacked p {
+  text-align: left;
+  margin: 0 10%;
+}
+
+.quote {
+  clear: both;
+  margin: 15% 0;
+  color: rgba(1,1,1,1);
+  background-image: url(https://download.unsplash.com/39/yvDPJ8ZSmSVob7pRxIvU_IMG_40322.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  font-size: 2em;
+  font-weight: 600;
+  padding: 15% 10%;
+  text-align: center;
+
+}
+
+.allcapoclasses, .otherclass {
+  margin: 2% 6%;
+  clear: both;
+}
+.otherclass h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+
+.otherclass{
+  background-color: rgba(3,94,123,.1);
+  color: rgba(3,94,123,1);
+  clear: both;
+  width: 85%;
+  margin: 4% auto;
+  padding: 2% 3%;
+  overflow: auto;
+}
+
+.description {
+  text-align: left;
+}
+
+.classthumbnail {
+  /* HELPFUL FOR LAYOUT
+  border: solid 1px rgba(3,94,123,1);
+  */
+
+}
+
+.classtitle {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+
+/*------------MEDIA QUERIES START HERE --------------*/
+@media screen and (min-width: 550px) {
+  .main {
+    width: 700px;
+  }
+  .grid4 {
+    width: 30%;
+    margin-right: 4%;
+    float: left;
+  }
+
+  .payment .grid4 {
+    position: relative;
+    height: 350px
+  }
+  .payment .grid4:last-child {
+    margin-right: 0px;
+  }
+  .payment .price {
+    padding: 5%;
+  }
+  .payment .button {
+    width: 70%;
+    position: absolute;
+    bottom: 5%;
+    margin: 0 15%;
+  }
+  .locations .grid3 {
+    width: 22%;
+    margin-right: 3%;
+    padding: 1%;
+    float: left;
+  }
+
+
+
+  .quote {
+    margin: 5% 0;
+  }
+  .description {
+    width: 50%;
+    float: left;
+  }
+  .dancelist {
+    width: 40%;
+    float: right;
+    margin-top: 5%;
+  }
+  /* NEVER ADDED IMAGES
+  .classthumbnail img {
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: solid white 5px;
+  } */
+  .classthumbnail {
+    text-align: right;
+    padding: 5%;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .main {
+    width: 90%;
+  }
+  .locations .grid3 {
+    width: 20%;
+    margin-right: 4%;
+  }
+  .locations .grid3:last-child {
+    margin-right: 0;
+  }
+  .neighborhood .extra {
+    display: none;
+  }
+
+  .info { /*-- THE CLASS FOR OLD DROPDOWN FORMAT --*/
+    position: relative;
+    height: 300px;
+  }
+  .fineprint {
+    position: absolute;
+    bottom: -20px;
+  }
+
+
+  .information {/*-- THE CLASS FOR OLD DROPDOWN FORMAT --*/
+  }
+  #information-hp {
+    clear: both;
+    background-color: rgba(3,94,123,1);
+  }
+
+  .payment .grid4 {
+    position: relative;
+    height: 300px
+  }
+  .payment ul {
+    padding-left: 35px;
+  }
+
+  .special {
+  padding-top: 5%;
+  width: 90%;
+  margin: 0 auto;
+  }
+  .special h1 {
+    border: none;
+    text-align: left;
+  }
+  .everyone {
+    width: 30%;
+    float: left;
+    border-style: none;
+    text-align: left;
+  }
+  .stacked {
+    width: 70%;
+    float: right;
+    border-left: 3px double rgba(3,94,123,1);
+    margin-bottom: 10%;
+  }
+
+  .dancelist {
+    margin-top: 0;
+  }
+  .description {
+    margin-top: 3%;
+  }
+
+}

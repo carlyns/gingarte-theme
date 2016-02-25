@@ -1,0 +1,45 @@
+/*-------LINKS & BOOK US----------*/
+
+.container h1 {
+	border-bottom: 3px double rgba(3,94,123,1);
+	padding-bottom: 3%;
+	text-align: center;
+}
+.container h2 {
+	font-size: 1.7em;
+	font-family: Ostrich, Helvetica Neue, sans-serif;
+}
+
+
+.links li {
+	list-style: circle;
+	font-size: 1.2em;
+}
+
+.googform iframe {
+	width: 100%;
+	height: 300px;
+}
+
+.booking {
+	border: 1px solid black;
+	padding: 1% 0 3% 0;
+	font-family: Ostrich, Helvetica Neue, sans-serif;
+	text-align: center;
+	font-size: 2.5em;
+	width: 200px;
+	margin: 5% auto;
+}
+
+
+@media screen and (min-width: 770px) {
+	.container {
+		width: 600px;
+		margin: 0 auto;
+	}
+	.container h2 {
+	}
+	.booking {
+	width: 500px;
+	}
+}

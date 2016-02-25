@@ -1,0 +1,452 @@
+@font-face {
+  font-family: Ostrich;
+  src: url(OstrichSansInline-Regular.otf);
+  font-weight: regular;
+}
+
+/* Background pattern from subtlepatterns.com */
+header {
+  width: 90%;
+  margin: 0 auto;
+}
+h1 {
+  font-family: Ostrich, Helvetica Neue, sans-serif;
+  font-weight: 100;
+  font-size: 4em;
+  text-align: center;
+}
+h2 {
+  font-family: Ostrich, Helvetica Neue, sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+  text-align: center;
+}
+.brandhead h1 {
+  font-size: 2em;
+}
+.brandhead h2 {
+  font-size: 4em;
+}
+
+.logo img {
+  width: 75px;
+}
+
+body {
+  font-family: Source Sans Pro, Helvetica Neue, sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+.button {
+  border: 1px solid  rgba(3,94,123,1);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.middle .button {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+header {
+  text-align: center;
+}
+.tagline {
+  font-size: 1.2em;
+}
+
+.menu-full {
+  display: none;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* -------- MENU LOGIC ------
+
+SMALL SCREEN:
+- no blue menu section
+- appear on scroll to front image: only menu icon & backtotop arrow (or double chevron) in corner
+- keep menu icon & backtotop arrow fixed on scroll
+- stick bulletin bar to top on scroll
+
+COLLAPSIBLE SECTIONS:
+- swap down chevron for up chevron when clicked
+- show transparent up chevron when within section only when scrolled past certain point (front img)
+
+*/
+
+.back-top {
+  display: none;
+}
+
+.menu-full {
+  display: none;
+}
+
+.menu-bar {
+  background-color: rgba(3,94,123,1);
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 1px 5px 5px rgba(1,1,1,1);
+}
+.menu-bar a {
+  color: rgba(251,252,255,1);
+}
+.menu-icon {
+  float: left;
+  width: 10%;
+}
+.menu-bar .latest-news {
+  width: 80%;
+  float: left;
+}
+.menu-bar .latest-news a {
+  border: 1px solid white;
+  padding: 1%;
+}
+.arrow-icon {
+  float: right;
+  width: 10%;
+}
+.mobilemenu {
+}
+.mobilemenu-fixed {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+}
+.dropdown {
+  display: none;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  text-align: left;
+  width: 100%;
+  height: 300px;
+  clear: both;
+  background-color: rgba(3,94,123,0.95);
+}
+/* so the dropdown menu sticks with the menu bar location */
+.mobilemenu .dropdown {
+  position: absolute;
+}
+.mobilemenu-fixed .dropdown {
+  position: static;
+}
+
+.dropdown a {
+  color: rgba(251,252,255,1);
+}
+.dropdown ul {
+  padding: 5% 11%;
+  margin: 0;
+}
+.dropdown li {
+  list-style-type: none;
+}
+.submenu {
+  text-transform: capitalize;
+  padding-left: 5%;
+  font-size: .5em;
+  overflow: scroll /* put this in the dropdown div*/
+}
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* -- FRONT PAGE IMG STYLING -- */
+.frontimg {
+  clear: both;
+  height: 300px;
+  background-image: url("../imgs/holidayroda2012.jpg");
+  background-size: cover;
+  background-position: 50% 47%;
+  position: relative;
+  z-index: -1;
+}
+
+.caption {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(1,1,1,.4);
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.1em;
+  position: absolute;
+  bottom: 0;
+  /*
+  width: 90%; 100% CAUSES EXTENDED WIDTH ON PAGE.  HAS TO DO WITH PADDING (BELOW)
+  padding: 0 5%;
+  */
+  box-shadow: 1px 5px 5px rgba(96,88,86,1);
+}
+
+/* -- FRONT PAGE NEWS STYLING -- */
+.items h2 {
+  font-size: 4em;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  border-bottom: 3px double black;
+}
+.items li {
+  font-size: 1.5em;
+  text-align: left;
+  list-style-type: circle;
+  font-size: 1.2em;
+}
+
+.smallnewstext {
+  font-size: .5em;
+}
+
+.fvideo {
+  width: 80%;
+  height: 200px;
+  clear: both;
+  background-color: rgba(96,88,86,.3);
+  margin: 5% auto;
+}
+
+/* -- FRONT PAGE 3 FEATURES STYLING -- */
+.features {
+  overflow: auto;
+}
+.features h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2em;
+}
+.capostar {
+  padding-top: 5%;
+  border: 1px solid rgba(96,88,86,.1);
+  display: block;
+  text-align: center;
+}
+
+.last {
+  margin-bottom: 5%;
+}
+
+.middle p {
+  text-align: center;
+}
+.featpartners {
+  width: 90%;
+  margin: 0 auto;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.partner {
+  width: 25%;
+  float: left;
+  padding: 3%;
+}
+.partner img {
+  width: 100%;
+}
+
+.last {
+  clear: both;
+}
+
+/* -- FOOTER STYLING -- */
+footer {
+  clear: both;
+  background-color: rgba(3,94,123,1);
+  color: rgba(251,252,255,1);
+  text-align: center;
+  font-size: 80%;
+  margin-top: 5%;
+  padding: 3% 3% 5% 3%;
+  letter-spacing: 1px;
+}
+
+footer a {
+    font-weight: 500;
+    color: rgba(251,252,255,1);
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+.largerftr {
+  display: none;
+}
+
+footer img {
+  width: 30px;
+}
+.buttonelist {
+  background-color: rgba(3,94,123,1);
+  padding: 2%;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid white;
+}
+
+.author {
+  font-size: 0.8em;
+}
+
+
+
+/* -- MEDIA QUERY FOR DISPLAYING MORE CONTENT IN FOOTER ... USING CSS -- */
+
+@media screen and (max-width: 410px) {
+  .dropdown {
+    width: 50%;
+    height: 224px;
+    top: 387px;
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .dropdown {
+    display: none;
+    /*-- NEED TO TOGGLE MOBILE MENU AT THIS BREAKPOINT.  display:none; DOESN'T DO IT.--*/
+
+    /*-- via Sarah Holden's tutorial, JQ adds inline styles of display:block, which will override all CSS, including overflow issues ... so this did it!--*/
+
+    height: 0;
+    overflow: hidden;
+  }
+  .back-top {
+    display: block;
+  }
+  .fa-arrow-circle-up {
+    font-size: 2em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 5%;
+    color: rgba(1,1,1,.5);
+
+  }
+  .menu-bar {
+    display: none;
+  }
+  .menu-full {
+    display: block;
+    background-color: rgba(3,94,123,1);
+    text-align: center;
+    overflow: auto;
+    font-family: Ostrich, Helvetica Neue, sans-serif;
+    font-size: 2em;
+    font-weight: 100;
+    box-shadow: 1px 5px 5px rgba(1,1,1,1);
+}
+  .menu-full ul { /* GETS RID OF THE WEIRD INVISIBLE BULLET INDENT FOR LISTS*/
+    margin: 0;
+    padding: 1% 0;
+}
+  .menu-full li {
+    display: inline;
+    padding: 0 1%;
+  }
+  .menu-full a {
+    color: rgba(251,252,255,1);
+  }
+  .menu-full .latest-news a {
+    border: 1px solid white;
+    padding: 0 1% 1% 1%;
+  }
+  .menu-full .latest-news {
+    margin: 1% 0 2% 0;
+  }
+
+
+
+  .news .items {
+    width: 42%;
+    padding: 0 4%;
+    float: left;
+  }
+  .news {
+    overflow: auto;
+  }
+  .capostar {
+    padding-top: 0;
+  }
+  .first {
+    width: 23%;
+    float: left;
+    margin-right: 2%
+  }
+  .last {
+    width: 23%;
+    clear: none;
+    float: left;
+    margin-left: 2%;
+}
+  .middle {
+    width: 50%;
+    float: left;
+  }
+
+
+
+  footer img {
+    width: 50px;
+  }
+  footer {
+    font-size: 1em;
+    padding-bottom: 2%;
+  }
+  .mainftrinfo {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .smallerftr {
+    display: none;
+  }
+  .largerftr {
+    display: block;
+    width: 40%;
+    float: right;
+    font-size: 1.2em;
+  }
+  .largerftr h4 {
+    font-weight: 100;
+    text-align: left;
+  }
+  .largerftr h4 a {
+    font-weight: 500;
+  }
+  .buttonelist {
+    width: auto;
+  }
+  .author {
+    clear: both;
+    text-align: center;
+    padding-top: 5%;
+    font-size: normal;
+  }
+}

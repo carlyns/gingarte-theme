@@ -1,0 +1,109 @@
+/*-------RESOURCES----------*/
+.container {
+	width: 85%;
+}
+.container h1 {
+	border-bottom: 3px double rgba(3,94,123,1);
+	padding-bottom: 3%;
+	text-align: center;
+}
+
+
+.trainbetter {
+	margin: 5% auto 15% auto;
+}
+.trainbetter .grid4 {
+
+}
+
+.trainbetter img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	box-shadow: 5px 5px 15px rgba(1,1,1,0.8);
+	margin: 0 auto;
+	display: block;
+	object-fit: cover;
+}
+
+.trainbetter p {
+	clear: both;
+}
+.quote {
+	clear: both;
+	background-color: blue;
+	font-size: 3em;
+}
+
+.howto {
+	margin: 0 auto 15% auto;
+	clear: both;
+}
+
+.favs {
+	margin: 0 auto 15% auto;
+	clear: both;
+}
+
+h2 {
+	font-family: Ostrich, Helvetica Neue, sans-serif;
+  font-size: 2em;
+  font-weight: 200;
+}
+.trainbetter h2 {
+	text-align: center;
+}
+.grid6 i {
+	padding: 5%;
+}
+.fa-cog, .fa-heart {
+	color: rgba(161,21,43,1);
+	font-size: 2.3em;
+}
+.resource {
+	font-family: Ostrich, Helvetica Neue, sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+	color: rgba(1,1,1,1);
+	padding-left: 5%;
+}
+.notes {
+  clear: both;
+  color: gray;
+}
+
+
+/* -- MEDIA QUERIES START HERE --- */
+@media screen and (min-width: 770px) {
+	.trainbetter {
+	  width: 850px;
+		margin-bottom: 350px;
+	}
+
+	.quote {
+		margin-top: 15%;
+	}
+	.howto {
+		margin-bottom: 350px;
+	}
+	.favs {
+		margin-bottom: 300px;
+	}
+
+	.grid4 {
+	  width: 30%;
+	  margin-right: 3%;
+	  float: left;
+	}
+	.grid3 {
+	  width: 23%;
+	  margin-right: 2%;
+	  float: left;
+	}
+	.grid6 {
+	  width: 48%;
+	  margin-right: 2%;
+	  float: left;
+	}
+
+}
