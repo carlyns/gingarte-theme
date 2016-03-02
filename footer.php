@@ -1,9 +1,5 @@
 <footer>
 
-
-
-
-
 	<div class="mainftrinfo">
 		<p>©<?php echo year_shortcode(); ?> Gingarte Capoeira Chicago. </br>All Rights Reserved.</p>
 
