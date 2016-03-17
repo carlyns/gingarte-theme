@@ -35,20 +35,23 @@
 		<div class="locations">
 			<h1>schedule & locations</h1>
 
+			<?php
+			$args = array( 'post_type' => 'locations', 'posts_per_page' => 10 ); //Define your custom post type name in the arguments
+			$loop = new WP_Query( $args ); //Define the loop based on arguments
+			//Display the contents
+			while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
 
 				<div class="grid3">
-					<div class="neighborhood" id="wt">West Town<span class="extra">, Chicago</span><br><i class="fa fa-chevron-down"></i></div>
-						<div class="info" id="wt-info">
-							<p>REACH Fitness, 2nd floor boxing gym</br>
-							1709 West Chicago Avenue</p>
-							<p><span class="days">Tuesdays</span>, 8-9:30pm</p>
-							<p><span class="days">Wednesdays</span>, 7-9pm</p>
-							<p><span class="days">Sundays</span>, 11am-1pm</br></p>
+<!-- HOW TO CHANGE THE JAVASCRIPT #ID'S??!? IN THE LOOP.  CUSTOM FIELD??  -->
+					<div class="neighborhood" id="wt"><?php the_title(); ?><span class="extra">, <?php the_field('region'); ?></span><br><i class="fa fa-chevron-down"></i></div>
 
-							<p class="fineprint">Gingarte class cards ARE honored here.
-							Groupons ARE accepted here. </p>
-						</div>
+					<div class="info" id="wt-info">
+						<?php the_content(); ?>
+					</div>
 				</div>
+			<?php 	endwhile; ?>
+
 
 
 				<div class="grid3">
@@ -132,18 +135,24 @@
 				</br>Pricing is subject to change, especially during special events/workshops.</p>
 				</div>
 
-			<div class="grid4">
-				<div class="option">
-					<h5>Drop-In:</h5>
-					<p class="price">$20 for adults</br>$10 for kids</p>
-				</div>
-						<ul>
-							<li>one-time only</li>
-							<li>great for trial class</li>
-							<li>available for in-person purchase</li>
-						</ul>
+				<?php
+				$args = array( 'post_type' => 'pricing', 'posts_per_page' => 10 ); //Define your custom post type name in the arguments
+				$loop = new WP_Query( $args ); //Define the loop based on arguments
+				//Display the contents
+				while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+
+					<div class="grid4">
+						<div class="option">
+							<h5><?php the_title(); ?></h5>
+							<div class="option"><?php the_content(); ?></div>
+						</div>
+
 						<div class="button">Purchase</div>
-			</div>
+						<!-- HOW TO MAKE EACH BUTTON URL DIFFERENT?  CUSTOM FIELD??   -->
+
+					</div>
+				<?php 	endwhile; ?>
 
 
 			<div class="grid4">
@@ -184,21 +193,21 @@
 				<div class="stacked">
 
 					<a href="kids.html"><h3>for kids</h3>
-						<img src="imgs/forkids.jpg"></a>
+						<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forkids.jpg" alt="kids classes"></a>
 					<p>Children ages 3 and above are welcome to our classes.  </p>
 					<p>We partner with some local schools too - click here to find out which ones!	</p>
 
 					<a href="beginners.html"><h3>for beginners</h3>
-						<img src="imgs/forbeginners.jpg"></a>
+						<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forbeginners.jpg" alt="beginners classes"></a>
 					<p>No matter what your background, movements can be tailored by teachers to fit anyone's ability.  </p>
 
 					<a href="students.html"><h3>for stressed students</h3>
-						<img src="imgs/forstudents.jpg"></a>
+						<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forstudents.jpg" alt="great for students"></a>
 					<p>Use capoeira to clear your mind.  Take a break before cramming for that next final!  </p>
 					<p>We offer discounts to UofC students (with an ID).</p>
 
 					<a href="private.html"><h3>private lessons</h3>
-						<img src="imgs/forprivate.jpg"></a>
+						<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forprivate.jpg" alt="private lessons"></a>
 					<p>Our teachers can personalize training for you.  We can work with your schedule. </p>
 				</div>
 		</div> <!-- // end of "special" -->

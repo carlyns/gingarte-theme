@@ -39,38 +39,29 @@
 		<?php the_field('related'); ?>
 
 
-		<div class="dance">
-			<?php
-				$image = get_field('maculele_image');
-				if( !empty($image) ): ?>
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-				<?php endif; ?>
-			<?php the_field('maculele'); ?>
-		</div>
 
+		<?php
+		//Define your custom post type name in the arguments
+		$args = array( 'post_type' => 'dances', 'posts_per_page' => 10 );
+		//Define the loop based on arguments
+		$loop = new WP_Query( $args );
+
+		//Display the contents
+		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		<div class="dance">
+			<h3><?php the_title(); ?></h3>
+
 			<?php
-				$image = get_field('guerreira_image');
-				if( !empty($image) ): ?>
+					$image = get_field('dance_image');
+					if( !empty($image) ): ?>
 					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-				<?php endif; ?>			<?php the_field('guerreira'); ?>
-		</div>
-		<div class="dance">
-			<?php
-				$image = get_field('samba_image');
-				if( !empty($image) ): ?>
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-				<?php endif; ?>			<?php the_field('samba'); ?>
-		</div>
-		<div class="dance">
-			<?php
-				$image = get_field('puxada_image');
-				if( !empty($image) ): ?>
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-				<?php endif; ?>			<?php the_field('puxada'); ?>
-		</div>
+
+			<?php	the_content(); ?>
+
+		<?php endif;
+		echo '</div>';
+		endwhile; ?>
 	</div>
-
 </div><!-- //end of "brazil"-->
 
 
@@ -143,14 +134,12 @@
 
 
 <div class="chicago">
-	<div class="description"><p>
+	<div class="description">
 		<p><?php the_field('chicago_description'); ?></p>
 	</div>
 <hr>
-
+<h3>We are dedicated to bringing capoeira to as many people as possible. These are some of the many schools that we've worked with: </h3>
 <?php the_field('after_school'); ?>
-
-
 
 <div class="partnerlogos">
 
@@ -172,9 +161,10 @@
 </div>
 
 <div class="alsopartners">
-	<p>Also: Reavis Elementary, Cameron Elementary, Castellanos Elementary, Mark Sheridan Academy, Evanston?, Libraries?, UIC Jazz Camp
-	</p>
+	<p><?php the_field('other_schools'); ?></p>
 </div>
+
+
 
 <?php the_field('board_directors'); ?>
 
@@ -182,7 +172,7 @@
 <?php the_field('support_group'); ?>
 	<div class="button">Donate to our 501c3</div>
 
-	<p>We have been generously sponsored throughout the years by countless partners.  These are just a few: </p>
+	<h3>We have been generously sponsored throughout the years by countless partners.  These are just a few: </h3>
 
 	<div class="partnerlogos">
 
@@ -207,8 +197,7 @@
 
 
 	<div class="alsopartners">
-		<p>Also: University of Chicago RSO, Chicago Samba School, Evanston Samba School, Swing Brasileiro, Ruth Page Center for the Arts, Union Church?, Easter Seals?,
-		</p>
+		<p><?php the_field('other_partners'); ?></p>
 	</div>
 
 	<div class="button">Please contact us on for coporate sponsorships and partnerships.</div>
@@ -221,9 +210,5 @@
 show students and Community Atmosphere!  Welcoming!  Embracing broader Brazilian community and social good.  The impacts capoeira can have on people / life.
 need to develop inclusive atmosphere, events & shows well-executed and demonstrates organization/efficiency, our board of directors, fundraisers-->
 
-
-
-
-<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo rawurlencode(get_permalink()); ?>&amp;layout=standard&amp;show-faces=true&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" id="facebook-like"></iframe>
 
 <?php get_footer(); ?>

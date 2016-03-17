@@ -24,12 +24,9 @@ h2 {
 .brandhead h1 {
   font-size: 2em;
 }
-.brandhead h2 {
-  font-size: 4em;
-}
 
 .logo img {
-  width: 75px;
+  width: 125px;
 }
 
 body {
@@ -331,6 +328,9 @@ footer img {
 }
 
 @media screen and (min-width: 770px) {
+  .brandhead h1 {
+    font-size: 4em;
+  }
   .dropdown {
     display: none;
     /*-- NEED TO TOGGLE MOBILE MENU AT THIS BREAKPOINT.  display:none; DOESN'T DO IT.--*/
