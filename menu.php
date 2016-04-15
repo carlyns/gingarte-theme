@@ -28,7 +28,8 @@
       <?php wp_nav_menu( array( 'menu' => 'primary' ) ); ?>
 		<div class="latest-news">
 			<a href="<?php the_field('featured_event',34); ?>"><i class="fa fa-star-o"></i> <?php the_field('featured_event_title',34); ?> <i class="fa fa-star-o"></i></a>
-		</div>
+</div>
+
 	</div>
 
 	<!--back-top arrow only shows up on larger screens -->

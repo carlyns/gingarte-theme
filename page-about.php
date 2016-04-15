@@ -38,8 +38,6 @@
 	<div class="dances" id="dances">
 		<?php the_field('related'); ?>
 
-
-
 		<?php
 		//Define your custom post type name in the arguments
 		$args = array( 'post_type' => 'dances', 'posts_per_page' => 10 );
@@ -61,7 +59,14 @@
 		<?php endif;
 		echo '</div>';
 		endwhile; ?>
+
+		<?php // ONCE A NEW QUERY IS DEFINED, THESE ARE THE POSTS PULLED
+		// MUST RESET THE LOOP TO THE MAIN QUERY (LIKE BELOW) TO GET THE BASIC INFO FROM ACF
+		// OTHERWISE THE REGULAR ACF FIELDS WON'T APPEAR ?>
+
 	</div>
+
+
 </div><!-- //end of "brazil"-->
 
 
@@ -75,6 +80,11 @@
 		<h1 class="section-title">Our Group</h1>
 		<div><a class="fliparrow" href="javascript:;"><i class="fa fa-chevron-down"></i></a></div>
 		</div>
+
+		<?php // THIS IS THE ORIGIAL LOOP! JUST HAD TO ADD THIS SNIPPET AND THE ORIG QUERY AND DATA APPEARS IN THIS FOLLOWING SECTION!
+		if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php endwhile; endif; ?>
+
 	</div>
 
 
@@ -93,6 +103,7 @@
 						<?php endif; ?>				</div>
 				<?php the_field('marisa_bio'); ?>
 
+
 		<h2>instructors</h2>
 
 		<?php //HOW TO DISPLAY CUSTOM POSTS from https://wp-types.com/documentation/user-guides/displaying-wordpress-custom-content/
@@ -102,16 +113,16 @@
 		//Display the contents
 		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		<div class="teacher"><a href="<?php the_field('bio_link'); ?>">
-			<h3><?php the_title(); ?></h3>
-			<!-- UNCOMMENT FOR DESKTOP? OR JUST DELETE <?php	the_content(); ?> -->
+		  <h3><?php the_title(); ?></h3>
+		  <!-- UNCOMMENT FOR DESKTOP? OR JUST DELETE <?php	the_content(); ?> -->
 
-			<?php	echo '<div class="headshot">';
-					$image = get_field('teacher_headshot');
-					if( !empty($image) ): ?>
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-					<?php endif;
-				echo '</div>';
-			echo '</a>';
+		  <?php	echo '<div class="headshot">';
+		      $image = get_field('teacher_headshot');
+		      if( !empty($image) ): ?>
+		        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		      <?php endif;
+		    echo '</div>';
+		  echo '</a>';
 		echo '</div>';
 		endwhile; ?>
 
@@ -130,6 +141,9 @@
 	</div>
 </div>
 
+<?php // RESETTING TO ORIG LOOP AGAIN
+if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php endwhile; endif; ?>
 
 
 
@@ -138,7 +152,6 @@
 		<p><?php the_field('chicago_description'); ?></p>
 	</div>
 <hr>
-<h3>We are dedicated to bringing capoeira to as many people as possible. These are some of the many schools that we've worked with: </h3>
 <?php the_field('after_school'); ?>
 
 <div class="partnerlogos">
@@ -159,6 +172,11 @@
 
 	endwhile; ?>
 </div>
+
+<?php // RESETTING TO ORIG LOOP AGAIN
+if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php endwhile; endif; ?>
+
 
 <div class="alsopartners">
 	<p><?php the_field('other_schools'); ?></p>
@@ -193,6 +211,10 @@
 		endwhile; ?>
 	</div>
 
+
+	<?php // RESETTING TO ORIG LOOP AGAIN
+	if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php endwhile; endif; ?>
 
 
 
