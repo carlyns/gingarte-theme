@@ -4,8 +4,8 @@
 ?>
 <?php get_header(); ?>
 
-<!-- ADD THE STYLESHEET THAT MIGHT CHANGE BETWEEN PAGES HERE.
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/post.css">-->
+<!-- ADD THE STYLESHEET THAT MIGHT CHANGE BETWEEN PAGES HERE.-->
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/post.css">
 
 <title><?php wp_title(); ?> | Gingarte Capoeira Chicago</title>
 </head>
@@ -24,16 +24,20 @@
 <?php include ('menu.php'); ?>
 
 <div class="container">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php the_content(); ?>
 
-	<h1><?php the_title(); ?></h1>
 	<div class="mainimg">
-		<p>
-			this must still be coded as a page template!
-			why doesn't the img in the wsysig editor display?
-		</p>
-		<caption>Photo Credit: ?, year?</caption>
+		<?php
+			$image = get_field('horzimage');
+			if( !empty($image) ): ?>
+				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			<?php endif; ?>
 	</div>
-	<?php the_content(); ?>
+	<p><?php the_field('caption'); ?></p>
+	<?php the_field('message'); ?>
+
+	<?php endwhile; endif; ?>
 
 </div>
 

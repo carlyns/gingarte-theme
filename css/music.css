@@ -39,6 +39,14 @@
   width: 50%;
   margin: 5% auto;
 }
+.songtypenav {
+  margin-top: 5%;
+}
+.songtypes {
+  border: 1px solid rgba(3,94,123,1);
+  padding: 2%;
+  margin-bottom: 1%;
+}
 
 
 @media screen and (min-width: 770px) {

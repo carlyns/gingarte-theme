@@ -23,18 +23,24 @@
 
 
 <div class="classes">
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<h2><?php the_title(); ?></h2>
-	  <p><?php the_content(); ?></p>
-	<?php endwhile; endif; ?>
 </div>
 
 
 <div class="main">
 	<div class="allcapoclasses">
 		<div class="locations">
-			<h1>schedule & locations</h1>
+			<h1>Schedule & Locations</h1>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php the_content(); ?>
+			<?php endwhile; endif; ?>
 
+			<!-- INSERTED TABBY PLUGIN TO DISPLAY CLASS INFO BY LOCATION -->
+
+
+
+
+
+<!-- PREVIOUS CUSTOM DROP-DOWN FOR CLASS LOCATIONS
 			<?php
 			$args = array( 'post_type' => 'locations', 'posts_per_page' => 10 ); //Define your custom post type name in the arguments
 			$loop = new WP_Query( $args ); //Define the loop based on arguments
@@ -43,7 +49,7 @@
 
 
 				<div class="grid3">
-<!-- HOW TO CHANGE THE JAVASCRIPT #ID'S??!? IN THE LOOP.  CUSTOM FIELD??  -->
+-- HOW TO CHANGE THE JAVASCRIPT #ID'S??!? IN THE LOOP.  CUSTOM FIELD??  --
 					<div class="neighborhood" id="wt"><?php the_title(); ?><span class="extra">, <?php the_field('region'); ?></span><br><i class="fa fa-chevron-down"></i></div>
 
 					<div class="info" id="wt-info">
@@ -61,7 +67,7 @@
 						<p>University of Chicago campus</br>
 						Ida Noyes Hall</br>1212 East 59th Street<span class="important"> (please check building for exact room)</span></p>
 						<p class="important">Winter Quarter classes run from until March 17</p>
-						<!-- HOW TO FORMAT THIS???
+						-- HOW TO FORMAT THIS???
 						Classes are MOST Tuesdays and Thursdays but please check detailed schedule:
 
 						Tuesday, 1/5 7p-9p @ Ida Noyes Hall Cloister Club
@@ -85,7 +91,7 @@
 						Thursday, 3/10 7p-9p @ Ida Noyes Hall 3rd flr Theater
 						Tuesday, 3/15 7p-9p @ Ida Noyes Hall Library/Lounge
 						Thursday, 3/17 7p-9p @ Ida Noyes Hall 3rd flr Theater
-						-->
+						--
 
 						<p class="fineprint">Gingarte class cards ARE honored here.
 						Groupons are NOT accepted here. </p>
@@ -120,7 +126,7 @@
 
 
 				</div>
-
+-->
 
 		</div> <!-- / "locations" -->
 

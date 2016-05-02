@@ -35,7 +35,7 @@
 		 </div>
 
 		<div class="grid4">
-			<a href="<?php get_page_template(); ?>/gingarte/about"><img src="http://www.carnaval.com/capoeira/maculele_intro.jpg" alt="maculele sticks">
+			<a href="<?php get_page_template(); ?>/gingarte/comingsoon"><img src="http://www.carnaval.com/capoeira/maculele_intro.jpg" alt="maculele sticks">
 				<h2>related dances and music</h2></a>
 			<!-- as a capoeira group, we regularly orixa and samba have been ingrained in capoeira from its origins.  this section also covers maculele, danca, frevo, coco, etc.  links to same page as from "About" -->
 		 </div>

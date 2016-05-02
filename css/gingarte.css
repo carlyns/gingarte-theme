@@ -105,7 +105,7 @@ COLLAPSIBLE SECTIONS:
   float: left;
   width: 10%;
 }
-.menu-bar .latest-news {
+.menu-bar ``.latest-news {
   width: 80%;
   float: left;
 }
@@ -134,6 +134,8 @@ COLLAPSIBLE SECTIONS:
   height: 300px;
   clear: both;
   background-color: rgba(3,94,123,0.95);
+  z-index: 1;
+
 }
 /* so the dropdown menu sticks with the menu bar location */
 .mobilemenu .dropdown {

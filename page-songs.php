@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <!-- ADD THE STYLESHEET THAT MIGHT CHANGE BETWEEN PAGES HERE.-->
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/music.css">
 
 <title><?php wp_title(); ?> | Gingarte Capoeira Chicago</title>
 </head>
@@ -24,6 +25,20 @@
 	<?php the_content(); ?>
 	<?php endwhile; endif; ?>
 
+	<div class="songtypenav">
+		<p>
+			<a href="<?php get_page_template(); ?>/gingarte/resources/music"><< Back to Songs</a>
+		</p>
+		<div class="songtypes">Corridos-One Line Chrouses</div>
+		<!-- TAG LIST INSTEAD?
+		<div class="songtypes">Contemp-Misc</div>
+		<div class="songtypes">Ladainhas e Quadras</div>
+		<div class="songtypes">Maculelê</div>
+		<div class="songtypes">Samba</div>
+		<div class="songtypes">Puxada de Rede</div>
+		<div class="songtypes">Dança de Coco</div>-->
+	</div>
+
 <?php
 	// $currentPage = get_query_var('paged'); select the 'paged' variable.  initially empty and set at zero.  need to replace it with at least 1.
 
@@ -31,7 +46,7 @@
 
 	$args = array(
 		'post_type' => 'lyrics',
-    'posts_per_page' => 10,
+    'posts_per_page' => 5,
 		'orderby' => 'title',
 		'order' => 'ASC',	// added 'orderby' and 'order' to alphabetize.
 		'paged' => $currentPage, // returns posts on specific page, so need to pass current page as a dynamic value.  this is why $currentPage is defined above.
@@ -53,8 +68,8 @@
 <?php endwhile; ?>
 
 <div class="pagination">
-	<div class="nav-previous"><?php next_posts_link( '<< Older posts' ); ?></div>
-	<div class="nav-next"><?php previous_posts_link( 'Newer posts >>' ); ?></div>
+	<div class="nav-previous"><?php previous_posts_link( '<< Previous Page' ); ?></div>
+	<div class="nav-next"><?php next_posts_link( 'Next Page >>' ); ?></div>
 
 
 <?php else : ?>

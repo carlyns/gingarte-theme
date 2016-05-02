@@ -98,7 +98,8 @@
 						$image = get_field('marisa_photo');
 						if( !empty($image) ): ?>
 							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-						<?php endif; ?>				</div>
+						<?php endif; ?>
+					</div>
 				<?php the_field('marisa_bio'); ?>
 
 		<h2>instructors</h2>

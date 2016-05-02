@@ -19,7 +19,16 @@ html {
 h1 {
   text-align: center;
 }
+/* -- PROB SHOULDN'T USE THIS
+.locations h1 {
+  padding-bottom: 2%;
+  border-bottom: 3px double rgba(3,94,123,1);
+  width: 100%;
+  margin: 0 auto;
+}--*/
 
+
+/* ------- CURRENTLY UNUSED
 .locations .grid3 {
   border-top: 3px double rgba(3,94,123,1);
   border-bottom: 3px double rgba(3,94,123,1);
@@ -35,8 +44,12 @@ h1 {
   font-size: 1.5em;
   padding-bottom: 2%;
 }
+---------*/
 
-.locations .info { /* ALL THE CONTENT THAT SHOWS/HIDES ON CLICK*/
+/* ------- CURRENTLY UNUSED
+
+* ALL THE CONTENT THAT SHOWS/HIDES ON CLICK*
+.locations .info {
   display: none;
 }
 .locations i {
@@ -44,9 +57,6 @@ h1 {
 }
 
 
-.info p {
-  /* line height does not change spacing between p tags.  but it's too messy to use a bunch of </br> tags.  padding does't reduce it either.  */
-}
 
 .days {
   font-weight: 500;
@@ -63,6 +73,7 @@ h1 {
 #information-hp {
   display: none;
 }
+---------*/
 
 
 .payment {
