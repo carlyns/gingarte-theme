@@ -38,8 +38,6 @@
 	<div class="dances" id="dances">
 		<?php the_field('related'); ?>
 
-
-
 		<?php
 		//Define your custom post type name in the arguments
 		$args = array( 'post_type' => 'dances', 'posts_per_page' => 10 );
@@ -49,18 +47,26 @@
 		//Display the contents
 		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		<div class="dance">
-			<h3><?php the_title(); ?></h3>
+		  <h3><?php the_title(); ?></h3>
 
-			<?php
-					$image = get_field('dance_image');
-					if( !empty($image) ): ?>
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		  <?php
+		      $image = get_field('dance_image');
+		      if( !empty($image) ): ?>
+		      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
-			<?php	the_content(); ?>
+		  <?php	the_content(); ?>
 
 		<?php endif;
 		echo '</div>';
 		endwhile; ?>
+
+
+		<?php // ONCE A NEW QUERY IS DEFINED, THESE ARE THE POSTS PULLED
+		// MUST RESET THE LOOP TO THE MAIN QUERY (LIKE BELOW) TO GET THE BASIC INFO FROM ACF
+		// OTHERWISE THE REGULAR ACF FIELDS WON'T APPEAR ?>
+
+
+
 	</div>
 </div><!-- //end of "brazil"-->
 
@@ -76,6 +82,10 @@
 		<div><a class="fliparrow" href="javascript:;"><i class="fa fa-chevron-down"></i></a></div>
 		</div>
 	</div>
+
+	<?php // THIS IS THE ORIGIAL LOOP! JUST HAD TO ADD THIS SNIPPET AND THE ORIG QUERY AND DATA APPEARS IN THIS FOLLOWING SECTION!
+	if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php endwhile; endif; ?>
 
 
 	<div class="group">
@@ -96,24 +106,25 @@
 		<h2>instructors</h2>
 
 		<?php //HOW TO DISPLAY CUSTOM POSTS from https://wp-types.com/documentation/user-guides/displaying-wordpress-custom-content/
-		$args = array( 'post_type' => 'teachers', 'posts_per_page' => 20 ); //Define your custom post type name in the arguments
+		$args = array( 'post_type' => 'teacher', 'posts_per_page' => 20 ); //Define your custom post type name in the arguments
 		$loop = new WP_Query( $args ); //Define the loop based on arguments
 
 		//Display the contents
 		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		<div class="teacher"><a href="<?php the_field('bio_link'); ?>">
-			<h3><?php the_title(); ?></h3>
-			<!-- UNCOMMENT FOR DESKTOP? OR JUST DELETE <?php	the_content(); ?> -->
+		  <h3><?php the_title(); ?></h3>
+		  <!-- UNCOMMENT FOR DESKTOP? OR JUST DELETE <?php	the_content(); ?> -->
 
-			<?php	echo '<div class="headshot">';
-					$image = get_field('teacher_headshot');
-					if( !empty($image) ): ?>
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-					<?php endif;
-				echo '</div>';
-			echo '</a>';
+		  <?php	echo '<div class="headshot">';
+		      $image = get_field('teacher_headshot');
+		      if( !empty($image) ): ?>
+		        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		      <?php endif;
+		    echo '</div>';
+		  echo '</a>';
 		echo '</div>';
 		endwhile; ?>
+
 
 	<div class="students">
 		<?php the_field('about_students'); ?>
@@ -131,8 +142,6 @@
 </div>
 
 
-
-
 <div class="chicago">
 	<div class="description">
 		<p><?php the_field('chicago_description'); ?></p>
@@ -142,7 +151,6 @@
 <?php the_field('after_school'); ?>
 
 <div class="partnerlogos">
-
 	<?php //HOW TO DISPLAY CUSTOM POSTS from https://wp-types.com/documentation/user-guides/displaying-wordpress-custom-content/
 	$args = array( 'post_type' => 'schools', 'posts_per_page' => 30 ); //Define your custom post type name in the arguments
 	$loop = new WP_Query( $args ); //Define the loop based on arguments
@@ -151,18 +159,27 @@
 	while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 	<?php	echo '<div class="plogo">';
-			$image = get_field('school_logo');
-			if( !empty($image) ): ?>
-				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-			<?php endif;
-		echo '</div>';
+	    $image = get_field('school_logo');
+	    if( !empty($image) ): ?>
+	      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+	    <?php endif;
+	  echo '</div>';
 
 	endwhile; ?>
+
 </div>
+
+<?php // RESETTING TO ORIG LOOP AGAIN
+if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php endwhile; endif; ?>
+
+
 
 <div class="alsopartners">
 	<p><?php the_field('other_schools'); ?></p>
+
 </div>
+
 
 
 
@@ -175,7 +192,6 @@
 	<h3>We have been generously sponsored throughout the years by countless partners.  These are just a few: </h3>
 
 	<div class="partnerlogos">
-
 		<?php //HOW TO DISPLAY CUSTOM POSTS from https://wp-types.com/documentation/user-guides/displaying-wordpress-custom-content/
 		$args = array( 'post_type' => 'partners', 'posts_per_page' => 30 ); //Define your custom post type name in the arguments
 		$loop = new WP_Query( $args ); //Define the loop based on arguments
@@ -184,14 +200,18 @@
 		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 		<?php	echo '<div class="plogo">';
-				$image = get_field('partner_logo');
-				if( !empty($image) ): ?>
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-				<?php endif;
-			echo '</div>';
+		    $image = get_field('partner_logo');
+		    if( !empty($image) ): ?>
+		      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		    <?php endif;
+		  echo '</div>';
 
 		endwhile; ?>
 	</div>
+
+	<?php // RESETTING TO ORIG LOOP AGAIN
+	if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php endwhile; endif; ?>
 
 
 

@@ -270,6 +270,27 @@ COLLAPSIBLE SECTIONS:
   clear: both;
 }
 
+/* -- PAGINATION STYLING -- (a dot shows up if i add a background-color)*/
+.nav-previous {
+  float: left;
+  margin: 5% 0;
+}
+.nav-next {
+  float: right;
+  margin: 5% 0;
+
+}
+.pagination {
+
+}
+.latest-news-item h3 {
+  margin-bottom: 0;
+}
+.latest-news-item p {
+  margin-top: 1%;
+}
+
+
 /* -- FOOTER STYLING -- */
 footer {
   clear: both;
@@ -413,8 +434,12 @@ footer img {
     float: left;
   }
 
+  /* -- PAGINATION -- */
+  .pagination {
+    width: 500px;
+  }
 
-
+  /* -- FOOTER -- */
   footer img {
     width: 50px;
   }

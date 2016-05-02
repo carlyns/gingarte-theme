@@ -34,13 +34,18 @@
 .music h2 {
   clear: both;
 }
-.grid4 {
-  width: 29%;
-  margin-right: 4%;
-  float: left;
-}
 
 .music .button {
   width: 50%;
   margin: 5% auto;
+}
+
+
+@media screen and (min-width: 770px) {
+  .grid4 {
+    width: 29%;
+    margin-right: 4%;
+    float: left;
+  }
+
 }

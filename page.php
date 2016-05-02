@@ -21,11 +21,11 @@
 
 <div class="container">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<h1><?php the_title(); ?></h1>
 	  <?php the_content(); ?>
 	<?php endwhile; endif; // THIS PLACEMENT MATTERS: in between the ul tag! ?>
 
 </div>
 
-<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo rawurlencode(get_permalink()); ?>&amp;layout=standard&amp;show-faces=true&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" id="facebook-like"></iframe>
 
 <?php get_footer(); ?>

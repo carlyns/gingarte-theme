@@ -31,14 +31,6 @@
   border-bottom: 3px double rgba(3,94,123,1);
 	padding-bottom: 3%;
 }
-.description {
-  width: 40%;
-  float: left;
-}
-.eventimg {
-  width: 40%;
-  float: right;
-}
 
 .eventimg img {
   width: 100%;
@@ -52,6 +44,14 @@ footer {
   .grid4 {
     width: 30%;
     float: left;
+  }
+  .description {
+    width: 50%;
+    float: left;
+  }
+  .eventimg {
+    width: 40%;
+    float: right;
   }
 
 }

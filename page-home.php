@@ -81,6 +81,7 @@ RESUS doesn't have php yet, so have to add the code manually.
       <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
     </ul>
     <?php endwhile; endif; // MAKE SURE THIS IS OUTSIDE THE ENTRY DIV ?>
+    <ul><a href="<?php get_page_template(); ?>/gingarte/news">(See All the Latest News)</a></ul>
   </div>
 
 	<div class="items">
@@ -92,8 +93,8 @@ RESUS doesn't have php yet, so have to add the code manually.
           <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
         </ul>
       <?php endwhile; endif; // MAKE SURE THIS IS OUTSIDE THE ENTRY DIV ?>
+      <ul><a href="<?php get_page_template(); ?>/gingarte/news">(See All the Latest News)</a></ul>
 	</div>
-
 	</div><!-- //end of "news"-->
 
 
@@ -117,10 +118,10 @@ RESUS doesn't have php yet, so have to add the code manually.
 				<h2><?php the_field('second_feature_heading',34); ?></h2></a>
         <p><?php the_field('second_feature',34); ?></p>
 			<div class="featpartners">
-				<div class="partner"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/partners/afire.png"></img></div>
-				<div class="partner"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/partners/dhs.png"></img></div>
-				<div class="partner"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/partners/icirr.png"></img></div>
-				<div class="partner"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/partners/newaminit.png"></img></div>
+        <!-- CAN I GET THE ACF POST ID TO SELECT SPECIFIC CUSTOM POST TYPES AND HAVE THEIR IMAGE FIELDS DISPLAY?? -->
+        <div class="partner"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/partners/driehaus.jpg"></img></div>
+        <div class="partner"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/partners/field.png"></img></div>
+        <div class="partner"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/partners/united.jpg"></img></div>
 			</div>
 		</div>
 
