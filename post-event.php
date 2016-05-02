@@ -26,7 +26,6 @@ Description: Gives you an initial section for the main info and a side image for
 <?php include ('menu.php'); ?>
 
 <div class="container">
-
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<h1><?php the_title(); ?></h1>
 

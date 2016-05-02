@@ -60,14 +60,12 @@
 		echo '</div>';
 		endwhile; ?>
 
-
 		<?php // ONCE A NEW QUERY IS DEFINED, THESE ARE THE POSTS PULLED
 		// MUST RESET THE LOOP TO THE MAIN QUERY (LIKE BELOW) TO GET THE BASIC INFO FROM ACF
 		// OTHERWISE THE REGULAR ACF FIELDS WON'T APPEAR ?>
-
-
-
 	</div>
+
+
 </div><!-- //end of "brazil"-->
 
 
@@ -141,13 +139,15 @@
 	</div>
 </div>
 
+<?php // RESETTING TO ORIG LOOP AGAIN
+if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php endwhile; endif; ?>
 
 <div class="chicago">
 	<div class="description">
 		<p><?php the_field('chicago_description'); ?></p>
 	</div>
 <hr>
-<h3>We are dedicated to bringing capoeira to as many people as possible. These are some of the many schools that we've worked with: </h3>
 <?php the_field('after_school'); ?>
 
 <div class="partnerlogos">
@@ -172,7 +172,6 @@
 <?php // RESETTING TO ORIG LOOP AGAIN
 if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php endwhile; endif; ?>
-
 
 
 <div class="alsopartners">
@@ -212,7 +211,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php // RESETTING TO ORIG LOOP AGAIN
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php endwhile; endif; ?>
-
 
 
 

@@ -24,7 +24,6 @@
 	<?php the_content(); ?>
 	<?php endwhile; endif; ?>
 
-
 <?php
 	// $currentPage = get_query_var('paged'); select the 'paged' variable.  initially empty and set at zero.  need to replace it with at least 1.
 
@@ -32,7 +31,7 @@
 
 	$args = array(
 		'post_type' => 'lyrics',
-    'posts_per_page' => 2,
+    'posts_per_page' => 10,
 		'orderby' => 'title',
 		'order' => 'ASC',	// added 'orderby' and 'order' to alphabetize.
 		'paged' => $currentPage, // returns posts on specific page, so need to pass current page as a dynamic value.  this is why $currentPage is defined above.
