@@ -36,101 +36,7 @@
 
 			<!-- INSERTED TABBY PLUGIN TO DISPLAY CLASS INFO BY LOCATION -->
 
-
-
-
-
-<!-- PREVIOUS CUSTOM DROP-DOWN FOR CLASS LOCATIONS
-			<?php
-			$args = array( 'post_type' => 'locations', 'posts_per_page' => 10 ); //Define your custom post type name in the arguments
-			$loop = new WP_Query( $args ); //Define the loop based on arguments
-			//Display the contents
-			while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-
-				<div class="grid3">
--- HOW TO CHANGE THE JAVASCRIPT #ID'S??!? IN THE LOOP.  CUSTOM FIELD??  --
-					<div class="neighborhood" id="wt"><?php the_title(); ?><span class="extra">, <?php the_field('region'); ?></span><br><i class="fa fa-chevron-down"></i></div>
-
-					<div class="info" id="wt-info">
-						<?php the_content(); ?>
-					</div>
-				</div>
-			<?php 	endwhile; ?>
-
-
-
-				<div class="grid3">
-					<div class="neighborhood" id="hp">Hyde Park<span class="extra">, Chicago</span><br><i class="fa fa-chevron-down"></i></div>
-					<div class="info" id="hp-info">
-
-						<p>University of Chicago campus</br>
-						Ida Noyes Hall</br>1212 East 59th Street<span class="important"> (please check building for exact room)</span></p>
-						<p class="important">Winter Quarter classes run from until March 17</p>
-						-- HOW TO FORMAT THIS???
-						Classes are MOST Tuesdays and Thursdays but please check detailed schedule:
-
-						Tuesday, 1/5 7p-9p @ Ida Noyes Hall Cloister Club
-						Tuesday, 1/12 7p-9p @ Ida Noyes Hall Library/Lounge
-						Thursday, 1/14 NO CLASS
-						Tuesday, 1/19 7p-9p @ Ida Noyes Hall Library/Lounge
-						Thursday, 1/21 7p-9p @ Ida Noyes Hall 3rd flr Theater
-						Tuesday, 1/26 6p-8p @ Ida Noyes Hall 3rd flr Theater
-						Thursday, 1/28 7p-9p @ Ida Noyes Hall 3rd flr Theater
-						Tuesday, 2/2 7:30p-9:30p @ Ida Noyes Hall Cloister Club
-						Thursday, 2/4 NO CLASS
-						Tuesday, 2/9 6p-8p @ Ida Noyes Hall 3rd flr Theater
-						Thursday, 2/11 NO CLASS
-						Tuesday, 2/16 7p-9p @ Ida Noyes Hall Library/Lounge
-						Thursday, 2/18 NO CLASS
-						Tuesday, 2/23 7p-9p @ Ida Noyes Hall Library/Lounge
-						Thursday, 2/25 NO CLASS
-						Tuesday, 3/1 7p-9p @ Ida Noyes Hall Cloister Club
-						Thursday, 3/3 7p-9p @ Ida Noyes Hall 3rd flr Theater
-						Tuesday, 3/8 NO CLASS
-						Thursday, 3/10 7p-9p @ Ida Noyes Hall 3rd flr Theater
-						Tuesday, 3/15 7p-9p @ Ida Noyes Hall Library/Lounge
-						Thursday, 3/17 7p-9p @ Ida Noyes Hall 3rd flr Theater
-						--
-
-						<p class="fineprint">Gingarte class cards ARE honored here.
-						Groupons are NOT accepted here. </p>
-					</div>
-				</div>
-
-
-				<div class="grid3">
-					<div class="neighborhood" id="ls">Lincoln Square<span class="extra">, Chicago</span><br><i class="fa fa-chevron-down"></i></div>
-					<div class="info" id="ls-info">
-						<p>Old Town School of Folk Music</br>4454 N. Lincoln Av. Chicago, 60625</p>
-						<p><span class="days">Sundays</span>,10am-12pm???</p>
-						<p class="important">Must sign up through <a href="https://www.oldtownschool.org/classes/adults/dance/">Old Town</a>. </p>
-						<p class="fineprint">Gingarte class cards are NOT honored here.
-						Groupons are NOT accepted here. </p>
-					</div>
-
-
-
-
-
-				</div>
-
-
-				<div class="grid3">
-					<div class="neighborhood" id="cl">Crystal Lake<span class="extra">, Illinois</span><br><i class="fa fa-chevron-down"></i></div>
-					<div class="info" id="cl-info">
-						<p>Please contact Instrutor Artista at artista@hotmail.com or 847-xxx-xxxx. </p>
-						<p class="fineprint">Gingarte class cards are NOT honored here.
-						Groupons are NOT accepted here.</p>
-					</div>
-
-
-				</div>
--->
-
 		</div> <!-- / "locations" -->
-
-
 
 
 		<div class="payment">
@@ -154,38 +60,11 @@
 							<div class="option"><?php the_content(); ?></div>
 						</div>
 
-						<div class="button">Purchase</div>
-						<!-- HOW TO MAKE EACH BUTTON URL DIFFERENT?  CUSTOM FIELD??   -->
+						<a href="<?php the_field('paypal_classes'); ?>" target="_blank"><div class="button">Purchase</div></a>
 
 					</div>
 				<?php 	endwhile; ?>
 
-
-			<div class="grid4">
-			<div class="option">
-				<h5>10-class Punch Card:</h5>
-				<p class="price">$110 for adults</br>$65 for kids</p>
-			</div>
-				<ul>
-					<li>occasional student</li>
-					<li>class about once a week</li>
-					<li>expires after 3 months</li>
-				</ul>
-				<div class="button">Purchase</div>
-			</div>
-
-			<div class="grid4">
-			<div class="option">
-				<h5>Monthly Unlimited:</h5>
-				<p class="price">$100 for adults</br>$50 for kids</p>
-			</div>
-				<ul>
-					<li>frequent student</li>
-					<li>class twice or more a week</li>
-					<li>due at the beginning of the month</li>
-				</ul>
-				<div class="button">Purchase</div>
-			</div>
 		</div> <!-- / "payment" -->
 	</div>
 </div>

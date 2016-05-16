@@ -1,17 +1,15 @@
 .container body {
 
 }
-
 .container h1 {
+  text-align: center;
 }
+
 .container h2 {
-  font-size: 3em;
   clear: both;
 }
 .container h3 {
-  font-family: Ostrich, Helvetica Neue, sans-serif;
-  font-size: 1.5em;
-  font-weight: 300;
+  font-family: Lato, Helvetica Neue, sans-serif;
 }
 .container img {
   margin: 0 auto;
@@ -26,21 +24,52 @@
   width: 100%;
 }
 .initial {
-  font-size: 1.4em;
   overflow: auto;
   border-bottom: 3px double rgba(3,94,123,1);
 	padding-bottom: 3%;
 }
-
 .eventimg img {
   width: 100%;
 }
 
+.button {
+  border: 1px solid rgba(3,94,123,1);
+  text-align: center;
+  text-transform: uppercase;
+  width: 70%;
+  margin: 0 auto;
+  padding: 3%;
+}
+.button:hover {
+  background-color: rgba(3,94,123,1);
+}
+
+.buttonbook {
+  border: 1px solid rgba(3,94,123,1);
+  text-align: center;
+  text-transform: uppercase;
+  width: 500px;
+  margin: 0 auto;
+}
+.buttonbook:hover {
+  background-color: rgba(3,94,123,1);
+}
+.buttonbook h2 {
+  margin: 1%;
+  padding-bottom: 3%;
+}
+iframe {
+  margin: 5% 0 0 0;
+}
 footer {
 }
 
 /* -- MEDIA QUERIES START HERE -- */
 @media screen and (min-width: 770px) {
+
+  .initial p {
+    font-size: 1.4em;
+  }
   .grid4 {
     width: 30%;
     float: left;
@@ -53,7 +82,14 @@ footer {
     width: 40%;
     float: right;
   }
-
 }
-
+@media screen and (max-width: 770px) {
+  .button a {
+    /* not sure why font-size or padding or font-color doesn't work*/
+  }
+  .buttonbook {
+    width: 170px;
+  }
+  .buttonbook h2{
+  }
 }

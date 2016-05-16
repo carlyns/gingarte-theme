@@ -40,9 +40,8 @@ RESUS doesn't have php yet, so have to add the code manually.
 
 	<?php include ('brandhead.php'); ?>
 
-	 <!-- BE CAREFUL!  SOMETIMES ITS BEST TO DEFINE A VARIABLE AND THEN CALL IT LATER. -->
-	<div class="tagline">
-		<p><?php echo get_bloginfo( 'description', 'display' ); ?></p>
+	<div class="contents">
+		<?php echo get_bloginfo( 'description', 'display' ); ?>
 	</div>
 </header>
 
@@ -107,15 +106,15 @@ RESUS doesn't have php yet, so have to add the code manually.
       <a href="<?php echo get_permalink(26); ?>">
 				<div class="capostar"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/capostarA.png"></div>
 				<h2><?php the_field('first_feature_heading',34); ?></h2>
+			  <p><?php the_field('first_feature',34); ?></p>
 			</a>
-			<p><?php the_field('first_feature',34); ?></p>
 		</div>
 
 		<div class="middle">
       <a href="<?php echo get_permalink(26); ?>">
 
       <div class="capostar"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/capostarB.png"></div>
-				<h2><?php the_field('second_feature_heading',34); ?></h2></a>
+				<h2><?php the_field('second_feature_heading',34); ?></h2>
         <p><?php the_field('second_feature',34); ?></p>
 			<div class="featpartners">
         <!-- CAN I GET THE ACF POST ID TO SELECT SPECIFIC CUSTOM POST TYPES AND HAVE THEIR IMAGE FIELDS DISPLAY?? -->
@@ -123,13 +122,15 @@ RESUS doesn't have php yet, so have to add the code manually.
         <div class="partner"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/partners/field.png"></img></div>
         <div class="partner"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/partners/united.jpg"></img></div>
 			</div>
-		</div>
+      </a>
+    </div>
 
 		<div class="last">
       <a href="<?php echo get_permalink(36); ?>">
         <div class="capostar"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/capostarS.png"></div>
-				<h2><?php the_field('third_feature_heading',34); ?></h2></a>
+				<h2><?php the_field('third_feature_heading',34); ?></h2>
         <p><?php the_field('third_feature',34); ?></p>
+      </a>
 		</div>
 	</div> <!-- / "features" -->
 </div> <!--/ "container" -->

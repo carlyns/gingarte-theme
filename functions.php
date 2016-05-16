@@ -51,4 +51,8 @@ function my_home_category( $fan_posts_query ) { if ( $fan_posts_query->is_home()
 add_action( 'pre_get_posts', 'my_home_category' );
 
 
+
+// CLASSES PAGE USES A PLUGIN CALLED TABBY-RESPONSIVE-TABS.  TO STYLE THEM, THIS LINE IS ADDED TO PREVENT THE DEFAULT STYLES FROM LOADING.  THE EDITED STYLES ARE COPIED INTO THE CLASSES PAGE STYLE SHEET.
+remove_action('wp_print_styles', 'cc_tabby_css', 30);
+
 ?>

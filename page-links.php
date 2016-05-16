@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- ADD THE STYLESHEET THAT MIGHT CHANGE BETWEEN PAGES HERE.-->
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/linksbook.css">
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/links.css">
 
 <title><?php wp_title(); ?> | Gingarte Capoeira Chicago</title>
 </head>

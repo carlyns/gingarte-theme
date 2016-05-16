@@ -16,6 +16,7 @@
 	<meta name="description" content="Brazilian martial arts classes and performances in Chicago.  Cultivating a community through capoeira for over 20 years.">
 
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/gingarte.css">
 
