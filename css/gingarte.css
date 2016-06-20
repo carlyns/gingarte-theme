@@ -1,3 +1,36 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('montserrat/Montserrat-Light.otf') format('opentype');
+  font-weight: 300;
+  font-weight: regular;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('montserrat/Montserrat-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('montserrat/Montserrat-SemiBold.otf') format('opentype');
+  font-weight: 500;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('montserrat/Montserrat-Bold.otf') format('opentype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('montserrat/Montserrat-UltraLight.otf') format('opentype');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('montserrat/Montserrat-Hairline.otf') format('opentype');
+  font-weight: 100;
+}
+
 /* Background pattern from subtlepatterns.com */
 header {
   width: 90%;
@@ -5,32 +38,47 @@ header {
 }
 h1 {
   text-transform: uppercase;
+  font-weight: 500;
 }
 h2 {
   text-transform: uppercase;
+  font-weight: 500;
 }
-.brandhead {
-  font-family: Lato, Helvetica Neue, sans-serif;
-  line-height: 1em;
-
+.brandhead h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.4em;
 }
-
 .logo img {
   width: 100px;
 }
+.logo {
+  margin: 0 auto;
+}
+
 
 body {
-  font-family: Lato, Helvetica Neue, sans-serif;
+  font-family: Montserrat, Helvetica Neue, sans-serif;
+  font-weight: 300;
   margin: 0;
+  color: rgba(56,49,50,1); /* MAIN GREY FONT */
 }
 
 .button {
-  border: 1px solid  rgba(3,94,123,1);
+  background-color: rgba(137,133,133,1); /* MENU GREY */
+  color: white;
+  border: 1px solid white;
   text-align: center;
   text-transform: uppercase;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1%;
 }
 .button:hover {
   background-color: rgba(3,94,123,1);
+}
+.button a {
+  color: white;
 }
 .middle .button {
   width: 50%;
@@ -44,6 +92,7 @@ header {
 .contents {
   font-style: italic;
   margin-bottom: 3%;
+  color: rgba(56,49,50,0.6); /* LIGHT GREY FONT */
 }
 
 
@@ -70,13 +119,17 @@ COLLAPSIBLE SECTIONS:
 .back-top {
   display: none;
 }
-
+nav {
+  clear: both;
+}
 .menu-full {
   display: none;
   text-transform: uppercase;
+
 }
 .menu-bar {
-  background-color: rgba(3,94,123,1);
+  /* background-color: rgba(3,94,123,1);  OLD BLUE */
+  background-color: rgba(137,133,133,1); /* MENU GREY */
   text-align: center;
   padding: 15px 0;
   width: 100%;
@@ -85,6 +138,7 @@ COLLAPSIBLE SECTIONS:
 }
 .menu-bar a {
   color: rgba(251,252,255,1);
+
 }
 .menu-icon {
   float: left;
@@ -97,9 +151,10 @@ COLLAPSIBLE SECTIONS:
 .menu-bar .news-feature a {
   border: 1px solid white;
   padding: 1%;
+
 }
 .news-feature a:hover {
-  background-color: #00008B;
+  background-color: rgba(3,94,123,1);
 }
 .arrow-icon {
   float: right;
@@ -117,9 +172,9 @@ COLLAPSIBLE SECTIONS:
   font-size: 1.4em;
   text-align: left;
   width: 100%;
-  height: 300px;
+  height: 250px;
   clear: both;
-  background-color: rgba(3,94,123,0.95);
+  background-color: rgba(137,133,133,1); /* MENU GREY */
   z-index: 1;
 }
 /* so the dropdown menu sticks with the menu bar location */
@@ -134,33 +189,26 @@ COLLAPSIBLE SECTIONS:
 }
 .dropdown li:hover {
   /* highlight mobile menu items on hover */
-  background-color: #00008B;
-  width: 50%;
+  background-color: rgba(3,94,123,1);
+  width: 200px;
 }
 .dropdown .current-menu-item:hover {
   /* but don't change background color behind current mobile menu item */
-  background-color: rgba(3,94,123,0.8);
+  background-color: rgba(137,133,133,1); /* MENU GREY */
 }
 
 /* change dispaly of current mobile menu item, WP-generated class */
 .current-menu-item a {
-  color: #00008B;
+  color: rgba(56,49,50,1); /* MAIN GREY FONT */
 }
 
 .dropdown ul {
-  padding: 5% 11%;
   margin: 0;
+  padding-top: 30px;
 }
 .dropdown li {
   list-style-type: none;
 }
-.submenu {
-  text-transform: capitalize;
-  padding-left: 5%;
-  font-size: .5em;
-  overflow: scroll /* put this in the dropdown div*/
-}
-/* highlight current menu item, WP-generated class */
 
 .container {
   width: 80%;
@@ -183,7 +231,6 @@ COLLAPSIBLE SECTIONS:
   margin: 0 auto;
   background-color: rgba(1,1,1,.4);
   color: white;
-  font-weight: 400;
   text-align: center;
   letter-spacing: 0.1em;
   position: absolute;
@@ -296,7 +343,7 @@ COLLAPSIBLE SECTIONS:
 /* -- FOOTER STYLING -- */
 footer {
   clear: both;
-  background-color: rgba(3,94,123,1);
+  background-color: rgba(137,133,133,1); /* MENU GREY */
   color: rgba(251,252,255,1);
   text-align: center;
   font-size: 80%;
@@ -306,7 +353,7 @@ footer {
 }
 
 footer a {
-  font-weight: 500;
+  font-weight: 400;
   color: rgba(251,252,255,1);
 }
 footer a:hover {
@@ -321,28 +368,28 @@ footer {
   display: none;
 }
 
-footer img {
-  width: 30px;
-}
 .buttonelist {
-  background-color: rgba(3,94,123,1);
   text-align: center;
   width: 50%;
   margin: 0 auto;
   border: 1px solid white;
 }
 .buttonelist:hover {
-  background-color: #00008D;
+  background-color: rgba(3,94,123,1);
 }
 .buttonelist a:hover {
   text-decoration: none;
 }
-.sfsi_widget {
-  width: 35%;
+.social { /* found size of div wrapping icons from web inspector and wrapped in my own to center on mobile */
+  width: 225px;
   margin: 0 auto;
 }
 .author {
   font-size: 0.8em;
+  font-weight: 200;
+}
+.author a {
+  font-weight: 400;
 }
 
 
@@ -351,14 +398,35 @@ footer img {
 
 @media screen and (max-width: 410px) {
   .dropdown {
-``  }
-  .dropdown li:hover {
-    width: 100%;
   }
+  .dropdown li:hover {
+  }
+  .brandtext {
+    display: none;
+  }
+
 }
 
 @media screen and (min-width: 770px) {
+  .brandhead {
+  }
+  .brandtext {
+    float: left;
+    padding: 3%;
+    width: 70%;
+  }
   .brandhead h1 {
+    text-align: left;
+    font-size: 2em;
+  }
+  .logo {
+    padding: 3%;
+    float: left;
+    width: 10%;
+  }
+  .contents {
+    float: left;
+    text-align: left;
   }
   .dropdown {
     display: none;
@@ -386,11 +454,10 @@ footer img {
   }
   .menu-full {
     display: block;
-    background-color: rgba(3,94,123,1);
+    background-color: rgba(137,133,133,1); /* MENU GREY */
     text-align: center;
     overflow: auto;
-    font-family: Source Sans Pro, Helvetica Neue, sans-serif;
-    font-weight: 700;
+    font-family: Montserrat, Helvetica Neue, sans-serif;
     font-size: 1.1em;
     box-shadow: 1px 5px 5px rgba(1,1,1,1);
 }
@@ -408,27 +475,25 @@ footer img {
 
   .menu-full li:hover {
     /* highlight menu items on hover */
-    background-color: #00008B;
+    background-color: rgba(3,94,123,1);
     padding: 1%;
   }
   .menu-full .current-menu-item:hover {
     /* but don't change background color behind current menu item */
-    background-color: rgba(3,94,123,1);
+    background-color: rgba(137,133,133,1); /* MENU GREY */
   }
 
   /* highlight current menu item, WP-generated class */
   .current-menu-item a {
-    background-color: rgba(3,94,123,1);
-    color: #00008B;
+    background-color: rgba(137,133,133,1); /* MENU GREY */
+    color: rgba(56,49,50,1); /* MAIN GREY FONT */
   }
   .menu-full .news-feature a {
     border: 1px solid white;
-    padding: 0 1%;
+    padding: 0.5% 1%;
   }
   .menu-full .news-feature {
     margin: 1% 0 2% 0;
-    font-weight: 400;
-
   }
 
   .news .items {
@@ -471,7 +536,7 @@ footer img {
     font-size: 1em;
     padding-bottom: 2%;
   }
-  .sfsi_widget {
+  .social {
     width: 100%;
   }
   .mainftrinfo {
@@ -493,7 +558,7 @@ footer img {
     text-align: left;
   }
   .largerftr h4 a {
-    font-weight: 500;
+    font-weight: regular;
   }
   .buttonelist {
     width: auto;

@@ -14,6 +14,8 @@
 		<?php $postid = get_the_ID(); ?>		<!-- This defines the variable $postid to be used in the following function. -->
 		<?php echo get_post_meta($postid, 'Tagline', true); ?>
 	</div>
+</div> <!-- / "brandtext"-->
+</div> <!-- / "brandhead"-->
 
 </header>
 

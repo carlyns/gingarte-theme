@@ -30,9 +30,9 @@ RESUS doesn't have php yet, so have to add the code manually.
 -->
 
 
+<!-- ALL OLD, INDEX.PHP SINCE WE'REUSING PAGE-HOME.PHP INSTEAD
 
-
-	<title>Gingarte Capoeira Chicago</title>
+<title>Gingarte Capoeira Chicago</title>
 </head>
 
 <body>
@@ -40,7 +40,6 @@ RESUS doesn't have php yet, so have to add the code manually.
 
 	<?php include ('brandhead.php'); ?>
 
-	 <!-- BE CAREFUL!  SOMETIMES ITS BEST TO DEFINE A VARIABLE AND THEN CALL IT LATER. -->
 	<div class="tagline">
 		<p><?php echo get_bloginfo( 'description', 'display' ); ?></p>
 	</div>
@@ -49,7 +48,6 @@ RESUS doesn't have php yet, so have to add the code manually.
 <?php include ('menu.php'); ?>
 
 	<div class="frontimg">
-	<!--HEADER IMAGE GOES HERE, BUT IT'S ACTUALLY A BACKGROUND -->
 		<div class="caption">
 			<p>Mestre Marisa brought Capoeira to Chicago in 1991.</p>
 		</div>
@@ -65,7 +63,6 @@ RESUS doesn't have php yet, so have to add the code manually.
     <ul>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-      <!-- If no content, include the "No posts found" template. LEARN MORE ABOUT THE WP LOOP -->
 
       <?php endwhile; endif; // THIS PLACEMENT MATTERS: in between the ul tag! ?>
     </ul>
@@ -79,7 +76,7 @@ RESUS doesn't have php yet, so have to add the code manually.
 			</ul>
 	</div>
 
-	</div><!-- //end of "news"-->
+	</div>
 
 
   <div class="fvideo">
@@ -112,9 +109,9 @@ RESUS doesn't have php yet, so have to add the code manually.
 				<h2>Beginner Student?</h2></a>
 			<p>All of our classes are mixed-level.  Our teachers can tailor movements for all abilities.  We've found students improve faster when surrounded by more advanced students.  We have sessions too.  <a href="classes.html">Read more about the classes we offer</a>. </p>
 		</div>
-	</div> <!-- / "features" -->
-</div> <!--/ "container" -->
-
+	</div>
+</div>
+-->
 <?php get_footer(); ?>
 
 

@@ -1,15 +1,19 @@
-.container body {
-
+a {
+  color: rgba(3,94,123,1);
+}
+a:hover {
 }
 .container h1 {
   text-align: center;
 }
-
+.container h2 {
+  text-align: center;
+}
 .container h2 {
   clear: both;
 }
 .container h3 {
-  font-family: Lato, Helvetica Neue, sans-serif;
+  font-family: Montserrat, Helvetica Neue, sans-serif;
 }
 .container img {
   margin: 0 auto;
@@ -17,6 +21,16 @@
 }
 .container caption {
   clear: both;
+}
+.cordoes img {
+  width: 100%;
+}
+.cordoes {
+  line-height: 0.2em;
+}
+.cord {
+  height: auto;
+  max-width: 500px;
 }
 .mainimg {
 }
@@ -33,33 +47,47 @@
 }
 
 .button {
-  border: 1px solid rgba(3,94,123,1);
+  background-color: rgba(137,133,133,1); /* MENU GREY */
+  border: 1px solid white;
   text-align: center;
   text-transform: uppercase;
   width: 70%;
   margin: 0 auto;
-  padding: 3%;
+}
+.button a {
+  color: white;
 }
 .button:hover {
   background-color: rgba(3,94,123,1);
 }
 
+
 .buttonbook {
-  border: 1px solid rgba(3,94,123,1);
+  background-color: rgba(137,133,133,1); /* MENU GREY */
+  border: 1px solid white;
   text-align: center;
   text-transform: uppercase;
   width: 500px;
   margin: 0 auto;
 }
+.buttonbook a {
+  color: white;
+}
 .buttonbook:hover {
   background-color: rgba(3,94,123,1);
 }
 .buttonbook h2 {
-  margin: 1%;
-  padding-bottom: 3%;
 }
 iframe {
   margin: 5% 0 0 0;
+}
+
+.latest-news-item h3 {
+  margin: 6% 0 0 0;
+}
+.latest-news-item p {
+  margin: 0;
+  font-size: 0.8em;
 }
 footer {
 }
@@ -82,6 +110,12 @@ footer {
     width: 40%;
     float: right;
   }
+  .latest-news-item h3 {
+    margin: 3% 0 0 0;
+  }
+  .latest-news-item p {
+    font-size: 1em;
+  }
 }
 @media screen and (max-width: 770px) {
   .button a {
@@ -92,4 +126,5 @@ footer {
   }
   .buttonbook h2{
   }
+
 }

@@ -1,42 +1,17 @@
-/*-------LINKS & BOOK US----------*/
+/*------- not much.  just fixed container widths on larger screens for centering ----------*/
 
 .container h1 {
 	border-bottom: 3px double rgba(3,94,123,1);
 	padding-bottom: 3%;
+	padding-top: 5%;
 	text-align: center;
 }
-.container h2 {
-	font-family: Lato, sans-serif;
+.container a:hover {
+	text-decoration: underline;
 }
-
-
-.links li {
-	list-style: circle;
-}
-
-.googform iframe {
-	width: 100%;
-	height: 300px;
-}
-
-.booking {
-	border: 1px solid black;
-	padding: 1% 0 3% 0;
-	font-family: Lato, sans-serif;
-	text-align: center;
-	width: 200px;
-	margin: 5% auto;
-}
-
-
 @media screen and (min-width: 770px) {
 	.container {
 		width: 600px;
 		margin: 0 auto;
-	}
-	.container h2 {
-	}
-	.booking {
-	width: 500px;
 	}
 }

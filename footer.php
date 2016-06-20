@@ -1,16 +1,18 @@
 <footer>
 
 	<div class="mainftrinfo">
-		<p>©<?php echo year_shortcode(); ?> Gingarte Capoeira Chicago. </br>All Rights Reserved.</p>
+		<p>©<?php echo year_shortcode(); ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>"> Gingarte Capoeira Chicago</a></br>All Rights Reserved.</p>
 
 		<?php the_field('our_locations',34); ?>
 
 
 <!-- FOOTER AREA to add widgets -->
-		<?php if ( is_active_sidebar( 'main_footer' ) ) : ?>
-		<?php dynamic_sidebar( 'main_footer' ); ?>
-		<!-- ADD CLASSES TO REGISTER_SIDEBAR FUNCTION IN FUNCTIONS.PHP TO WRAP DIVS UNIQUELY.  Didn't really try to do this.  Instead of having two different sizes for the icons, I made them a universal 40px wide and fudged the centering on larger screens. -->
-		<?php endif; ?>
+		<div class="social">
+			<?php if ( is_active_sidebar( 'main_footer' ) ) : ?>
+			<?php dynamic_sidebar( 'main_footer' ); ?>
+			<!-- ADD CLASSES TO REGISTER_SIDEBAR FUNCTION IN FUNCTIONS.PHP TO WRAP DIVS UNIQUELY.  Didn't really try to do this.  Instead of having two different sizes for the icons, I made them a universal 40px wide and fudged the centering on larger screens. -->
+			<?php endif; ?>
+		</div>
 
 
 		<?php the_field('contact_info',34); ?>
@@ -20,7 +22,7 @@
 				<?php the_field('newsletter_signup',34); ?>
 			</div>
 		</div>
-			</div> <!-- end of "mainftrinfo" -->
+	</div> <!-- end of "mainftrinfo" -->
 
 	<div class="largerftr">
 		<?php the_field('more_info',34); ?>

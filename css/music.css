@@ -2,6 +2,9 @@
   width: 80%;
   margin: 0 auto;
 }
+.music h1, .container h1 {
+  text-align: center;
+}
 
 .musicimg {
 /*  --- TRYING TO ADD A COLOR TINT ON TOP OF IMAGE background-color: linear-gradient (rgba(3,94,123,.5), rgba(3,94,123,.5)); --- CSS TRICKS DIDN'T WORK */
@@ -42,12 +45,12 @@
 .songtypenav {
   margin-top: 5%;
 }
-.songtypes {
-  border: 1px solid rgba(3,94,123,1);
-  padding: 2%;
-  margin-bottom: 1%;
+.songtypenav h4 {
+  text-align: center;
 }
-
+.songlist a:hover {
+  text-decoration: underline;
+}
 
 @media screen and (min-width: 770px) {
   .grid4 {

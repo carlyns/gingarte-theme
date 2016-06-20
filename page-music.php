@@ -21,7 +21,9 @@
 <?php include ('menu.php'); ?>
 
 <div class="music">
-
+	<p>
+		<a href="<?php get_page_template(); ?>/gingarte/resources"><< Back to Resources</a>
+	</p>
 	<h1><?php the_title(); ?></h1>
 
 	<div class="musicimg"></div>
@@ -76,7 +78,7 @@
 
 	<h2>Songs</h2>
 	<p><?php the_field('songs_overview'); ?></p>
-		<a href="<?php echo get_permalink(232); ?>"><div class="button">Database of Types, History, Lyrics</div></a>
+		<a href="<?php echo get_permalink(232); ?>"><div class="button">Database of Lyrics</div></a>
 
 
 </div>

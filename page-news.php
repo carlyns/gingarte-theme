@@ -53,7 +53,7 @@
 
 		<div class="latest-news-item">
 			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<p>(First published <?php the_date(); ?>)</p>
+				<p>(Originally published <?php echo get_the_date(); ?>)</p> <!-- the_date ONLY SHOWS FIRST POST WITH SAME DATES-->
 		</div>
 
 

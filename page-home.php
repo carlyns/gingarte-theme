@@ -43,6 +43,9 @@ RESUS doesn't have php yet, so have to add the code manually.
 	<div class="contents">
 		<?php echo get_bloginfo( 'description', 'display' ); ?>
 	</div>
+</div> <!-- / "brandtext"-->
+</div> <!-- / "brandhead"-->
+
 </header>
 
 <?php include ('menu.php'); ?>

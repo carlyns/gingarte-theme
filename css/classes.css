@@ -1,80 +1,14 @@
-/* UNDERSTAND BOX SIZING!! */
-* {
-  box-sizing: border-box;
-}
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-/* Basically means if there's a border, it is included in the width of the box. */
-
-/* This is to allow for the full-width image in the middle of the page. */
-
 .main {
   width: 80%;
   margin: 0 auto;
 }
-h1 {
+.main h1 {
   text-align: center;
 }
-/* -- PROB SHOULDN'T USE THIS
-.locations h1 {
-  padding-bottom: 2%;
-  border-bottom: 3px double rgba(3,94,123,1);
-  width: 100%;
-  margin: 0 auto;
-}--*/
-
-
-/* ------- CURRENTLY UNUSED
-.locations .grid3 {
-  border-top: 3px double rgba(3,94,123,1);
-  border-bottom: 3px double rgba(3,94,123,1);
-  margin-bottom: 10%;
-  background-color: rgba(3,94,123,0.1);
+.classes a {
+  color: rgba(56,49,50,1); /* MAIN GREY FONT */
+  text-decoration: underline;
 }
-
-.locations .neighborhood {
-	text-align: center;
-	font-weight: 400;
-	margin-right: 5%;
-  font-family: Lato, sans-serif;
-  font-size: 1.5em;
-  padding-bottom: 2%;
-}
----------*/
-
-/* ------- CURRENTLY UNUSED
-
-* ALL THE CONTENT THAT SHOWS/HIDES ON CLICK*
-.locations .info {
-  display: none;
-}
-.locations i {
-  color: rgba(3,94,123,1);
-}
-
-
-
-.days {
-  font-weight: 500;
-}
-.important {
-  font-size: 0.8em;
-  font-style: italic;
-}
-.info {
-}
-.fineprint {
-  font-size: 0.8em;
-}
-#information-hp {
-  display: none;
-}
----------*/
-
 
 .payment {
 	clear: both;
@@ -82,11 +16,8 @@ h1 {
 .payment a {
   color: white;
 }
-.option a {
-  text-decoration: underline;
-}
 .payment .button:hover {
-  background-color: #00008D;
+  background-color: rgba(3,94,123,1);
 }
 .payment h1 {
   padding-bottom: 2%;
@@ -96,14 +27,14 @@ h1 {
 }
 .payment .grid4 {
   margin-bottom: 8%;
-  background-color: rgba(3,94,123,1);
+  background-color: rgba(137,133,133,1); /* MENU GREY */
   color: white;
   /* background-image: url(sneaker_mesh.png);*/
   box-shadow: 1px 5px 5px rgba(1,1,1,1);
 }
 
 .option h5 {
-  font-family: Lato, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 1.5em;
   font-weight: 300;
   margin-top: 0;
@@ -123,6 +54,10 @@ h1 {
   margin: 0 auto;
   width: 50%;
   border-color: white;
+  margin-top: 3%;
+}
+.paypal a {
+  text-decoration: none;
 }
 .payment .grid4 {
   padding-bottom: 5%;
@@ -148,9 +83,11 @@ h1 {
   height: 50px;
 	object-fit: cover;
 }
-
+.special a {
+  text-decoration: none;
+}
 .stacked h3 {
-  font-family: Lato, sans-serif;
+  font-family: Montserrat, sans-serif;
   text-align: left;
   font-size: 2em;
   font-weight: 300;
@@ -234,15 +171,15 @@ h1 {
 
   .payment .button {
     width: 70%;
+    margin: 3% 15% 0 15%;
+  }
+  .paypal {
     position: absolute;
     bottom: 5%;
-    margin: 0 15%;
+    width: 100%;
   }
-  .locations .grid3 {
-    width: 22%;
-    margin-right: 3%;
-    padding: 1%;
-    float: left;
+  .locations {
+    min-height: 400px; /* FIX THE HEIGHT OF THE TABBY PLUGIN SO THE NEXT SECTION DOESN'T JUMP AROUND ON LARGER SCREENS */
   }
 
 
@@ -329,7 +266,7 @@ h1 {
     text-align: left;
   }
   .stacked {
-    width: 70%;
+    width: 67%;
     float: right;
     border-left: 3px double rgba(3,94,123,1);
     margin-bottom: 10%;
@@ -355,8 +292,8 @@ h1 {
 	display: inline;
 	cursor: pointer;
   /* CHANGE TAB TITLE FONT STYLE */
-  font-family: Lato, sans-serif;
-  font-weight: 100;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
 }
 
 .responsive-tabs-wrapper {
@@ -386,7 +323,7 @@ h1 {
 }
 
 .responsive-tabs ul.responsive-tabs__list {
-	font-size: 18px;
+	font-size: 0.8em;   /* CHANGE TAB TITLE FONT SIZE */
 	line-height: 18px;
 	margin: 20px 0 0 12px;
 	padding: 0;
@@ -487,7 +424,7 @@ h1 {
 		border: 1px solid #ccc;
 		border-top: none;
 		color: #777;
-    font-size: 1.5em; /* CHANGE TAB TITLE FONT SIZE on smaller screens*/
+    font-size: 1em; /* CHANGE TAB TITLE FONT SIZE on smaller screens*/
 		font-weight: normal;
 		text-transform: inherit;
 		margin: 0;

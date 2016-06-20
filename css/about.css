@@ -1,4 +1,6 @@
-
+.section-collapsed h1 {
+	font-size: 1.5em;
+}
 h2 {
 	text-align: center;
 }
@@ -20,15 +22,16 @@ body {
 	clear: both;
 }
 .titleicon img {
-	width: 150px;
+	width: 80px;
 	margin: 0 auto;
 	display: block;
 }
 .fliparrow {
 	clear: both;
-	font-size: 3em;
 	margin: 0 auto;
 	display: block;
+	font-size: 1.3em;
+
 }
 
 a .fa-chevron-down {
@@ -58,24 +61,29 @@ a:hover .fa-chevron-down {
 .brazil {
 	display: none;
 	padding: 0 3%;
-	font-size: 1.1em;
+}
+.brazil h3 {
+	font-weight: 400;
 }
 .group {
 	display: none;
 	padding: 0 3% 5% 3%;
 	clear: both;
-	font-size: 1.1em;
 }
 .group a {
 	color: white;
 }
+.group h3 {
+	font-weight: 400;
+}
+
 .chicago {
 	display: none;
 	padding: 0 3%;
-	font-size: 1.1em;
 }
-
-
+.chicago h3 {
+	font-weight: 400;
+}
 
 .description {
 	font-size: 1.3em;
@@ -101,11 +109,11 @@ hr {
 }
 
 
-.marisa img{
+.marisa img {
 	float: none;
 	margin: 0 auto;
 	display: block;
-	border-radius: 25px;
+	width: 100%;
 }
 .teacher {
 	text-align: center;
@@ -139,10 +147,8 @@ hr {
 }
 
 .button {
-	border: 1px solid rgba(3,94,123,1);
   margin: 0 auto;
   width: 50%;
-	padding: 2%;
 }
 
 /*------MEDIA QUERIES START HERE ----------*/
@@ -160,19 +166,26 @@ hr {
 		float: left;
 		padding-top: 5%;
 	}
+	.titleicon img {
+		width: 150px;
+
+	}
 	.section-title {
 		clear: none;
 		float: right;
-		margin-bottom: 10%;
+		margin-top: 10%;
+		width: 250px;
 	}
-	.section-collapsed h2 {
-
+	.section-collapsed h1 {
+		font-size: 2.5em;
 	}
 	.section-collapsed {
-		width: 350px;
+		width: 400px;
 		margin: 0 auto;
 	}
-
+	.fliparrow {
+		font-size: 2em;
+	}
 	.dance{
 		width: 22%;
 		float: left;
@@ -182,7 +195,7 @@ hr {
 	.teacher {
 		width: 30%;
 		float: left;
-		height: 200px;
+		height: 210px;
 	}
 	.teacher .headshot {
 		display: block;

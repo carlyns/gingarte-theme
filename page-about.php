@@ -111,8 +111,6 @@
 		//Display the contents
 		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		<div class="teacher"><a href="<?php the_field('bio_link'); ?>">
-		  <h3><?php the_title(); ?></h3>
-		  <!-- UNCOMMENT FOR DESKTOP? OR JUST DELETE <?php	the_content(); ?> -->
 
 		  <?php	echo '<div class="headshot">';
 		      $image = get_field('teacher_headshot');
@@ -120,8 +118,11 @@
 		        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 		      <?php endif;
 		    echo '</div>';
-		  echo '</a>';
-		echo '</div>';
+		  echo '</a>'; ?>
+
+			<h3><?php the_title(); ?></h3>
+
+		<?php echo '</div>'; 
 		endwhile; ?>
 
 
@@ -187,7 +188,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 
 <?php the_field('support_group'); ?>
-	<div class="button">Donate to our 501c3</div>
 
 	<h3>We have been generously sponsored throughout the years by countless partners.  These are just a few: </h3>
 
@@ -219,7 +219,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<p><?php the_field('other_partners'); ?></p>
 	</div>
 
-	<div class="button">Please contact us on for coporate sponsorships and partnerships.</div>
+	<div class="button"><a href="mailto:info@gingartecapoeira.org">Please contact us for coporate sponsorships and partnerships.</a></div>
 
 
 
