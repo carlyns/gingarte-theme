@@ -39,9 +39,8 @@
 				<div class="payment">
 					<h1>class payment options</h1>
 						<div class="notes">
-						<p>Please note:</p>
-						<p>Kids are 17 years of age or under.
-						</br>Pricing is subject to change, especially during special events/workshops.</p>
+						<p>* Kids are 17 years of age or under.
+						</br>** Pricing is subject to change, especially during special events/workshops.</p>
 						</div>
 
 						<?php
@@ -77,21 +76,21 @@
 
 						<div class="stacked">
 
-							<a href="<?php get_page_template(); ?>/gingarte/kids"><h3>for kids</h3>
+							<a href="<?php get_page_template(); ?>/gingarte/kids"><h3>For Kids</h3>
 								<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forkids.jpg" alt="kids classes"></a>
 							<p>Children ages 3 and above are welcome to our classes.  </p>
 							<p>We partner with some local schools too - <a href="<?php get_page_template(); ?>/gingarte/about">see our About page</a> to find out which ones!	</p>
 
-							<a href="<?php get_page_template(); ?>/gingarte/beginners"><h3>for beginners</h3>
+							<a href="<?php get_page_template(); ?>/gingarte/classes/beginners"><h3>For Beginners</h3>
 								<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forbeginners.jpg" alt="beginners classes"></a>
 							<p>No matter what your background, movements can be tailored by teachers to fit anyone's ability.  </p>
 
-							<a href="<?php get_page_template(); ?>/gingarte/comingsoon"><h3>for stressed students</h3>
+							<a href="<?php get_page_template(); ?>/gingarte/comingsoon"><h3>For Stressed Students</h3>
 								<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forstudents.jpg" alt="great for students"></a>
 							<p>Use capoeira to clear your mind.  Take a break before cramming for that next final!  </p>
 							<p>We offer discounts to UofC students (with an ID).</p>
 
-							<a href="<?php get_page_template(); ?>/gingarte/private"><h3>private lessons</h3>
+							<a href="<?php get_page_template(); ?>/gingarte/private"><h3>Private Lessons</h3>
 								<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forprivate.jpg" alt="private lessons"></a>
 							<p>Our teachers can personalize training for you.  We can work with your schedule. </p>
 						</div>
@@ -121,19 +120,19 @@
 
 		<div class="dancelist">
 			<div class="classthumbnail">
-				<div class="classtitle">Samba</div>
+				<div class="classtitle"><a href="#">Samba</a></div>
 			</div>
 
 			<div class="classthumbnail">
-				<div class="classtitle">Orixa Dances/Toques</div>
+				<div class="classtitle"><a href="#">Orixa Dances/Toques</a></div>
 			</div>
 
 			<div class="classthumbnail">
-				<div class="classtitle">Percussion</div>
+				<div class="classtitle"><a href="#">Percussion</a></div>
 			</div>
 
 			<div class="classthumbnail">
-				<div class="classtitle">Portuguese language</div>
+				<div class="classtitle"><a href="#">Portuguese language</a></div>
 			</div>
 		</div> <!-- // end of "dancelist" -->
 

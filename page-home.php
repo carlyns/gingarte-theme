@@ -52,9 +52,13 @@ RESUS doesn't have php yet, so have to add the code manually.
 
 	<div class="frontimg">
 	<!--HEADER IMAGE GOES HERE, BUT IT'S ACTUALLY A BACKGROUND -->
+
+  <!-- THE CAPTION WAS JUST A SELFISH FEATURE
 		<div class="caption">
 			<p><?php the_field('home_image_caption'); ?></p>
 		</div>
+  -->
+
 	</div>
 
 

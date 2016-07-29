@@ -30,10 +30,9 @@
 </div>
 
 <div class="brazil">
-	<div class="description"><p><?php the_field('brazil_description'); ?></p>	</div>
-	<hr>
+	<!-- <div class="description"><p><?php the_field('brazil_description'); ?></p>	</div> -->
 
-	<?php the_field('capoeira_description'); ?>
+<?php the_field('capoeira_description'); ?>
 
 	<div class="dances" id="dances">
 		<?php the_field('related'); ?>
@@ -47,13 +46,12 @@
 		//Display the contents
 		while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		<div class="dance">
-		  <h3><?php the_title(); ?></h3>
 
 		  <?php
 		      $image = get_field('dance_image');
 		      if( !empty($image) ): ?>
 		      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
+			<h3><?php the_title(); ?></h3>
 		  <?php	the_content(); ?>
 
 		<?php endif;
@@ -68,70 +66,67 @@
 
 </div><!-- //end of "brazil"-->
 
+<hr>
 
-
-
-<div class="bluebkgrd">
-
-	<div class="section-collapsed">
-		<div class="toggle-group">
-		<div class="titleicon"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/abt-berimbau-blue-white.png"></div>
-		<h1 class="section-title">Our Group</h1>
-		<div><a class="fliparrow" href="javascript:;"><i class="fa fa-chevron-down"></i></a></div>
-		</div>
+<div class="section-collapsed">
+	<div class="toggle-group">
+	<div class="titleicon"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/abt-berimbau-blue-white.png"></div>
+	<h1 class="section-title">Our Group</h1>
+	<div><a class="fliparrow" href="javascript:;"><i class="fa fa-chevron-down"></i></a></div>
 	</div>
+</div>
 
-	<?php // THIS IS THE ORIGIAL LOOP! JUST HAD TO ADD THIS SNIPPET AND THE ORIG QUERY AND DATA APPEARS IN THIS FOLLOWING SECTION!
-	if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<?php endwhile; endif; ?>
-
-
-	<div class="group">
-		<div class="description">
-			<p><?php the_field('group_description'); ?></p>
-		</div>
-		<hr>
-			<?php the_field('group_history'); ?>
-			<h2>mestre marisa</h2>
-				<div class="marisa">
-					<?php
-						$image = get_field('marisa_photo');
-						if( !empty($image) ): ?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-						<?php endif; ?>
-					</div>
-				<?php the_field('marisa_bio'); ?>
-
-		<h2>instructors</h2>
-
-		<?php //HOW TO DISPLAY CUSTOM POSTS from https://wp-types.com/documentation/user-guides/displaying-wordpress-custom-content/
-		$args = array( 'post_type' => 'teacher', 'posts_per_page' => 20 ); //Define your custom post type name in the arguments
-		$loop = new WP_Query( $args ); //Define the loop based on arguments
-
-		//Display the contents
-		while ( $loop->have_posts() ) : $loop->the_post(); ?>
-		<div class="teacher"><a href="<?php the_field('bio_link'); ?>">
-
-		  <?php	echo '<div class="headshot">';
-		      $image = get_field('teacher_headshot');
-		      if( !empty($image) ): ?>
-		        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-		      <?php endif;
-		    echo '</div>';
-		  echo '</a>'; ?>
-
-			<h3><?php the_title(); ?></h3>
-
-		<?php echo '</div>'; 
-		endwhile; ?>
+<?php // THIS IS THE ORIGIAL LOOP! JUST HAD TO ADD THIS SNIPPET AND THE ORIG QUERY AND DATA APPEARS IN THIS FOLLOWING SECTION!
+if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php endwhile; endif; ?>
 
 
-	<div class="students">
-		<?php the_field('about_students'); ?>
-	</div>
+<div class="group">
+	<!--  <div class="description">
+		<p><?php the_field('group_description'); ?></p>
+	</div> -->
+		<?php the_field('group_history'); ?>
+		<h2>mestre marisa</h2>
+			<div class="marisa">
+				<?php
+					$image = get_field('marisa_photo');
+					if( !empty($image) ): ?>
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					<?php endif; ?>
+				</div>
+			<?php the_field('marisa_bio'); ?>
 
-	</div><!-- //end of "group"-->
-</div> <!-- / #bluebkgrd-->
+	<h2>instructors</h2>
+
+	<?php //HOW TO DISPLAY CUSTOM POSTS from https://wp-types.com/documentation/user-guides/displaying-wordpress-custom-content/
+	$args = array( 'post_type' => 'teacher', 'posts_per_page' => 20 ); //Define your custom post type name in the arguments
+	$loop = new WP_Query( $args ); //Define the loop based on arguments
+
+	//Display the contents
+	while ( $loop->have_posts() ) : $loop->the_post(); ?>
+	<div class="teacher"><a href="<?php the_field('bio_link'); ?>">
+
+	  <?php	echo '<div class="headshot">';
+	      $image = get_field('teacher_headshot');
+	      if( !empty($image) ): ?>
+	        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+	      <?php endif;
+	    echo '</div>';
+	  echo '</a>'; ?>
+
+		<a href="<?php the_field('bio_link'); ?>"><h3><?php the_title(); ?></h3></a>
+
+	<?php echo '</div>';
+	endwhile; ?>
+
+
+<div class="students">
+	<?php the_field('about_students'); ?>
+</div>
+
+</div><!-- //end of "group"-->
+
+<hr>
 
 <div class="section-collapsed">
 	<div class="toggle-chicago">
@@ -146,10 +141,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php endwhile; endif; ?>
 
 <div class="chicago">
-	<div class="description">
+	<!-- <div class="description">
 		<p><?php the_field('chicago_description'); ?></p>
-	</div>
-<hr>
+	</div> -->
 <?php the_field('after_school'); ?>
 
 <div class="partnerlogos">

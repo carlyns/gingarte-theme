@@ -1,5 +1,5 @@
 a {
-  color: rgba(3,94,123,1);
+  color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
 }
 a:hover {
 }
@@ -39,7 +39,7 @@ a:hover {
 }
 .initial {
   overflow: auto;
-  border-bottom: 3px double rgba(3,94,123,1);
+  border-bottom: 3px double rgba(137,133,133,1); /* MENU GREY */
 	padding-bottom: 3%;
 }
 .eventimg img {
@@ -101,6 +101,9 @@ footer {
   .grid4 {
     width: 30%;
     float: left;
+  }
+  .container h2 {
+    text-align: left;
   }
   .description {
     width: 50%;

@@ -3,6 +3,7 @@
 }
 h2 {
 	text-align: center;
+	font-size: 1.8em;
 }
 h3 {
 }
@@ -12,7 +13,7 @@ body {
 	padding: 3%;
 	overflow: auto;
 	clear: both;
-	color: rgba(3,94,123,1);
+	color: rgba(56,49,50,1); /* MAIN GREY FONT */
 	text-align: center;
 }
 
@@ -36,26 +37,10 @@ body {
 
 a .fa-chevron-down {
 	clear: both;
-	color: rgba(3,94,123,1);
+	color: rgba(224,27,60,1);
 }
 a:hover .fa-chevron-down {
 	text-decoration: none;
-}
-
-
-.bluebkgrd {
-	background-color: rgba(3,94,123,1);
-	color: rgba(237,234,255,1);
-}
-.bluebkgrd .section-collapsed {
-	background-color: rgba(3,94,123,1);
-	color: rgba(237,234,255,1);
-}
-.bluebkgrd .section-collapsed a {
-	color: rgba(237,234,255,1);
-}
-.bluebkgrd a .fa-chevron-down {
-	color: rgba(237,234,255,1);
 }
 
 .brazil {
@@ -71,7 +56,7 @@ a:hover .fa-chevron-down {
 	clear: both;
 }
 .group a {
-	color: white;
+	color: rgba(56,49,50,1); /* MAIN GREY FONT */
 }
 .group h3 {
 	font-weight: 400;
@@ -90,9 +75,8 @@ a:hover .fa-chevron-down {
 	font-style: italic;
 	clear: both;
 }
-hr {
-	clear: both;
-}
+
+
 
 
 .dances {
@@ -106,6 +90,7 @@ hr {
 }
 .dance p {
 	padding-top: 3%;
+	font-size: 0.9em;
 }
 
 
@@ -115,8 +100,9 @@ hr {
 	display: block;
 	width: 100%;
 }
-.teacher {
+.teacher h3 {
 	text-align: center;
+	font-weight: 300;
 }
 
 .teacher .headshot{
@@ -156,12 +142,18 @@ hr {
 @media screen and (max-width: 410px) {
 	.chicago .plogo {
 		width: 40%;
-}
+	}
+	h2 {
+		font-size: 1.3em;
+	}
+
 }
 
 @media screen and (min-width: 550px) {
 	.description {
 	}
+
+
 	.titleicon {
 		float: left;
 		padding-top: 5%;

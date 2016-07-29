@@ -17,7 +17,7 @@
   color: white;
 }
 .payment .button:hover {
-  background-color: rgba(3,94,123,1);
+  background-color: rgba(224,27,60,1); /* LOGO RED */
 }
 .payment h1 {
   padding-bottom: 2%;
@@ -30,12 +30,12 @@
   background-color: rgba(137,133,133,1); /* MENU GREY */
   color: white;
   /* background-image: url(sneaker_mesh.png);*/
-  box-shadow: 1px 5px 5px rgba(1,1,1,1);
+  box-shadow: 1px 5px 5px rgba(1,1,1,0.7);
 }
 
 .option h5 {
   font-family: Montserrat, sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 0;
@@ -75,7 +75,7 @@
 }
 .special h1 {
   padding-bottom: 2%;
-  border-bottom: 3px double rgba(3,94,123,1);
+  border-bottom: 3px double rgba(137,133,133,1);
   margin: 0 10%;
 }
 .special img {
@@ -86,10 +86,13 @@
 .special a {
   text-decoration: none;
 }
+.everyone .smallnewstext {
+  font-size: 0.6em;
+}
 .stacked h3 {
   font-family: Montserrat, sans-serif;
   text-align: left;
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 300;
   margin: 8% 10% 2% 10%;
 }
@@ -123,14 +126,18 @@
 }
 
 
-.otherclass{
-  background-color: rgba(3,94,123,.1);
-  color: rgba(3,94,123,1);
+.otherclass {
+  background-color: rgba(242,242,242,1); /* LIGHT GREY */
+  color: rgba(56,49,50,1); /* MAIN GREY FONT */
   clear: both;
   width: 85%;
   margin: 4% auto;
   padding: 2% 3%;
   overflow: auto;
+}
+.otherclass a {
+  color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
+  text-decoration: none;
 }
 
 .description {
@@ -268,7 +275,7 @@
   .stacked {
     width: 67%;
     float: right;
-    border-left: 3px double rgba(3,94,123,1);
+    border-left: 3px double rgba(137,133,133,1); /* MENU GREY */
     margin-bottom: 10%;
   }
 
