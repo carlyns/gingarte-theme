@@ -292,9 +292,11 @@ nav {
   background-color: rgba(96,88,86,.2); /* MADEUP HOVER GREY*/
 }
 .capostar {
-  padding-top: 5%;
   display: block;
   text-align: center;
+}
+.capostar svg {
+  width: 80px;
 }
 
 .last {

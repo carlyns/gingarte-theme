@@ -1,7 +1,7 @@
 /*------- not much.  just fixed container widths on larger screens for centering ----------*/
 
 .container h1 {
-	border-bottom: 3px double rgba(3,94,123,1);
+	border-bottom: 3px double rgba(137,133,133,1); /* MENU GREY */
 	padding-bottom: 3%;
 	padding-top: 5%;
 	text-align: center;

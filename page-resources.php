@@ -24,19 +24,19 @@
 	<h1>main resources</h1>
 
 		<div class="grid4">
-			<a href="<?php get_page_template(); ?>/gingarte/resources/cordao-system"><img src="https://sites.google.com/site/capoeirarva/home/about-us/About_cordao.jpg" alt="cords">
+			<a href="<?php get_page_template(); ?>/gingarte/resources/cordao-system"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/resource-cords-anneliese.png" alt="cords">
 				<h2>cordão system</h2></a>
 		 </div>
 
 		<div class="grid4">
-			<a href="<?php get_page_template(); ?>/gingarte/resources/music"><img src="http://www.capoeira-auvergne.com/en/wp-content/uploads/sites/2/2013/11/berimbaus04.jpg" alt="berimbau">
+			<a href="<?php get_page_template(); ?>/gingarte/resources/music"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/resource-berimbench-oscarD.jpg" alt="capoeira music">
 				<h2>capoeira music: instruments & songs</h2></a>
 			<!-- as a capoeira group, we regularly practice samba, orixa dance and music.  this is included in this section. -->
 		 </div>
 
 		<div class="grid4">
-			<a href="<?php get_page_template(); ?>/gingarte/comingsoon"><img src="http://www.carnaval.com/capoeira/maculele_intro.jpg" alt="maculele sticks">
-				<h2>related dances and music</h2></a>
+			<a href="<?php get_page_template(); ?>/gingarte/comingsoon"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/resource-maculele5.jpg" alt="maculele">
+			<h2>related dances and music</h2></a>
 			<!-- as a capoeira group, we regularly orixa and samba have been ingrained in capoeira from its origins.  this section also covers maculele, danca, frevo, coco, etc.  links to same page as from "About" -->
 		 </div>
 	</div> <!-- // end of "trainbetter" -->

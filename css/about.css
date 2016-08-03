@@ -16,6 +16,9 @@ body {
 	color: rgba(56,49,50,1); /* MAIN GREY FONT */
 	text-align: center;
 }
+.section-collapsed svg {
+	width: 150px;
+}
 
 .section-title {
 	width: 200px;
@@ -47,6 +50,7 @@ a:hover .fa-chevron-down {
 	display: none;
 	padding: 0 3%;
 }
+
 .brazil h3 {
 	font-weight: 400;
 }
