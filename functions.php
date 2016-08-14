@@ -1,4 +1,18 @@
 <?php
+/* ENQUEING CSS AND JS FILES.
+It helps load faster.  Better practice.  See Alessandro's videos.
+This functions.php file triggers the css and js files to load up at the start in the header and in the footer.
+For functions that need to be executed before the page loads rest of content.
+Should this be done for google fonts with an external url?  */
+/* TRY TO KEEP FUNCTION NAMES UNIQUE.  in case other developers happen to use the same names.  */
+/* ------------ NOT SURE WHY ENQUEING IS NOT WORKING.  AND LOTS OF EXTRA SCRIPT IN THE HEADER IN WEB INSPECTOR I'M NOT SURE OF.  
+function gingarte_script_enqueue () {
+  // first of five parameters are reqd.  first can be made-up name.  second is location to search which needs to be absolute.  third holds dependencies, which we don't have so there's an empty array.  fourth is version number you can make up.  fifth is for media to specify what kind/all devices&scenarios.  fifth for printing js in the header or footer by default, it's in the header.
+  wp_enqueue_style('gingstyle', get_template_directory_uri() . 'css/gingarte.css', array(), '1.0', 'all');
+  wp_enqueue_style('gingjs', get_template_directory_uri() . 'js/gingarte.js', array(), '1.0', true);
+}
+add_action(wp_enqueue_scripts, 'gingarte_script_enqueue'); // hooks tells WP when to trigger the function you just made, i.e. when WP is when all scripts are being loaded, second: which function.  also, remember you need to add a hook to locate the header file.
+-------------*/
 
 /* add post formats
 add_theme_support( 'post-formats', array( 'aside', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat', 'gallery' ) );

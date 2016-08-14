@@ -3,6 +3,9 @@ a {
 }
 a:hover {
 }
+.breadcrumbs {
+  margin-top: 3%;
+}
 .container h1 {
   text-align: center;
 }

@@ -70,7 +70,13 @@
 		//Display the contents
 		if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-		<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+		<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			<span class="songtags"><?php the_tags( '<div class="songtagbox">', '</div><div class="songtagbox">', '</div>' ); ?></span>
+		</h4>
+
+
+
+
 
 		<!-- TAG SONG TYPES??-->
 

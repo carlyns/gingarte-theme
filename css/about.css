@@ -35,12 +35,11 @@ body {
 	margin: 0 auto;
 	display: block;
 	font-size: 1.3em;
-
 }
 
 a .fa-chevron-down {
 	clear: both;
-	color: rgba(224,27,60,1);
+	color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
 }
 a:hover .fa-chevron-down {
 	text-decoration: none;

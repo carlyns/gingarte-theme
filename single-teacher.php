@@ -19,14 +19,19 @@
 
 <?php include ('menu.php'); ?>
 
+
 <div class="container">
+	<div class="breadcrumbs">
+		<a href="<?php get_page_template(); ?>/gingarte/about"><< Back to "About" page (needs an anchor)</a>
+	</div>
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<h1><?php the_title(); ?></h1>
+
+	<h1><?php the_title(); ?></h1>
 
 
-	  <p><?php the_content(); ?></p>
-	<?php endwhile; endif; // THIS PLACEMENT MATTERS: in between the ul tag! ?>
+  <p><?php the_content(); ?></p>
+	<?php endwhile; endif; ?>
 
 
 </div>

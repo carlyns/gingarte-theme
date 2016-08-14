@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}  /* added box sizing to this styelsheet because of tag link hover */
+
+
 .music {
   width: 80%;
   margin: 0 auto;
@@ -50,6 +58,26 @@
 }
 .songlist a:hover {
   text-decoration: underline;
+}
+.songtags {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+.songtagbox {
+  border: 1px solid rgba(137,133,133,1); /* MENU GREY */
+  padding: 0.5% 0;
+  display: inline;
+  margin: 0.5%;
+}
+.songtagbox a:hover {
+  background-color: rgba(224,27,60,1);
+  text-decoration: none;
+  padding: 0.5% 0.2%;
+  color: white;
+
+
+/* added box sizing to this styelsheet at top because of discrepency on tag link hover */
+
 }
 
 @media screen and (min-width: 770px) {

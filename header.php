@@ -12,7 +12,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 
-	<meta name="keywords" content="capoeira, chicago, gingarte, brazil, martial arts, community, dance, samba, nonprofit, culture, portuguese">
 	<meta name="description" content="Brazilian martial arts classes and performances in Chicago.  Cultivating a community through capoeira for over 20 years.">
 
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -22,4 +21,4 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/gingarte.css">
 
 
-	<?php wp_head(); ?> <!-- THIS TAG POINTS WP TO THIS FILE TO PULL THE HEADER WHEN IT'S CALLED IN OTHER FILES.  THAT'S WHY IT NEEDS TO BE IN THIS FILE.  (SO CAN IT BE CALLED SOMETHING OTHER THAN HEADER.PHP?  ) -->
+	<?php wp_head(); ?> <!-- THIS TAG POINTS WP TO THIS FILE TO PULL THE HEADER WHEN IT'S CALLED IN OTHER FILES.  THAT'S WHY IT NEEDS TO BE IN THIS FILE. ) -->
