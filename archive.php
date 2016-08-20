@@ -9,19 +9,22 @@
 <body>
 <header>
 	<?php include ('brandhead.php'); ?>
-	<div class="contents">
-		<p>All the News</p>
-	</div>
-
 </header>
 
 <?php include ('menu.php'); ?>
 
 <div class="container">
+	<p>
+		You were on the search for posts labeled with the tag/category <span>"<?php single_tag_title(); ?>"</span>
+	</p>
+
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<h2><?php the_title(); ?></h2>
-	  <p><?php the_content(); ?></p>
-	<?php endwhile; endif;  ?>
+		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	<?php endwhile; else : ?>
+		<p><?php _e( "Unfortunately, no posts matched your criteria.  But don't give up just yet!" ); ?></p>
+
+	<?php endif; ?>
+
 
 </div>
 

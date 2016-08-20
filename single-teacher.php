@@ -9,11 +9,6 @@
 <body>
 <header>
 	<?php include ('brandhead.php'); ?>
-	<div class="contents">
-		<!-- <?php the_meta(); ?> Use this to return everything. -->
-		<?php $postid = get_the_ID(); ?>		<!-- This defines the variable $postid to be used in the following function. -->
-		<?php echo get_post_meta($postid, 'Tagline', true); ?>
-	</div>
 
 </header>
 
@@ -23,6 +18,7 @@
 <div class="container">
 	<div class="breadcrumbs">
 		<a href="<?php get_page_template(); ?>/gingarte/about"><< Back to "About" page (needs an anchor)</a>
+		<!-- THIS LINK NEEDS TO INCLUDE SOME JS THAT ON CLICK, IT TOGGLES THE .GROUP PROPERTY "DISPLAY" TO BLOCK (FROM NONE).  THEN I CAN PROBABLY ADD AN ID ANCHOR.  -->
 	</div>
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

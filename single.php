@@ -9,13 +9,6 @@
 <body>
 <header>
 	<?php include ('brandhead.php'); ?>
-	<div class="contents">
-		<!-- <?php the_meta(); ?> Use this to return everything. -->
-		<?php $postid = get_the_ID(); ?>		<!-- This defines the variable $postid to be used in the following function. -->
-		<?php echo get_post_meta($postid, 'Tagline', true); ?>
-	</div>
-</div> <!-- / "brandtext"-->
-</div> <!-- / "brandhead"-->
 
 </header>
 
@@ -24,10 +17,21 @@
 <div class="container">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 		<h1><?php the_title(); ?></h1>
 
 
-	  <p><?php the_content(); ?></p>
+	  <p><?php the_content(); ?>
+
+		<!--	<?php wp_list_categories (); ?>
+			But these are all categories that exist.  Not the ones of this specific blog post.  -->
+
+			<?php edit_post_link ();
+			// This is an 'edit' button if a user is logged in using a standard WP function!?>
+
+</p>
+
+
 	<?php endwhile; endif; // THIS PLACEMENT MATTERS: in between the ul tag! ?>
 
 

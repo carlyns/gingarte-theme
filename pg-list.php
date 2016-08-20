@@ -14,11 +14,6 @@
 
 	<?php include ('brandhead.php'); ?>
 
-	<div class="contents">
-  	<!-- This defines the variable $postid to be used in the following function. --><?php $postid = get_the_ID(); ?>
-		<?php echo get_post_meta($postid, 'Tagline', true); ?>
-	</div>
-
 </header>
 
 <?php include ('menu.php'); ?>

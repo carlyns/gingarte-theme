@@ -6,7 +6,12 @@ a:hover {
 .breadcrumbs {
   margin-top: 3%;
 }
+.container {
+  line-height: 1.4em;
+
+}
 .container h1 {
+  line-height: 1.4em;
   text-align: center;
 }
 .container h2 {
@@ -44,9 +49,13 @@ a:hover {
   overflow: auto;
   border-bottom: 3px double rgba(137,133,133,1); /* MENU GREY */
 	padding-bottom: 3%;
+  line-height: 1.5em;
 }
 .eventimg img {
   width: 100%;
+}
+.eventimgcap {
+  font-size: 0.8em;
 }
 
 .button {
@@ -61,7 +70,7 @@ a:hover {
   color: white;
 }
 .button:hover {
-  background-color: rgba(3,94,123,1);
+  background-color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
 }
 
 
@@ -77,7 +86,7 @@ a:hover {
   color: white;
 }
 .buttonbook:hover {
-  background-color: rgba(3,94,123,1);
+  background-color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
 }
 .buttonbook h2 {
 }
@@ -99,7 +108,7 @@ footer {
 @media screen and (min-width: 770px) {
 
   .initial p {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   .grid4 {
     width: 30%;

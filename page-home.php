@@ -40,12 +40,6 @@ RESUS doesn't have php yet, so have to add the code manually.
 
 	<?php include ('brandhead.php'); ?>
 
-	<div class="contents">
-		<?php echo get_bloginfo( 'description', 'display' ); ?>
-	</div>
-</div> <!-- / "brandtext"-->
-</div> <!-- / "brandhead"-->
-
 </header>
 
 <?php include ('menu.php'); ?>
@@ -86,19 +80,27 @@ RESUS doesn't have php yet, so have to add the code manually.
     <ul>
       <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
     </ul>
-    <?php endwhile; endif; // MAKE SURE THIS IS OUTSIDE THE ENTRY DIV ?>
+    <?php endwhile; endif; // MAKE SURE THIS IS OUTSIDE THE ENTRY DIV
+
+    wp_reset_postdata();
+
+    ?>
     <ul><a href="<?php get_page_template(); ?>/gingarte/news">(See All the Latest News)</a></ul>
   </div>
 
 	<div class="items">
 	   <h2><span class="smallnewstext">news for </span></br>Students</h3>
 
-      <?php $mainposts_query = "showposts=6&cat=2"; $mainposts_query = new WP_Query($mainposts_query); ?>
+      <?php $mainposts_query = "showposts=6&cat=2"; $mainposts_query = new WP_Query($mainposts_query); // gives you a new instance of the main query posts loop! ?>
       <?php if ($mainposts_query->have_posts()) : while ($mainposts_query->have_posts()) : $mainposts_query->the_post(); ?>
         <ul>
           <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
         </ul>
-      <?php endwhile; endif; // MAKE SURE THIS IS OUTSIDE THE ENTRY DIV ?>
+      <?php endwhile; endif; // MAKE SURE THIS IS OUTSIDE THE ENTRY DIV
+
+      wp_reset_postdata();
+
+      ?>
       <ul><a href="<?php get_page_template(); ?>/gingarte/news">(See All the Latest News)</a></ul>
 	</div>
 	</div><!-- //end of "news"-->

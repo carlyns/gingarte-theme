@@ -17,6 +17,12 @@ var main = function() {
     $(".chicago").toggle();
   });
 
+  /* TOGGLE 'GROUP' SECTION ON CLICK OF THE TEACHER BREADCRUMB LINKS
+  $(".breadcrumbs").click(function() {
+    $(".group").show();
+  }); ----TRIED THIS DOESNT WORK ---*/
+
+
 
   // TOGGLING THE CLASS LOCATIONS
   $("#wt").click(function() {

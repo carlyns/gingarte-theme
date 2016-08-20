@@ -87,9 +87,7 @@ a:hover .fa-chevron-down {
 	overflow: auto; /* THIS PREVENTS THE BLUE BACKGROUND FROM THE LOWER SECTION TO BLEED INTO THIS SECTION. */
 }
 .dance img {
-	height: 90px;
-	max-width: 100px;
-	border-radius: 25px;
+	width: 100%;
 }
 .dance p {
 	padding-top: 3%;
@@ -149,6 +147,7 @@ a:hover .fa-chevron-down {
 	h2 {
 		font-size: 1.3em;
 	}
+
 
 }
 
@@ -211,5 +210,16 @@ a:hover .fa-chevron-down {
 @media screen and (min-width: 770px) {
 	.chicago .plogo {
 		width: 12%;
+	}
+	.chicago .section-top-horzrule h2 {
+		border-top: 1px solid red;
+		width: 80%;
+	}
+}
+/* FOR HUGE SCREENS! */
+@media screen and (min-width: 1200px) {
+	.brazil, .group, .chicago {
+		width: 1000px;
+		margin: 0 auto;
 	}
 }

@@ -15,11 +15,6 @@ Description: Gives you an initial section for the main info and a side image for
 <body>
 <header>
 	<?php include ('brandhead.php'); ?>
-	<div class="contents">
-		<!-- <?php the_meta(); ?> Use this to return everything. -->
-		<?php $postid = get_the_ID(); ?>		<!-- This defines the variable $postid to be used in the following function. -->
-		<?php echo get_post_meta($postid, 'Tagline', true); ?>
-	</div>
 
 </header>
 
@@ -38,6 +33,8 @@ Description: Gives you an initial section for the main info and a side image for
 				$image = get_field('event_image');
 				if( !empty($image) ): ?>
 					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					<div class="eventimgcap"><?php echo $caption = $image['caption']; ?></div>
+
 				<?php endif; ?>
 		</div>
 	</div>

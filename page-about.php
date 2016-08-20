@@ -11,11 +11,6 @@
 
 	<?php include ('brandhead.php'); ?>
 
-	<div class="contents">
-		<!-- <?php the_meta(); ?> Use this to return everything. -->
-		<?php $postid = get_the_ID(); ?>		<!-- This defines the variable $postid to be used in the following function. -->
-		<?php echo get_post_meta($postid, 'Tagline', true); ?>
-	</div>
 </header>
 
 <?php include ('menu.php'); ?>
@@ -376,7 +371,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<!-- <div class="description">
 		<p><?php the_field('chicago_description'); ?></p>
 	</div> -->
-<?php the_field('after_school'); ?>
+<div class="schoolprograms"><?php the_field('after_school'); ?></div>
 
 <div class="partnerlogos">
 	<?php //HOW TO DISPLAY CUSTOM POSTS from https://wp-types.com/documentation/user-guides/displaying-wordpress-custom-content/
@@ -409,13 +404,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 
 
+<div class="section-top-horzrule"><?php the_field('board_directors'); ?></div>
 
-<?php the_field('board_directors'); ?>
-
-
-<?php the_field('support_group'); ?>
-
-	<h3>We have been generously sponsored throughout the years by countless partners.  These are just a few: </h3>
+<div class="section-top-horzrule"><?php the_field('support_group'); ?></div>
 
 	<div class="partnerlogos">
 		<?php //HOW TO DISPLAY CUSTOM POSTS from https://wp-types.com/documentation/user-guides/displaying-wordpress-custom-content/

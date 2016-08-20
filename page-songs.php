@@ -11,11 +11,6 @@
 
 	<?php include ('brandhead.php'); ?>
 
-	<div class="contents">
-  	<!-- This defines the variable $postid to be used in the following function. --><?php $postid = get_the_ID(); ?>
-		<?php echo get_post_meta($postid, 'Tagline', true); ?>
-	</div>
-
 </header>
 
 <?php include ('menu.php'); ?>
@@ -26,7 +21,7 @@
 	<?php endwhile; endif; ?>
 
 	<div class="songtypenav">
-		<p>
+		<p class="breadcrumbs">
 			<a href="<?php get_page_template(); ?>/gingarte/resources/music"><< Back to Music</a>
 		</p>
 
@@ -54,7 +49,7 @@
 
 		$args = array(
 			'post_type' => 'lyrics',
-	    'posts_per_page' => -1, /* SHOW ALL POSTS*/
+	    'posts_per_page' => 10, /* -1 will SHOW ALL POSTS*/
 			'orderby' => 'title',
 			'order' => 'ASC',	// added 'orderby' and 'order' to alphabetize.
 			'paged' => $currentPage, // returns posts on specific page, so need to pass current page as a dynamic value.  this is why $currentPage is defined above.
@@ -74,20 +69,12 @@
 			<span class="songtags"><?php the_tags( '<div class="songtagbox">', '</div><div class="songtagbox">', '</div>' ); ?></span>
 		</h4>
 
-
-
-
-
-		<!-- TAG SONG TYPES??-->
-
 	<?php endwhile; ?>
 
 
-	<!-- UNCOMMENT TO SHOW PAGINATION NAVIGATION!
 	<div class="pagination">
 		<div class="nav-previous"><?php previous_posts_link( '<< Previous Page' ); ?></div>
 		<div class="nav-next"><?php next_posts_link( 'Next Page >>' ); ?></div>
-	-->
 
 	<?php else : ?>
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>

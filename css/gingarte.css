@@ -54,7 +54,6 @@ h2 {
 }
 .logo {
   margin: 0 auto;
-  color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
 }
 .mestremarisa {
   font-size: 0.8em;
@@ -277,16 +276,20 @@ nav {
   height: 200px;
   clear: both;
   background-color: rgba(96,88,86,.3);
-  margin: 5% auto;
+  margin: 5% auto 15% auto;
+  font-size: 0.8em;
 }
 
 /* -- FRONT PAGE 3 FEATURES STYLING -- */
 .features {
   overflow: auto;
+  clear: both;
 }
 .features h2 {
   margin-top: 0;
   text-align: center;
+}
+.first {
 }
 .first:hover, .middle:hover, .last:hover {
   background-color: rgba(96,88,86,.2); /* MADEUP HOVER GREY*/
@@ -339,8 +342,8 @@ nav {
   margin: 5% 0;
 
 }
-.pagination {
-
+.pagination a {
+  color: rgba(224,27,60,1); /* LOGO RED */
 }
 .news-feature-item h3 {
   margin-bottom: 0;
@@ -418,21 +421,19 @@ footer {
 }
 
 @media screen and (min-width: 770px) {
-  .brandhead {
-  }
   .brandtext {
     float: left;
-    padding: 3%;
-    width: 70%;
+    padding: 3% 3% 3% 50px;
+    width: 500px;
   }
   .brandhead h1 {
     text-align: left;
     font-size: 2em;
   }
   .logo {
-    padding: 3%;
+    padding: 3% 0 3% 3%;
     float: left;
-    width: 10%;
+    width: 100px;
   }
   .contents {
     float: left;
@@ -514,6 +515,10 @@ footer {
   .news {
     overflow: auto;
   }
+  .fvideo {
+    margin-bottom: 8%;
+
+  }
   .capostar {
     padding-top: 0;
   }
@@ -578,5 +583,29 @@ footer {
     text-align: center;
     padding-top: 5%;
     font-size: normal;
+  }
+}
+
+/* FOR HUGE SCREENS! */
+@media screen and (min-width: 1200px) {
+  .brandtext {
+    float: left;
+    padding: 5% 3% 3% 50px;
+    width: 700px;
+    font-size: 1.6em;
+}
+  .brandhead h1 {
+    text-align: left;
+  }
+  .logo {
+    padding: 3% 0 3% 3%;
+    float: left;
+    width: 250px;
+  }
+  .logo img {
+    width: 200px;
+  }
+  .logo {
+    margin: 0 auto;
   }
 }
