@@ -1,3 +1,5 @@
+<!-- THIS IS SUCH A BEAUTIFUL PAGE I NEEDED TO KEEP IT.  THIS WAS BEFORE I HAD CUSTOM TAXONOMIES.  I HAD ALL THE NEWS ITEMS ON THE FRONT PAGE CATEGORIZED AS STUDENTS OR FANS.  SO THOSE 2 CATEGORIES HAD TO SHOW UP ON A PAGINATED ARCHIVE PAGE AS "ALL LATEST NEWS"-->
+
 <?php get_header(); ?>
 
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/post.css">
@@ -19,7 +21,7 @@
 
 <div class="container">
 
-	<?php // NEWS IS NOT A CATEGORY!  IT'S JUST A PAGE RIGHT NOW.  NEWZ IS THE ACTUAL CUSTOM TAXONOMY.
+	<?php // default info for News Page
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<h1><?php the_title(); ?></h1>
 	<?php endwhile; endif; ?>
@@ -30,20 +32,11 @@
 
 	$currentPage = (get_query_var('paged')) ? get_query_var('paged') : 1; //steamlined if statement asking if 'paged' is already an integer, then use that current page number.  otherwise use the number 1.
 
-	$args = array( // SETUP ARGS HERE TO PASS THRU NEW QUERY
-    'posts_per_page' => 6,
+	$args = array(
+    'posts_per_page' => 6, // not having this breaks it, even though it doesn't override
+		'cat' => '2,3', // finally this string works
 		'paged' => $currentPage, // returns posts on specific page, so need to pass current page as a dynamic value.  this is why $currentPage is defined above.
-		// "Querying by taxonomy" section was helpful for clear syntax: https://codex.wordpress.org/Taxonomies
-		'tax_query' => array( // tax_query is a WP hook
-			array( // needs an array within an array apparently?
-				'taxonomy' => 'newz', // taxonomy = name
-				'field' => 'id', // specifying to use the ID so this is standard
-				// could also use 'slug' and use labels for the terms array
-				'terms' => array( // yet another array for the labels
-					'20', '21' )
-			)
-		)
-  );
+    );
 	?>
 
 	<?php
@@ -51,9 +44,7 @@
 	query_posts($args); // still need this for pagination to show up ... but not suppost to use queryposts because it is the main loop!
 	?>
 
-	<?php if ($newsPosts->have_posts()) : while ($newsPosts->have_posts()) : $newsPosts->the_post();
-	// WHY NOT IN CHRONOLOGICAL ORDER??
-	?>
+	<?php if ($newsPosts->have_posts()) : while ($newsPosts->have_posts()) : $newsPosts->the_post(); ?>
 
 
 		<div class="latest-news-item">

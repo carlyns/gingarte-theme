@@ -8,7 +8,6 @@ a:hover {
 }
 .container {
   line-height: 1.4em;
-
 }
 .container h1 {
   line-height: 1.4em;
@@ -72,8 +71,6 @@ a:hover {
 .button:hover {
   background-color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
 }
-
-
 .buttonbook {
   background-color: rgba(137,133,133,1); /* MENU GREY */
   border: 1px solid white;
@@ -101,7 +98,11 @@ iframe {
   margin: 0;
   font-size: 0.8em;
 }
-footer {
+.archive {
+  margin-top: 3%;
+}
+.keyword {
+  font-weight: 700;
 }
 
 /* -- MEDIA QUERIES START HERE -- */

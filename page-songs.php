@@ -37,8 +37,7 @@
 		<h4>
 			(More coming soon ... )
 		</h4>
-
-	</div>
+	</div>   <!-- end of "songtypenav" -->
 
 
 <div class="songlist">
@@ -66,7 +65,16 @@
 		if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 		<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			<span class="songtags"><?php the_tags( '<div class="songtagbox">', '</div><div class="songtagbox">', '</div>' ); ?></span>
+
+			<span class="songtags">
+
+				<?php echo get_the_term_list( $post->ID, 'songs', '<div class="songtagbox">', '</div><div class="songtagbox">', '</div>' );
+				// Otherwise just use the_tags() and no need to pass first 2 args.
+				// $post btw retrieves the data of the current post in a loop, so it's a standard WP hook
+?>
+
+			</span>
+
 		</h4>
 
 	<?php endwhile; ?>
@@ -82,11 +90,12 @@
 	<?php endif;
 	wp_reset_query();
 	?>
-</div>
+	</div>
 
 
-</div>
+</div>  <!-- end of "songlist" -->
 
+</div>  <!-- end of "container" -->
 
 
 <?php get_footer(); ?>

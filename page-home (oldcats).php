@@ -60,31 +60,22 @@ RESUS doesn't have php yet, so have to add the code manually.
 	<div class="news">
   <div class="items">
 
+  <!-- ADD THIS A TAG IF A LINK TO THE CATEGORY ARCHIVE IS NECESSARY:
+  <?php $category_id = get_cat_ID( 'fans' );
+  ?>
+  <?php $category_link = get_category_link( $category_id );
+  ?>
+<a href="<?php echo esc_url( $category_link ); ?>">  -->
+
     <h2><span class="smallnewstext">news for </span></br>Fans</h2>
 
-    <!-- See page-news.php for how I figured this out. -->
+    <!-- This loop needs to be added if the page isn't the index.php page.  Otherwise the loop will return the content of the Home Page, not show the actual blog posts -->
+    <!-- ALSO THE SOURCE OF THIS CODE IS SUPER COOL BECAUSE ADDING &CAT=3 ALLOWS ME TO ONLY DISPLAY A CERTAIN CATEGORY.  THAT WAS COMPLETE LUCK IT WAS IN THE SAME THREAD.  WOW.
+  	https://wordpress.org/support/topic/blog-posts-on-static-front-page
+  	-->
+    <?php $fan_posts_query = "showposts=6&cat=3"; $fan_posts_query = new WP_Query($fan_posts_query); ?>
 
-    <?php // SETUP ARGS HERE TO PASS THRU NEW QUERY
-    $args = array(
-      'posts_per_page' => 6,
-      // "Querying by taxonomy" section was helpful for clear syntax: https://codex.wordpress.org/Taxonomies
-      'tax_query' => array( // tax_query is a WP hook
-        array( // needs an array within an array apparently?
-          'taxonomy' => 'newz', // taxonomy = name
-          'field' => 'id', // specifying to use the ID so this is standard
-          // could also use 'slug' and use labels for the terms array
-          'terms' => array( // yet another array for the labels
-            '20' )
-        )
-      )
-    );
-    ?>
-
-    <?php $fan_posts_query = new WP_Query($args);
-    query_posts($args); // even though there's no pagination here, this is needed for it, so keeping it to be safe.
-    ?>
-    <?php // THE LOOP
-    if ($fan_posts_query->have_posts()) : while ($fan_posts_query->have_posts()) : $fan_posts_query->the_post(); ?>
+    <?php if ($fan_posts_query->have_posts()) : while ($fan_posts_query->have_posts()) : $fan_posts_query->the_post(); ?>
 
     <ul>
       <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
@@ -100,28 +91,8 @@ RESUS doesn't have php yet, so have to add the code manually.
 	<div class="items">
 	   <h2><span class="smallnewstext">news for </span></br>Students</h3>
 
-       <?php // SETUP ARGS HERE TO PASS THRU NEW QUERY
-       $args = array(
-         'posts_per_page' => 6,
-         // "Querying by taxonomy" section was helpful for clear syntax: https://codex.wordpress.org/Taxonomies
-         'tax_query' => array( // tax_query is a WP hook
-           array( // needs an array within an array apparently?
-             'taxonomy' => 'newz', // taxonomy = name
-             'field' => 'id', // specifying to use the ID so this is standard
-             // could also use 'slug' and use labels for the terms array
-             'terms' => array( // yet another array for the labels
-               '21' )
-           )
-         )
-       );
-       ?>
-
-       <?php $student_posts_query = new WP_Query($args);
-       query_posts($args); // even though there's no pagination here, this is needed for it, so keeping it to be safe.
-       ?>
-
-      <?php // THE LOOP
-      if ($student_posts_query->have_posts()) : while ($student_posts_query->have_posts()) : $student_posts_query->the_post(); ?>
+      <?php $student_posts_query = "showposts=6&cat=2"; $student_posts_query = new WP_Query($student_posts_query); // gives you a new instance of the main query posts loop! ?>
+      <?php if ($student_posts_query->have_posts()) : while ($student_posts_query->have_posts()) : $student_posts_query->the_post(); ?>
         <ul>
           <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
         </ul>
