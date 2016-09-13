@@ -225,12 +225,20 @@ nav {
 /* -- FRONT PAGE IMG STYLING -- */
 .frontimg {
   clear: both;
-  height: 300px;
+  /*-- AS A BACKGROUND IMAGE -------------
   background-image: url("../imgs/holidayroda2012.jpg");
   background-size: cover;
   background-position: 50% 47%;
   position: relative;
-  z-index: -1;
+  z-index: -1; --*/
+}
+/*-- AS HTML IMG (lost the menu bar drop shadow with this) ----------- */
+.frontimg img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  position: static;
+  left: 20%;
 }
 
 .caption {
@@ -273,10 +281,9 @@ nav {
 
 .fvideo {
   width: 80%;
-  height: 200px;
+  height: 270px; /* this is what captures the caption text or not, so be careful. change on mobile too*/
   clear: both;
-  background-color: rgba(96,88,86,.3);
-  margin: 5% auto 15% auto;
+  margin: 5% auto 10% auto;
   font-size: 0.8em;
 }
 
@@ -331,6 +338,11 @@ nav {
 .last {
   clear: both;
 }
+.frontpgcredits {
+  font-size: 0.8em;
+  text-align: center;
+  margin: 5% 0 0 0;
+}
 
 /* -- PAGINATION STYLING -- (a dot shows up if i add a background-color)*/
 .nav-previous {
@@ -360,9 +372,9 @@ footer {
   color: rgba(251,252,255,1);
   text-align: center;
   font-size: 80%;
-  margin-top: 5%;
-  padding: 3% 3% 5% 3%;
+  padding: 3% 3% 2% 3%;
   letter-spacing: 1px;
+  margin-top: 3%;
 }
 
 footer a {
@@ -371,10 +383,6 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
-}
-
-footer {
-  padding-bottom: 2%;
 }
 
 .largerftr {
@@ -420,20 +428,19 @@ footer {
 
 }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 780px) {
   .brandtext {
     float: left;
-    padding: 3% 3% 3% 50px;
-    width: 500px;
+    padding: 50px 0 50px 50px;
+    width: 510px;
   }
   .brandhead h1 {
     text-align: left;
     font-size: 2em;
   }
   .logo {
-    padding: 3% 0 3% 3%;
+    padding: 50px 0 50px 50px;
     float: left;
-    width: 100px;
   }
   .contents {
     float: left;
@@ -516,8 +523,8 @@ footer {
     overflow: auto;
   }
   .fvideo {
-    margin-bottom: 8%;
-
+    margin-bottom: 50px;
+    height: 200px;
   }
   .capostar {
     padding-top: 0;
@@ -549,7 +556,6 @@ footer {
   }
   footer {
     font-size: 1em;
-    padding-bottom: 2%;
   }
   .social {
     width: 100%;
@@ -587,20 +593,17 @@ footer {
 }
 
 /* FOR HUGE SCREENS! */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1250px) {
   .brandtext {
-    float: left;
-    padding: 5% 3% 3% 50px;
-    width: 700px;
+    padding: 70px 0 50px 50px;
+    width: 820px;
     font-size: 1.6em;
 }
   .brandhead h1 {
     text-align: left;
   }
   .logo {
-    padding: 3% 0 3% 3%;
-    float: left;
-    width: 250px;
+    padding: 50px 0 50px 50px;
   }
   .logo img {
     width: 200px;

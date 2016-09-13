@@ -17,7 +17,7 @@
 
 <div class="music">
 	<p class="breadcrumbs">
-		<a href="<?php get_page_template(); ?>/gingarte/resources"><< Back to Resources</a>
+		<a href="<?php echo site_url(); ?>/resources"><< Back to Resources</a>
 	</p>
 	<h1><?php the_title(); ?></h1>
 

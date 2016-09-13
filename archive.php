@@ -29,7 +29,7 @@
 			if ( is_tax( 'songs', array('term_name' => 'ladainha', 'corrido', 'contemporanea', 'one-line-coro', 'samba' ) ) ) : ?>
 
 			<p class="breadcrumbs">
-				<a href="<?php get_page_template(); ?>/gingarte/resources/music/songs"><< Back to All Songs</a>
+				<a href="<?php echo site_url(); ?>/resources/music/songs"><< Back to All Songs</a>
 			</p>
 
 

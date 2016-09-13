@@ -22,7 +22,7 @@
 
 	<div class="songtypenav">
 		<p class="breadcrumbs">
-			<a href="<?php get_page_template(); ?>/gingarte/resources/music"><< Back to Music</a>
+			<a href="<?php echo site_url(); ?>/gingarte/resources/music"><< Back to Music</a>
 		</p>
 
 

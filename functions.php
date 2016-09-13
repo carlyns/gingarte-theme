@@ -12,19 +12,27 @@ function gingarte_script_enqueue () {
   wp_enqueue_style('gingjs', get_template_directory_uri() . 'js/gingarte.js', array(), '1.0', true);
 }
 add_action(wp_enqueue_scripts, 'gingarte_script_enqueue'); // hooks tells WP when to trigger the function you just made, i.e. when WP is when all scripts are being loaded, second: which function.  also, remember you need to add a hook to locate the header file.
--------------*/
+MAYBE START THIS FROM THE VERY BEGINNING TO TEST THAT IT WORKS. -------------*/
+
+// HEAD FUNCTION to unprint WP version
+function gingarte_remove_version() {
+  return '';
+}
+add_filter('the_generator', 'gingarte_remove_version');
+
 
 /* add post formats
 add_theme_support( 'post-formats', array( 'aside', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat', 'gallery' ) );
 */
 
 // This theme uses wp_nav_menu() in one location.
-function register_theme_menu() {
-  register_nav_menus( 'primary', 'Gingarte Navigation' );
+// maybe no plural?
+function register_theme_menus() {
+  register_nav_menu( 'primary', 'Gingarte Navigation' );
 }
 
-add_action( 'init', 'register_theme_menu' );
-
+add_action( 'init', 'register_theme_menus' );
+// was missing an 's' at the end here, calling the function.
 
 // Year Shortcode
 function year_shortcode() {
@@ -88,5 +96,15 @@ function activity_type_columns( $taxonomies ) {
     return $taxonomies;
 }
 
+// ACTIVATE CUSTOM HEADER IMAGE
+$args = array(
+	'flex-width'    => true,
+	'flex-height'    => true,
+  'height'        => 300,
+	'default-image' => get_template_directory_uri() . '/imgs/header.jpg',
+  'uploads'       => true,
+  'admin-preview-callback' => 'frontimg',
 
+);
+add_theme_support( 'custom-header', $args );
 ?>

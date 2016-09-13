@@ -363,43 +363,50 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	</div>
 </div>
 
-<?php // RESETTING TO ORIG LOOP AGAIN
-if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php endwhile; endif; ?>
+<?php // RESETTING TO ORIG LOOP AGAIN to show content
+wp_reset_postdata(); ?>
 
 <div class="chicago">
 	<!-- <div class="description">
 		<p><?php the_field('chicago_description'); ?></p>
 	</div> -->
-<div class="schoolprograms"><?php the_field('after_school'); ?></div>
+<div class="schoolprograms">
+	<?php the_field('after_school'); ?>
+</div>
 
 <div class="partnerlogos">
 	<?php //HOW TO DISPLAY CUSTOM POSTS from https://wp-types.com/documentation/user-guides/displaying-wordpress-custom-content/
 	$args = array( 'post_type' => 'schools', 'posts_per_page' => 30 ); //Define your custom post type name in the arguments
 	$loop = new WP_Query( $args ); //Define the loop based on arguments
+ ?>
 
-	//Display the contents
-	while ( $loop->have_posts() ) : $loop->the_post(); ?>
+<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-	<?php	echo '<div class="plogo">';
-	    $image = get_field('school_logo');
-	    if( !empty($image) ): ?>
-	      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-	    <?php endif;
-	  echo '</div>';
+	<?php	// Get ready to display each image within a the plogo div
+		echo '<div class="plogo">';
+		$image = get_field('school_logo');
+		if( !empty($image) ): // Check if there is a logo ?>
 
-	endwhile; ?>
+		<!-- SHOW THE LOGO VIA ACF -->
+			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+	<?php else : // this didn't really work - to show nothing if there was no logo.
+		echo ''; ?>
+
+	<?php endif; echo '</div>'; // END THE CONDITION TO CHECK FOR ?>
+
+	<?php endwhile ?>
+
 
 </div>
 
-<?php // RESETTING TO ORIG LOOP AGAIN
-if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php endwhile; endif; ?>
+<div class="mobile-only">
+	<?php // RESETTING TO ORIG LOOP AGAIN to show content
+	wp_reset_postdata(); ?>
 
-
-<div class="alsopartners">
-	<p><?php the_field('other_schools'); ?></p>
-
+	<div class="alsopartners">
+		<p><?php the_field('other_schools'); ?></p>
+	</div>
 </div>
 
 
@@ -426,17 +433,20 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		endwhile; ?>
 	</div>
 
-	<?php // RESETTING TO ORIG LOOP AGAIN
-	if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<?php endwhile; endif; ?>
 
 
+<div class="mobile-only">
+
+	<?php // RESETTING TO ORIG LOOP AGAIN to show content
+	wp_reset_postdata(); ?>
 
 	<div class="alsopartners">
 		<p><?php the_field('other_partners'); ?></p>
 	</div>
+</div>
 
-	<div class="button"><a href="mailto:info@gingartecapoeira.org">Please contact us for coporate sponsorships and partnerships.</a></div>
+
+	<div class="button"><a href="mailto:info@gingartecapoeira.org">Become a sponsor</a></div>
 
 
 

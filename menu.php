@@ -1,5 +1,3 @@
-<!-- REMEMBER: I HAVE TO REGISTER MY MENU FOR IT TO SHOW UP IN THE WP DASHBOARD? -->
-
 <nav>
 <div class="mobilemenu">
 	<!-- to highlight current menu item, target the WP-generated class "current-menu-item"-->

@@ -3,7 +3,6 @@
 <!-- ADD THE STYLESHEET THAT MIGHT CHANGE BETWEEN PAGES HERE.-->
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/classes.css">
 
-<title><?php wp_title(); ?> | Gingarte Capoeira Chicago</title>
 </head>
 
 <body>
@@ -52,7 +51,7 @@
 									<div class="option"><?php the_content(); ?></div>
 								</div>
 
-
+								<!-- WHY IT'S NOT A SINGLE PURCHASE BUTTON.  unfortunately, PayPal only gives you a link if it's a non drop-down option ie a single option.  otherwise, you have to embed the actual button onto your page. -->
 								<div class="paypal">
 									<a href="<?php the_field('paypal_link_1'); ?>" target="_blank"><div class="button"><?php the_field('type_of_purchase_1'); ?></div></a>
 
@@ -72,21 +71,21 @@
 
 						<div class="stacked">
 
-							<a href="<?php get_page_template(); ?>/gingarte/kids"><h3>For Kids</h3>
+							<a href="<?php echo site_url(); ?>/kids"><h3>For Kids</h3>
 								<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forkids.jpg" alt="kids classes"></a>
 							<p>Children ages 3 and above are welcome to our classes.  </p>
-							<p>We partner with some local schools too - <a href="<?php get_page_template(); ?>/gingarte/about">see our About page</a> to find out which ones!	</p>
+							<p>We partner with some local schools too - <a href="<?php echo site_url(); ?>/about">see our About page</a> to find out which ones!	</p>
 
-							<a href="<?php get_page_template(); ?>/gingarte/classes/beginners"><h3>For Beginners</h3>
+							<a href="<?php echo site_url(); ?>/classes/beginners"><h3>For Beginners</h3>
 								<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forbeginners.jpg" alt="beginners classes"></a>
 							<p>No matter what your background, movements can be tailored by teachers to fit anyone's ability.  </p>
 
-							<a href="<?php get_page_template(); ?>/gingarte/comingsoon"><h3>For Stressed Students</h3>
+							<a href="<?php echo site_url(); ?>/comingsoon"><h3>For Stressed Students</h3>
 								<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forstudents.jpg" alt="great for students"></a>
 							<p>Use capoeira to clear your mind.  Take a break before cramming for that next final!  </p>
 							<p>We offer discounts to UofC students (with an ID).</p>
 
-							<a href="<?php get_page_template(); ?>/gingarte/private"><h3>Private Lessons</h3>
+							<a href="<?php echo site_url(); ?>/private"><h3>Private Lessons</h3>
 								<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forprivate.jpg" alt="private lessons"></a>
 							<p>Our teachers can personalize training for you.  We can work with your schedule. </p>
 						</div>

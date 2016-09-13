@@ -17,7 +17,7 @@
 
 <div class="container">
 	<div class="breadcrumbs">
-		<a href="<?php get_page_template(); ?>/gingarte/about"><< Back to "About" page (needs an anchor)</a>
+		<a href="<?php echo site_url(); ?>/gingarte/about"><< Back to "About" page (needs an anchor)</a>
 		<!-- THIS LINK NEEDS TO INCLUDE SOME JS THAT ON CLICK, IT TOGGLES THE .GROUP PROPERTY "DISPLAY" TO BLOCK (FROM NONE).  THEN I CAN PROBABLY ADD AN ID ANCHOR.  -->
 	</div>
 

@@ -16,7 +16,7 @@
 
 <div class="container">
 	<p class="breadcrumbs">
-		<a href="<?php get_page_template(); ?>/gingarte/resources/songs"><< Back to Full List of Songs</a>
+		<a href="<?php echo site_url(); ?>/resources/songs"><< Back to Full List of Songs</a>
 	</p>
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

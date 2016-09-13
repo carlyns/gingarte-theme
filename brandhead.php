@@ -1,4 +1,4 @@
-<div class="brandhead">
+<div class="brandhead" id="top">
   <div class="logo"><a href="<?php echo esc_url( home_url( '/' ) );	    ?>"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/25_logo.png"></a></div>
 
   <div class="brandtext">

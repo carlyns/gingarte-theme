@@ -45,13 +45,17 @@ RESUS doesn't have php yet, so have to add the code manually.
 <?php include ('menu.php'); ?>
 
 	<div class="frontimg">
-	<!--HEADER IMAGE GOES HERE, BUT IT'S ACTUALLY A BACKGROUND -->
+	<!--HEADER IMAGE GOES HERE, was background but needed to conver to html img tag to be a dynamic wp header image -->
 
   <!-- THE CAPTION WAS JUST A SELFISH FEATURE
 		<div class="caption">
 			<p><?php the_field('home_image_caption'); ?></p>
 		</div>
   -->
+
+  <!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/holidayroda2012.jpg" alt="front image" /> -->
+
+  <img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id ) ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 
 	</div>
 
@@ -94,7 +98,7 @@ RESUS doesn't have php yet, so have to add the code manually.
     wp_reset_postdata();
 
     ?>
-    <ul><a href="<?php get_page_template(); ?>/gingarte/news">(See All the Latest News)</a></ul>
+    <ul><a href="<?php echo site_url(); ?>/news">(See All the Latest News)</a></ul>
   </div>
 
 	<div class="items">
@@ -130,7 +134,7 @@ RESUS doesn't have php yet, so have to add the code manually.
       wp_reset_postdata();
 
       ?>
-      <ul><a href="<?php get_page_template(); ?>/gingarte/news">(See All the Latest News)</a></ul>
+      <ul><a href="<?php echo site_url(); ?>/news">(See All the Latest News)</a></ul>
 	</div>
 	</div><!-- //end of "news"-->
 
@@ -281,6 +285,10 @@ RESUS doesn't have php yet, so have to add the code manually.
       </a>
 		</div>
 	</div> <!-- / "features" -->
+
+  <div class="frontpgcredits">
+    <?php the_field('frontpg_photo_creds',34); ?>
+  </div>
 </div> <!--/ "container" -->
 
 <?php get_footer(); ?>

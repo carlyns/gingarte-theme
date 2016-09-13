@@ -19,18 +19,18 @@
 	<h1>main resources</h1>
 
 		<div class="grid4">
-			<a href="<?php get_page_template(); ?>/gingarte/resources/cordao-system"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/resource-cords-anneliese.png" alt="cords">
+			<a href="<?php echo site_url(); ?>/resources/cordao-system"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/resource-cords-anneliese.png" alt="cords">
 				<h2>cordão system</h2></a>
 		 </div>
 
 		<div class="grid4">
-			<a href="<?php get_page_template(); ?>/gingarte/resources/music"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/resource-berimbench-oscarD.jpg" alt="capoeira music">
+			<a href="<?php echo site_url(); ?>/resources/music"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/resource-berimbench-oscarD.jpg" alt="capoeira music">
 				<h2>capoeira music: instruments & songs</h2></a>
 			<!-- as a capoeira group, we regularly practice samba, orixa dance and music.  this is included in this section. -->
 		 </div>
 
 		<div class="grid4">
-			<a href="<?php get_page_template(); ?>/gingarte/comingsoon"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/resource-maculele5.jpg" alt="maculele">
+			<a href="<?php echo site_url(); ?>/comingsoon"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/resource-maculele5.jpg" alt="maculele">
 			<h2>related dances and music</h2></a>
 			<!-- as a capoeira group, we regularly orixa and samba have been ingrained in capoeira from its origins.  this section also covers maculele, danca, frevo, coco, etc.  links to same page as from "About" -->
 		 </div>
