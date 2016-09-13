@@ -1,37 +1,3 @@
-@font-face {
-  font-family: 'Montserrat';
-  src: url('montserrat/Montserrat-Light.otf') format('opentype');
-  font-weight: 300;
-  font-weight: regular;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('montserrat/Montserrat-Regular.otf') format('opentype');
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('montserrat/Montserrat-SemiBold.otf') format('opentype');
-  font-weight: 500;
-  font-weight: bold;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('montserrat/Montserrat-Bold.otf') format('opentype');
-  font-weight: 600;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('montserrat/Montserrat-UltraLight.otf') format('opentype');
-  font-weight: 200;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('montserrat/Montserrat-Hairline.otf') format('opentype');
-  font-weight: 100;
-}
-
-/* Background pattern from subtlepatterns.com */
 header {
   width: 90%;
   margin: 0 auto;
@@ -63,14 +29,16 @@ h2 {
 }
 
 body {
-  font-family: Montserrat, Helvetica Neue, sans-serif;
+  font-family: Oswald, Helvetica Neue, sans-serif;
   font-weight: 300;
   margin: 0;
   color: rgba(56,49,50,1); /* MAIN GREY FONT */
 }
-
+header {
+  text-align: center; /* NEED THIS ON MOBILE */
+}
 .button {
-  background-color: rgba(137,133,133,1); /* MENU GREY */
+  background-color: rgba(3,94,123,1); /* OLD BLUE */
   color: white;
   border: 1px solid white;
   text-align: center;
@@ -80,7 +48,7 @@ body {
   padding: 1%;
 }
 .button:hover {
-  background-color: rgba(224,27,60,1); /* LOGO RED */
+  background-color: rgba(56,49,50,1);
 }
 .button a {
   color: white;
@@ -89,10 +57,6 @@ body {
   width: 50%;
   margin: 0 auto;
   margin-bottom: 5%;
-}
-
-header {
-  text-align: center;
 }
 .contents {
   font-style: italic;
@@ -103,7 +67,7 @@ header {
 
 a {
   text-decoration: none;
-  color: black;
+  color: rgba(56,49,50,1); /* MAIN GREY FONT */
 }
 
 
@@ -133,8 +97,7 @@ nav {
 
 }
 .menu-bar {
-  /* background-color: rgba(3,94,123,1);  OLD BLUE */
-  background-color: rgba(137,133,133,1); /* MENU GREY */
+  background-color: rgba(3,94,123,1); /* OLD BLUE */
   text-align: center;
   padding: 15px 0;
   width: 100%;
@@ -159,7 +122,7 @@ nav {
 
 }
 .news-feature a:hover {
-  background-color: rgba(224,27,60,1); /* LOGO RED */
+  background-color: rgba(56,49,50,1);
 }
 .arrow-icon {
   float: right;
@@ -180,7 +143,7 @@ nav {
   width: 100%;
   height: 250px;
   clear: both;
-  background-color: rgba(137,133,133,1); /* MENU GREY */
+  background-color: rgba(3,94,123,1); /* OLD BLUE */
   z-index: 1;
 }
 /* so the dropdown menu sticks with the menu bar location */
@@ -195,13 +158,13 @@ nav {
 }
 .dropdown li:hover {
   /* highlight mobile menu items on hover */
-  background-color: rgba(224,27,60,1); /* LOGO RED */
+  background-color: rgba(56,49,50,1);
   width: 200px;
 
 }
 .dropdown .current-menu-item:hover {
   /* but don't change background color behind current mobile menu item */
-  background-color: rgba(137,133,133,1); /* MENU GREY */
+  background-color: rgba(3,94,123,1); /* OLD BLUE */
 }
 
 /* change dispaly of current mobile menu item, WP-generated class */
@@ -355,7 +318,7 @@ nav {
 
 }
 .pagination a {
-  color: rgba(224,27,60,1); /* LOGO RED */
+  color: rgba(3,94,123,1); /* BLUE */
 }
 .news-feature-item h3 {
   margin-bottom: 0;
@@ -368,7 +331,7 @@ nav {
 /* -- FOOTER STYLING -- */
 footer {
   clear: both;
-  background-color: rgba(137,133,133,1); /* MENU GREY */
+  background-color: rgba(3,94,123,1); /* OLD BLUE */
   color: rgba(251,252,255,1);
   text-align: center;
   font-size: 80%;
@@ -396,7 +359,7 @@ footer a:hover {
   border: 1px solid white;
 }
 .buttonelist:hover {
-  background-color: rgba(224,27,60,1); /* LOGO RED */
+  background-color: rgba(56,49,50,1);
 }
 .buttonelist a:hover {
   text-decoration: none;
@@ -411,6 +374,7 @@ footer a:hover {
 }
 .author a {
   font-weight: 400;
+  color: rgba(242,242,242,0.5); /* LIGHT GREY */
 }
 
 
@@ -472,10 +436,9 @@ footer a:hover {
   }
   .menu-full {
     display: block;
-    background-color: rgba(137,133,133,1); /* MENU GREY */
+    background-color: rgba(3,94,123,1); /* OLD BLUE */
     text-align: center;
     overflow: auto;
-    font-family: Montserrat, Helvetica Neue, sans-serif;
     font-size: 1.1em;
     box-shadow: 1px 5px 5px rgba(1,1,1,0.7);
 }
@@ -493,18 +456,17 @@ footer a:hover {
 
   .menu-full li:hover {
     /* highlight menu items on hover */
-    background-color: rgba(224,27,60,1); /* LOGO RED */
+    background-color: rgba(56,49,50,1);
     padding: 1%;
   }
   .menu-full .current-menu-item:hover {
     /* but don't change background color behind current menu item */
-    background-color: rgba(137,133,133,1); /* MENU GREY */
+    background-color: rgba(3,94,123,1); /* OLD BLUE */
   }
 
   /* highlight current menu item, WP-generated class */
   .current-menu-item a {
-    background-color: rgba(137,133,133,1); /* MENU GREY */
-    color: rgba(56,49,50,1); /* MAIN GREY FONT */
+    color: rgba(56,49,50,1); /* OLD BLUE */
   }
   .menu-full .news-feature a {
     border: 1px solid white;
