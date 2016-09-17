@@ -34,7 +34,6 @@
 }
 
 .option h5 {
-  font-family: Montserrat, sans-serif;
   font-size: 1em;
   font-weight: 300;
   margin-top: 0;
@@ -90,7 +89,6 @@
   font-size: 0.6em;
 }
 .stacked h3 {
-  font-family: Montserrat, sans-serif;
   text-align: left;
   font-size: 1.8em;
   font-weight: 300;
@@ -298,7 +296,6 @@ color: rgba(3,94,123,1); /* OLD BLUE */  text-decoration: none;
 	display: inline;
 	cursor: pointer;
   /* CHANGE TAB TITLE FONT STYLE */
-  font-family: Montserrat, sans-serif;
   font-weight: 300;
 }
 

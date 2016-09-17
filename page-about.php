@@ -123,7 +123,7 @@
 		      if( !empty($image) ): ?>
 		      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 			<h3><?php the_title(); ?></h3>
-		  <?php	the_content(); ?>
+		  <p><?php	the_content(); ?></p>
 
 		<?php endif;
 		echo '</div>';
