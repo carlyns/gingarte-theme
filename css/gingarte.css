@@ -230,9 +230,11 @@ nav {
   padding-bottom: 3%;
   border-bottom: 3px double rgba(137,133,133,1);
 }
+li {
+  list-style-type: circle;
+}
 .items li {
   text-align: left;
-  list-style-type: circle;
 }
 .items a:hover {
   text-decoration: underline;
