@@ -1,103 +1,48 @@
-/* UNDERSTAND BOX SIZING!! */
-* {
-  box-sizing: border-box;
-}
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-/* Basically means if there's a border, it is included in the width of the box. */
-
-/* This is to allow for the full-width image in the middle of the page. */
-
 .main {
   width: 80%;
   margin: 0 auto;
 }
-h1 {
+.main h1 {
   text-align: center;
 }
-
-.locations .grid3 {
-  border-top: 3px double rgba(3,94,123,1);
-  border-bottom: 3px double rgba(3,94,123,1);
-  margin-bottom: 10%;
-  background-color: rgba(3,94,123,0.1);
+.classes a {
+  color: rgba(56,49,50,1); /* MAIN GREY FONT */
+  text-decoration: underline;
 }
-
-.locations .neighborhood {
-	text-align: center;
-	font-weight: 400;
-	margin-right: 5%;
-  font-family: Ostrich, Helvetica Neue, sans-serif;
-  font-size: 1.5em;
-  padding-bottom: 2%;
-}
-
-.locations .info { /* ALL THE CONTENT THAT SHOWS/HIDES ON CLICK*/
-  display: none;
-}
-.locations i {
-  color: rgba(3,94,123,1);
-}
-
-
-.info p {
-  /* line height does not change spacing between p tags.  but it's too messy to use a bunch of </br> tags.  padding does't reduce it either.  */
-}
-
-.days {
-  font-weight: 500;
-}
-.important {
-  font-size: 0.8em;
-  font-style: italic;
-}
-.info {
-}
-.fineprint {
-  font-size: 0.8em;
-}
-#information-hp {
-  display: none;
-}
-
 
 .payment {
 	clear: both;
 }
+.payment a {
+  color: white;
+}
+.payment .button:hover {
+  background-color: rgba(224,27,60,1); /* LOGO RED */
+}
 .payment h1 {
   padding-bottom: 2%;
-  border-bottom: 3px double rgba(3,94,123,1);
+  /* border-bottom: 3px double rgba(3,94,123,1); */
   width: 100%;
   margin: 0 auto;
 }
 .payment .grid4 {
   margin-bottom: 8%;
-  background-color: rgba(3,94,123,1);
+  background-color: rgba(137,133,133,1); /* MENU GREY */
   color: white;
   /* background-image: url(sneaker_mesh.png);*/
-  box-shadow: 1px 5px 5px rgba(1,1,1,1);
+  box-shadow: 1px 5px 5px rgba(1,1,1,0.7);
 }
-.option {
-  font-size: 1.3em;
-  text-align: center;
-}
+
 .option h5 {
-  font-family: Ostrich, Helvetica Neue, sans-serif;
-  font-size: 1.2em;
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 5%;
-}
-.option p {
-  font-size: 1em;
-  font-weight: 500;
   text-align: center;
 }
+
 .notes p {
   text-align: left;
   font-size: 1.2em;
@@ -109,6 +54,10 @@ h1 {
   margin: 0 auto;
   width: 50%;
   border-color: white;
+  margin-top: 3%;
+}
+.paypal a {
+  text-decoration: none;
 }
 .payment .grid4 {
   padding-bottom: 5%;
@@ -126,7 +75,7 @@ h1 {
 }
 .special h1 {
   padding-bottom: 2%;
-  border-bottom: 3px double rgba(3,94,123,1);
+  border-bottom: 3px double rgba(137,133,133,1);
   margin: 0 10%;
 }
 .special img {
@@ -134,11 +83,16 @@ h1 {
   height: 50px;
 	object-fit: cover;
 }
-
+.special a {
+  text-decoration: none;
+}
+.everyone .smallnewstext {
+  font-size: 0.6em;
+}
 .stacked h3 {
-  font-family: Ostrich, Helvetica Neue, sans-serif;
+  font-family: Montserrat, sans-serif;
   text-align: left;
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 300;
   margin: 8% 10% 2% 10%;
 }
@@ -172,14 +126,18 @@ h1 {
 }
 
 
-.otherclass{
-  background-color: rgba(3,94,123,.1);
-  color: rgba(3,94,123,1);
+.otherclass {
+  background-color: rgba(242,242,242,1); /* LIGHT GREY */
+  color: rgba(56,49,50,1); /* MAIN GREY FONT */
   clear: both;
   width: 85%;
   margin: 4% auto;
   padding: 2% 3%;
   overflow: auto;
+}
+.otherclass a {
+  color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
+  text-decoration: none;
 }
 
 .description {
@@ -217,20 +175,18 @@ h1 {
   .payment .grid4:last-child {
     margin-right: 0px;
   }
-  .payment .price {
-    padding: 5%;
-  }
+
   .payment .button {
     width: 70%;
+    margin: 3% 15% 0 15%;
+  }
+  .paypal {
     position: absolute;
     bottom: 5%;
-    margin: 0 15%;
+    width: 100%;
   }
-  .locations .grid3 {
-    width: 22%;
-    margin-right: 3%;
-    padding: 1%;
-    float: left;
+  .locations {
+    min-height: 400px; /* FIX THE HEIGHT OF THE TABBY PLUGIN SO THE NEXT SECTION DOESN'T JUMP AROUND ON LARGER SCREENS */
   }
 
 
@@ -317,9 +273,9 @@ h1 {
     text-align: left;
   }
   .stacked {
-    width: 70%;
+    width: 67%;
     float: right;
-    border-left: 3px double rgba(3,94,123,1);
+    border-left: 3px double rgba(137,133,133,1); /* MENU GREY */
     margin-bottom: 10%;
   }
 
@@ -330,4 +286,209 @@ h1 {
     margin-top: 3%;
   }
 
+}
+
+
+/* ------ wordpress.org/plugins/tabby-responsive-tabs/ ------ */
+
+.responsive-tabs .responsive-tabs__heading {
+	display: none;
+}
+
+.responsive-tabs .responsive-tabs__list__item {
+	display: inline;
+	cursor: pointer;
+  /* CHANGE TAB TITLE FONT STYLE */
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+}
+
+.responsive-tabs-wrapper {
+	clear: both;
+	margin-bottom: 20px;
+	zoom: 1;
+}
+
+.responsive-tabs-wrapper:before,
+.responsive-tabs-wrapper:after {
+	content: "";
+	display: table;
+}
+
+.responsive-tabs-wrapper:after {
+	clear: both;
+}
+
+.responsive-tabs .responsive-tabs__heading:focus,
+.responsive-tabs .responsive-tabs__list__item:focus {
+	outline: 1px solid transparent;
+}
+
+.responsive-tabs .responsive-tabs__heading--active:focus,
+.responsive-tabs .responsive-tabs__list__item--active:focus {
+	outline: none;
+}
+
+.responsive-tabs ul.responsive-tabs__list {
+	font-size: 0.8em;   /* CHANGE TAB TITLE FONT SIZE */
+	line-height: 18px;
+	margin: 20px 0 0 12px;
+	padding: 0;
+}
+
+.responsive-tabs .responsive-tabs__list__item {
+	background: transparent;
+	border: 1px solid transparent;
+	border-bottom: none;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	color: #999;
+	font-size: 1.5em; /* CHANGE TAB TITLE FONT SIZE */
+	line-height: 19px;
+	text-transform: inherit;
+	margin: 1px 12px 0 0;
+	padding: 10px 12px 10px;
+	white-space: nowrap;
+	float: left;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.responsive-tabs .responsive-tabs__list__item .fa {
+	margin-right: 8px;
+	line-height: 0.8;
+}
+
+.responsive-tabs .responsive-tabs__list__item:hover {
+	color: #333;
+	background: transparent;
+}
+
+.responsive-tabs .responsive-tabs__list__item--active,
+.responsive-tabs .responsive-tabs__list__item--active:hover {
+	background: #fff;
+	border-color: #ddd;
+	color: #666;
+	padding-bottom: 11px;
+	margin-top: 0;
+	position: relative;
+	top: 1px;
+}
+
+.responsive-tabs .responsive-tabs__panel {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	border-top-left-radius: 0px;
+	clear: left;
+	margin-bottom: 0;
+	padding: 20px 20px 0;
+	word-wrap: break-word;
+}
+
+.responsive-tabs .responsive-tabs__panel:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+@media (min-width: 768px) {
+
+	.responsive-tabs .responsive-tabs__panel--closed-accordion-only {
+		display: block;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.responsive-tabs .responsive-tabs__list {
+		display: none;
+	}
+
+	.responsive-tabs .responsive-tabs__heading {
+		display: block;
+		cursor: pointer;
+	}
+
+	.responsive-tabs-wrapper {
+		border-top: 1px solid #ccc;
+	}
+
+	.responsive-tabs .responsive-tabs__heading {
+		background: #fff;
+		border: 1px solid #ccc;
+		border-top: none;
+		color: #777;
+    font-size: 1em; /* CHANGE TAB TITLE FONT SIZE on smaller screens*/
+		font-weight: normal;
+		text-transform: inherit;
+		margin: 0;
+		padding: 10px 0;
+		padding-left: 20px;
+		position: relative;
+	}
+
+	.responsive-tabs .responsive-tabs__heading .fa {
+		margin-right: 8px;
+		display:none;
+		}
+
+	.responsive-tabs .responsive-tabs__heading:after {
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-top: 6px solid #777;
+		content:"";
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		height: 0;
+		width: 0;
+	}
+
+	.responsive-tabs .responsive-tabs__heading:hover {
+		background: #eee;
+		color: #777;
+	}
+
+	.responsive-tabs .responsive-tabs__heading:hover:after {
+		border-top: 6px solid #777;
+	}
+
+	.responsive-tabs .responsive-tabs__heading--active,
+	.responsive-tabs .responsive-tabs__heading--active:hover {
+		background: #ccc;
+		color: #fff;
+	}
+
+	.responsive-tabs .responsive-tabs__heading--active:after,
+	.responsive-tabs .responsive-tabs__heading--active:hover:after {
+		border-bottom: 6px solid #fff;
+		border-top: 0;
+		top: 18px;
+	}
+
+	.responsive-tabs .responsive-tabs__panel {
+		background: #fff;
+		border: 1px solid #ccc;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		border-top: none;
+		margin: 0;
+		padding: 0 20px;
+		padding-top: 20px;
+	}
 }

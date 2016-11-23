@@ -1,13 +1,11 @@
-/*.contents {
-	background-color: rgba(237,234,255,1);
+.section-collapsed h1 {
+	font-size: 1.5em;
 }
-*/
 h2 {
 	text-align: center;
-	font-size: 3em;
+	font-size: 1.8em;
 }
 h3 {
-	font-weight: 500;
 }
 body {
 }
@@ -15,8 +13,11 @@ body {
 	padding: 3%;
 	overflow: auto;
 	clear: both;
-	color: rgba(3,94,123,1);
+	color: rgba(56,49,50,1); /* MAIN GREY FONT */
 	text-align: center;
+}
+.section-collapsed svg {
+	width: 150px;
 }
 
 .section-title {
@@ -25,71 +26,63 @@ body {
 	clear: both;
 }
 .titleicon img {
-	width: 150px;
+	width: 80px;
 	margin: 0 auto;
 	display: block;
 }
 .fliparrow {
 	clear: both;
-	font-size: 3em;
 	margin: 0 auto;
 	display: block;
+	font-size: 1.3em;
 }
 
 a .fa-chevron-down {
 	clear: both;
-	color: rgba(3,94,123,1);
+	color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
 }
 a:hover .fa-chevron-down {
 	text-decoration: none;
 }
 
-
-.bluebkgrd {
-	background-color: rgba(3,94,123,1);
-	color: rgba(237,234,255,1);
-}
-.bluebkgrd .section-collapsed {
-	background-color: rgba(3,94,123,1);
-	color: rgba(237,234,255,1);
-}
-.bluebkgrd .section-collapsed a {
-	color: rgba(237,234,255,1);
-}
-.bluebkgrd a .fa-chevron-down {
-	color: rgba(237,234,255,1);
-}
-
 .brazil {
 	display: none;
 	padding: 0 3%;
-	font-size: 1.1em;
+}
+
+.brazil h3 {
+	font-weight: 400;
 }
 .group {
 	display: none;
 	padding: 0 3% 5% 3%;
 	clear: both;
-	font-size: 1.1em;
 }
 .group a {
-	color: white;
+	color: rgba(56,49,50,1); /* MAIN GREY FONT */
 }
+.group h3 {
+	font-weight: 400;
+}
+
 .chicago {
 	display: none;
 	padding: 0 3%;
-	font-size: 1.1em;
 }
-
-
+.chicago h3 {
+	font-weight: 400;
+}
+.chicago .section-top-horzrule {
+	margin-top: 50px;
+}
 
 .description {
 	font-size: 1.3em;
 	font-style: italic;
 	clear: both;
 }
-hr {
-	clear: both;
-}
+
+
 
 
 .dances {
@@ -97,23 +90,23 @@ hr {
 	overflow: auto; /* THIS PREVENTS THE BLUE BACKGROUND FROM THE LOWER SECTION TO BLEED INTO THIS SECTION. */
 }
 .dance img {
-	height: 90px;
-	max-width: 100px;
-	border-radius: 25px;
+	width: 100%;
 }
 .dance p {
 	padding-top: 3%;
+	font-size: 0.9em;
 }
 
 
-.marisa img{
+.marisa img {
 	float: none;
 	margin: 0 auto;
 	display: block;
-	border-radius: 25px;
+	width: 100%;
 }
-.teacher {
+.teacher h3 {
 	text-align: center;
+	font-weight: 300;
 }
 
 .teacher .headshot{
@@ -124,30 +117,25 @@ hr {
 }
 .troupe {
 }
-.chicago .partnerlogos {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	justify-content: center;
-}
 
-.chicago .plogo {
-	padding: 2%;
-	flex: none;
-	width: 20%;
-}
+
 .chicago img {
 	width: 100%;
 }
 .chicago .alsopartners {
 	clear: both;
 }
-
+.mobile-only {
+	display: block;
+	line-height: 1.2em;
+	text-transform: capitalize;
+}
+.partnerlogos {
+	display: none;
+}
 .button {
-	border: 1px solid rgba(3,94,123,1);
   margin: 0 auto;
   width: 50%;
-	padding: 2%;
 }
 
 /*------MEDIA QUERIES START HERE ----------*/
@@ -155,52 +143,72 @@ hr {
 @media screen and (max-width: 410px) {
 	.chicago .plogo {
 		width: 40%;
-}
+	}
+	h2 {
+		font-size: 1.3em;
+	}
 }
 
 @media screen and (min-width: 550px) {
-	.description {
-	}
 	.titleicon {
 		float: left;
 		padding-top: 5%;
 	}
+	.titleicon img {
+		width: 150px;
+	}
 	.section-title {
 		clear: none;
 		float: right;
-		margin-bottom: 10%;
+		margin-top: 10%;
+		width: 250px;
 	}
-	.section-collapsed h2 {
-
+	.section-collapsed h1 {
+		font-size: 2.5em;
 	}
 	.section-collapsed {
-		width: 350px;
+		width: 400px;
 		margin: 0 auto;
 	}
-
+	.fliparrow {
+		font-size: 2em;
+	}
 	.dance{
 		width: 22%;
 		float: left;
 		padding-right: 3%;
 	}
-
 	.teacher {
-		width: 30%;
+		width: 33%;
 		float: left;
-		height: 200px;
+		height: 210px;
 	}
 	.teacher .headshot {
 		display: block;
 		width: 100px;
 		height: 100px;
 		overflow: hidden;
-		border-radius: 25px;
+		border-radius: 50px;
 		margin: 0 auto;
-}
+	}
 	.teacher img {
 		min-height: 100%;
 		max-width: 100%;
 		object-fit: cover;
+	}
+	.mobile-only {
+		display: none;
+	}
+	.chicago .partnerlogos {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.chicago .plogo {
+		padding: 2%;
+		flex: none;
+		width: 20%;
 	}
 }
 
@@ -208,5 +216,24 @@ hr {
 @media screen and (min-width: 770px) {
 	.chicago .plogo {
 		width: 12%;
+	}
+	.chicago .section-top-horzrule {
+		border-top: 1px solid rgba(137,133,133,1);
+		padding-bottom: 3%;
+	}
+}
+/* FOR HUGE SCREENS! */
+@media screen and (min-width: 1200px) {
+	.brazil, .group, .chicago {
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.teacher .headshot {
+		width: 150px;
+		height: 150px;
+		border-radius: 75px;
+	}
+	.teacher {
+		height: 250px;
 	}
 }

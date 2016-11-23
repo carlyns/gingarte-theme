@@ -11,295 +11,442 @@
 
 	<?php include ('brandhead.php'); ?>
 
-	<div class="contents">
-		<!-- <?php the_meta(); ?> Use this to return everything. -->
-		<?php $postid = get_the_ID(); ?>		<!-- This defines the variable $postid to be used in the following function. -->
-		<?php echo get_post_meta($postid, 'Tagline', true); ?>
-	</div>
 </header>
 
 <?php include ('menu.php'); ?>
 
 
-
 <div class="section-collapsed">
 	<div class="toggle-brazil">
-		<div class="titleicon"><img src="imgs/abt-brasil.png"></div>
+		<div class="titleicon">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 360 360" enable-background="new 0 0 360 360" xml:space="preserve">
+			<g id="background" display="none">
+				<rect display="inline" fill="#065F7C" width="360" height="360"/>
+			</g>
+			<g id="origs" display="none">
+
+					<image display="inline" overflow="visible" width="581" height="309" xlink:href="12CE063531ADF467.png"  transform="matrix(0.3643 0 0 0.3643 70.6763 175.835)">
+				</image>
+
+					<image display="inline" overflow="visible" width="640" height="637" xlink:href="12CE063531ADF465.png"  transform="matrix(0.2568 0 0 0.2568 44.0088 51.8252)">
+				</image>
+			</g>
+			<g id="orig-berimbau" display="none">
+
+					<image display="inline" overflow="visible" width="200" height="443" xlink:href="12CE063531ADF46B.png"  transform="matrix(0.3887 0 0 0.3887 191.2285 33.4092)">
+				</image>
+			</g>
+			<g id="circle_frames">
+				<circle fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" cx="232.7" cy="126.6" r="105.3"/>
+				<circle fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" cx="127.3" cy="126.6" r="105.3"/>
+				<circle fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" cx="181.6" cy="232" r="105.3"/>
+			</g>
+			<g id="berimbau" display="none">
+				<circle display="inline" fill="#FFFFFF" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" cx="232.7" cy="126.6" r="105.3"/>
+				<path display="inline" fill="none" stroke="rgba(224,27,60,1)" stroke-width="5" stroke-linecap="round" stroke-miterlimit="10" d="
+					M193.3,204.2c0,0,63.4-49.1,71.6-107.4c4.5-32-2.8-62.4-2.8-62.4"/>
+				<polyline display="inline" fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" points="260.6,37 215.8,168.4 195.4,202.5 	"/>
+				<g display="inline">
+					<polygon points="207.1,148.9 277.7,210.9 204.8,151.5 		"/>
+				</g>
+
+					<ellipse display="inline" fill="none" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-miterlimit="10" cx="242.9" cy="183.5" rx="20.2" ry="19.1"/>
+				<path display="inline" fill="none" stroke="rgba(224,27,60,1)" stroke-width="0.6636" stroke-miterlimit="10" d="M240.9,188.4
+					c0.8-8.8,7.4-15.9,13.3-15.9c7.3,0,10.6,10.2,8,17c-2.4,6.3-6.8,11.7-13.1,10.7C243.1,199.3,240.3,194.2,240.9,188.4z"/>
+			</g>
+			<g id="brazil">
+				<circle fill="#FFFFFF" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-miterlimit="10" cx="127.3" cy="126.6" r="105.3"/>
+				<path fill="none" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+					M87.6,65.2L82.3,57l7.4,1.6l2.1-1.6l5.1-2l3-3.1h1.9v2.4c0,0,2.5,0.3,2.2,2.3s-2.1,3.2-1.5,5.6s0.3,4.1,1.5,4.8s2.5,1.2,2.5,1.2
+					h3.1l5-2.4l5.1,0.5l-1-1.8l3.4-1.2l0.7-0.9l3.4,2.2c0,0,2.4-0.2,2.7-0.2s3.5,0.2,3.5,0.2l2.6-2.6l-0.4-2.5l3.7-3l2.3,2.3v4.4
+					l1.9,3.6l2.6,0.7l-1.4,3.6l-4.6,4.4l0.3,2.7h2l0.9-3.3l8.3-0.3c0,0,1,2.7,0,3.6s-2.7,1.8-2.7,1.8h3.2l1.1-2.6l3.8-0.6l6.6,2.4
+					l2.2,1.6h1.8l1.5,1.9v2.5l0.9,0.9l2.9-1.1l8.5,2.2h5.7l13.3,9.8l5.2,1.1c0,0,4.5,5.6,3.5,9.4s-5.7,10.1-5.7,10.1l-7.9,9.3l-1.3,1.7
+					l-3.4,1.4l-0.9,1.6c0,0,0.3,8.9-0.4,11.9s-4,9.9-4,9.9l0.4,3.1l-5.9,7.5l-0.4,3.3c0,0-3.1,1-3.5,1.9s-1.1,1.4-1.1,1.4h-7l-4.2,1.1
+					l-2.6,2l-2.3,0.9l-5.2,3.5l-2.3,2.3l-2.4,1.4l-0.5,4.4c0,0,0.9,1.4,0.2,3.5s-3.5,5.4-3.5,5.4l-6,10.4l-3.8,2.6l-3.6,6l-1.5,0.8
+					l-0.5-3l1.6-1.8l-7.5-5.7l-0.8-2.3l-2.1,1.4l-2.4-3.2l-2.8-0.3c0,0,3-4.9,5.9-7.4s7.3-5.3,7.3-5.3l1.1-4.2c0,0-0.5-2-1.2-2.2
+					s-2.3-0.7-2.3-0.7l0.8-4.3l-1-2.9l-2.8,1l-1.5-6.9l-3.8-1l-4.4,0.6v-5.1l-1.4-4.7l2.3-6.9c0,0-0.2-2.9-1-3.4s-2.5-1.4-2.5-1.4v-3.5
+					h-7.6c0,0-1.8-3.3-1.2-4.1s0.8-2.3,0.8-2.3l-0.6-3.6l-4.2-1.6l-6.5-2l-2.3-1.6l-3.3-0.1l-4.1-4.6v-6.7l-6.7,1.1l-1.8,3l-3.4,1
+					l-1.3,1.7c0,0-5-0.9-6.2-0.5s-2.9-1.5-2.9-1.5l0.4-5.2c0,0-2,2.5-2.6,2.6s-5.4,0.2-5.4,0.2v-2l-2.9-0.3l0.9-2c0,0-5.5-4.7-4.8-6.1
+					s1-2.6,1-2.6l2.4-1.1c0,0,0.3-6.1,0.6-6.3s8-4.4,8-4.4l3.5,0.9l3.3-13L61.6,77l-2.1-1l0.3-3l2.9-0.4l-0.4-2.1l-1.1,0.1l-0.4-1.8
+					l7.5-1.8l0.4,1l2.6-2.7c0,0,0.3,2.6,1.1,3.4s2.8,2.4,2.8,2.4s4.7-0.8,6.4-1.7S87.6,65.2,87.6,65.2z"/>
+			</g>
+			<g id="chicago" display="none">
+
+					<circle display="inline" fill="#FFFFFF" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-miterlimit="10" cx="181.6" cy="232" r="105.3"/>
+
+					<polyline display="inline" fill="none" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+					80.9,262.8 83.1,262.8 87.2,261 87.2,250.9 91.3,245.6 102.6,245.6 104.7,250.9 104.7,261 121.1,261 121.1,262.8 126.2,262.8
+					126.2,257.1 134.2,257.1 134.2,252.3 140.4,252.3 140.4,257.1 142.6,254.8 142.6,248.6 154.1,248.6 154.1,254.8 165.4,254.8
+					165.4,257.9 169.5,257.9 169.5,248.5 176.5,248.5 176.5,241.4 178.3,240 178.3,225.9 181,224.9 181,223.2 186,223.2 186,225.2
+					189.5,226.8 189.5,240.9 193.4,243 193.4,261.5 194.8,257.4 200.7,257.4 200.7,230.9 203.4,230.9 203.4,209.9 205.2,209.9
+					205.2,193.4 214.4,193.4 214.4,209.3 218.1,209.3 218.1,211.1 220,211.1 220,230.9 221.8,230.9 221.8,259.1 229.4,259.1
+					229.4,244.4 243.5,244.4 243.5,256.8 246.2,256.8 248,229.1 258.2,229.1 260,242.3 273.7,242.3 273.7,247.3 285.9,247.3 	"/>
+				<line display="inline" fill="none" stroke="#065F7C" stroke-miterlimit="10" x1="208.3" y1="176.7" x2="208.3" y2="193.4"/>
+				<line display="inline" fill="none" stroke="#065F7C" stroke-miterlimit="10" x1="211.4" y1="176.7" x2="211.4" y2="193.4"/>
+				<line display="inline" fill="none" stroke="#065F7C" stroke-miterlimit="10" x1="250.9" y1="220.8" x2="250.9" y2="229.1"/>
+				<line display="inline" fill="none" stroke="#065F7C" stroke-miterlimit="10" x1="255.3" y1="220.8" x2="255.3" y2="229.1"/>
+			</g>
+			<g id="palette" display="none">
+				<rect x="375" y="31.7" fill="#065F7C" width="41.3" height="41.3"/>
+				<rect x="375" y="82.3" fill="#650E1C" width="41.3" height="41.3"/>
+				<rect x="375" y="138.7" fill="#615956" width="41.3" height="41.3"/>
+				<rect x="375" y="196.7" fill="#D0CCD0" width="41.3" height="41.3"/>
+				<rect x="375" y="252" fill="#EDEAE1" width="41.3" height="41.3"/>
+			</g>
+			</svg>
+		</div>
 	<h1 class="section-title">Brazilian Roots</h1>
 	<div><a class="fliparrow" href="javascript:;"><i class="fa fa-chevron-down"></i></a></div>
 	</div>
 </div>
 
 <div class="brazil">
-	<div class="description"><p>We always try to stay connected with current events happening in Brazil.  Capoeira stems from the struggles of the lower-class, so these social issues are close to our hearts.  </p>	</div>
-	<hr>
+	<!-- <div class="description"><p><?php the_field('brazil_description'); ?></p>	</div> -->
 
-	<h2>capoeira origins</h2>
-	<p>Capoeira started as during the slave trade in Brazil, as a way for slaves to practice self-defense without getting caught.  They disguised it as a dance by incorporating music, instruments, and dance-live movements that could turn deadly.  It was outlawed in Brazil until Mestre Bimba legitimized it.  </p>
+<?php the_field('capoeira_description'); ?>
 
 	<div class="dances" id="dances">
-		<h2>related dances and music</h2>
-		<p>Other traditional cultural dances are go ahnd-in-hand with the training capoeira since its origins.  </p>
-		<div class="dance"><h3>Maculelê</h3>
-			<img src="imgs/dances/maculele1.jpg" alt="maculele image">
-			<p>Either originating from slaves in sugar-cane plantations or from a real-life African hero named "Maculele" (conflicting stories), the tradition is represented today with a spectacular, high-energy mock-fight dance performed with sticks and machetes to the rapid beat of drums.
-			</p></div>
-		<div class="dance"><h3>Dança Guerreira</h3>
-			<img src="imgs/dances/dancaguerreira1.jpg" alt="guerreira image">
-			<p>Dança Guerreira is a powerful dance representing a tribe preparing for fight. The choreography includes dancers in traditional clothing and body paint who are armed with swords and shields.
-			</p></div>
-		<div class="dance"><h3>Samba</h3>
-			<img src="imgs/dances/samba2.jpg" alt="samba image">
-			<p>Samba, characterized by vibrating hips and fast moving feet, is the official Brazilian dance of Carnaval. Radiant dancers wear Carnaval costumes and dance to live samba percussion.
-			</p></div>
-		<div class="dance"><h3>Puxada de Rede</h3>
-			<img src="imgs/dances/puxadaderede1.jpg" alt="puxada image">
-			<p>Puxada de Rede (or ‘pulling of the net’) is a folkloric theatrical dance about the simple life of Brazilian fishermen and the celebration of a successful catch. The graceful dance involves live music with passionate lyrics reflecting the natural beauty and daily struggles of the life of a fisherman.
-			</p></div>
+		<?php the_field('related'); ?>
+
+		<?php
+		//Define your custom post type name in the arguments
+		$args = array( 'post_type' => 'dances', 'posts_per_page' => 10 );
+		//Define the loop based on arguments
+		$loop = new WP_Query( $args );
+
+		//Display the contents
+		while ( $loop->have_posts() ) : $loop->the_post(); ?>
+		<div class="dance">
+
+		  <?php
+		      $image = get_field('dance_image');
+		      if( !empty($image) ): ?>
+		      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			<h3><?php the_title(); ?></h3>
+		  <?php	the_content(); ?>
+
+		<?php endif;
+		echo '</div>';
+		endwhile; ?>
+
+		<?php // ONCE A NEW QUERY IS DEFINED, THESE ARE THE POSTS PULLED
+		// MUST RESET THE LOOP TO THE MAIN QUERY (LIKE BELOW) TO GET THE BASIC INFO FROM ACF
+		// OTHERWISE THE REGULAR ACF FIELDS WON'T APPEAR ?>
 	</div>
+
 
 </div><!-- //end of "brazil"-->
 
+<hr>
 
+<div class="section-collapsed">
+	<div class="toggle-group">
+	<div class="titleicon">
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 360 360" enable-background="new 0 0 360 360" xml:space="preserve">
+		<g id="background" display="none">
+			<rect display="inline" fill="#065F7C" width="360" height="360"/>
+		</g>
+		<g id="origs" display="none">
 
+				<image display="inline" overflow="visible" width="581" height="309" xlink:href="7F01ED19D5090B55.png"  transform="matrix(0.3643 0 0 0.3643 70.6763 175.835)">
+			</image>
 
-<div class="bluebkgrd">
+				<image display="inline" overflow="visible" width="640" height="637" xlink:href="7F01ED19D5090B5B.png"  transform="matrix(0.2568 0 0 0.2568 44.0088 51.8252)">
+			</image>
+		</g>
+		<g id="orig-berimbau" display="none">
 
-	<div class="section-collapsed">
-		<div class="toggle-group">
-		<div class="titleicon"><img src="imgs/abt-berimbau-blue-white.png"></div>
-		<h1 class="section-title">Our Group</h1>
-		<div><a class="fliparrow" href="javascript:;"><i class="fa fa-chevron-down"></i></a></div>
-		</div>
+				<image display="inline" overflow="visible" width="200" height="443" xlink:href="7F01ED19D5090B5C.png"  transform="matrix(0.3887 0 0 0.3887 191.2285 33.4092)">
+			</image>
+		</g>
+		<g id="circle_frames">
+			<circle fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" cx="232.7" cy="126.6" r="105.3"/>
+			<circle fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" cx="127.3" cy="126.6" r="105.3"/>
+			<circle fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" cx="181.6" cy="232" r="105.3"/>
+		</g>
+		<g id="berimbau">
+			<circle fill="#FFFFFF" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-miterlimit="10" cx="232.7" cy="126.6" r="105.3"/>
+			<path fill="none" stroke="rgba(224,27,60,1)" stroke-width="5" stroke-linecap="round" stroke-miterlimit="10" d="M193.3,204.2
+				c0,0,63.4-49.1,71.6-107.4c4.5-32-2.8-62.4-2.8-62.4"/>
+			<polyline fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" points="260.6,37 215.8,168.4 195.4,202.5 	"/>
+			<g>
+				<polygon fill="rgba(224,27,60,1)" stroke="rgba(224,27,60,1)" points="207.1,148.9 277.7,210.9 204.8,151.5 		"/>
+			</g>
+			<ellipse fill="none" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-miterlimit="10" cx="242.9" cy="183.5" rx="20.2" ry="19.1"/>
+			<path fill="none" stroke="rgba(224,27,60,1)" stroke-width="0.6636" stroke-miterlimit="10" d="M240.9,188.4c0.8-8.8,7.4-15.9,13.3-15.9
+				c7.3,0,10.6,10.2,8,17c-2.4,6.3-6.8,11.7-13.1,10.7C243.1,199.3,240.3,194.2,240.9,188.4z"/>
+		</g>
+		<g id="brazil" display="none">
+
+				<circle display="inline" fill="#FFFFFF" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-miterlimit="10" cx="127.3" cy="126.6" r="105.3"/>
+
+				<path display="inline" fill="none" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M87.6,65.2L82.3,57l7.4,1.6l2.1-1.6l5.1-2l3-3.1h1.9v2.4c0,0,2.5,0.3,2.2,2.3s-2.1,3.2-1.5,5.6s0.3,4.1,1.5,4.8s2.5,1.2,2.5,1.2
+				h3.1l5-2.4l5.1,0.5l-1-1.8l3.4-1.2l0.7-0.9l3.4,2.2c0,0,2.4-0.2,2.7-0.2s3.5,0.2,3.5,0.2l2.6-2.6l-0.4-2.5l3.7-3l2.3,2.3v4.4
+				l1.9,3.6l2.6,0.7l-1.4,3.6l-4.6,4.4l0.3,2.7h2l0.9-3.3l8.3-0.3c0,0,1,2.7,0,3.6s-2.7,1.8-2.7,1.8h3.2l1.1-2.6l3.8-0.6l6.6,2.4
+				l2.2,1.6h1.8l1.5,1.9v2.5l0.9,0.9l2.9-1.1l8.5,2.2h5.7l13.3,9.8l5.2,1.1c0,0,4.5,5.6,3.5,9.4s-5.7,10.1-5.7,10.1l-7.9,9.3l-1.3,1.7
+				l-3.4,1.4l-0.9,1.6c0,0,0.3,8.9-0.4,11.9s-4,9.9-4,9.9l0.4,3.1l-5.9,7.5l-0.4,3.3c0,0-3.1,1-3.5,1.9s-1.1,1.4-1.1,1.4h-7l-4.2,1.1
+				l-2.6,2l-2.3,0.9l-5.2,3.5l-2.3,2.3l-2.4,1.4l-0.5,4.4c0,0,0.9,1.4,0.2,3.5s-3.5,5.4-3.5,5.4l-6,10.4l-3.8,2.6l-3.6,6l-1.5,0.8
+				l-0.5-3l1.6-1.8l-7.5-5.7l-0.8-2.3l-2.1,1.4l-2.4-3.2l-2.8-0.3c0,0,3-4.9,5.9-7.4s7.3-5.3,7.3-5.3l1.1-4.2c0,0-0.5-2-1.2-2.2
+				s-2.3-0.7-2.3-0.7l0.8-4.3l-1-2.9l-2.8,1l-1.5-6.9l-3.8-1l-4.4,0.6v-5.1l-1.4-4.7l2.3-6.9c0,0-0.2-2.9-1-3.4s-2.5-1.4-2.5-1.4v-3.5
+				h-7.6c0,0-1.8-3.3-1.2-4.1s0.8-2.3,0.8-2.3l-0.6-3.6l-4.2-1.6l-6.5-2l-2.3-1.6l-3.3-0.1l-4.1-4.6v-6.7l-6.7,1.1l-1.8,3l-3.4,1
+				l-1.3,1.7c0,0-5-0.9-6.2-0.5s-2.9-1.5-2.9-1.5l0.4-5.2c0,0-2,2.5-2.6,2.6s-5.4,0.2-5.4,0.2v-2l-2.9-0.3l0.9-2c0,0-5.5-4.7-4.8-6.1
+				s1-2.6,1-2.6l2.4-1.1c0,0,0.3-6.1,0.6-6.3s8-4.4,8-4.4l3.5,0.9l3.3-13L61.6,77l-2.1-1l0.3-3l2.9-0.4l-0.4-2.1l-1.1,0.1l-0.4-1.8
+				l7.5-1.8l0.4,1l2.6-2.7c0,0,0.3,2.6,1.1,3.4s2.8,2.4,2.8,2.4s4.7-0.8,6.4-1.7S87.6,65.2,87.6,65.2z"/>
+		</g>
+		<g id="chicago" display="none">
+
+				<circle display="inline" fill="#FFFFFF" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-miterlimit="10" cx="181.6" cy="232" r="105.3"/>
+
+				<polyline display="inline" fill="none" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				80.9,262.8 83.1,262.8 87.2,261 87.2,250.9 91.3,245.6 102.6,245.6 104.7,250.9 104.7,261 121.1,261 121.1,262.8 126.2,262.8
+				126.2,257.1 134.2,257.1 134.2,252.3 140.4,252.3 140.4,257.1 142.6,254.8 142.6,248.6 154.1,248.6 154.1,254.8 165.4,254.8
+				165.4,257.9 169.5,257.9 169.5,248.5 176.5,248.5 176.5,241.4 178.3,240 178.3,225.9 181,224.9 181,223.2 186,223.2 186,225.2
+				189.5,226.8 189.5,240.9 193.4,243 193.4,261.5 194.8,257.4 200.7,257.4 200.7,230.9 203.4,230.9 203.4,209.9 205.2,209.9
+				205.2,193.4 214.4,193.4 214.4,209.3 218.1,209.3 218.1,211.1 220,211.1 220,230.9 221.8,230.9 221.8,259.1 229.4,259.1
+				229.4,244.4 243.5,244.4 243.5,256.8 246.2,256.8 248,229.1 258.2,229.1 260,242.3 273.7,242.3 273.7,247.3 285.9,247.3 	"/>
+			<line display="inline" fill="none" stroke="#065F7C" stroke-miterlimit="10" x1="208.3" y1="176.7" x2="208.3" y2="193.4"/>
+			<line display="inline" fill="none" stroke="#065F7C" stroke-miterlimit="10" x1="211.4" y1="176.7" x2="211.4" y2="193.4"/>
+			<line display="inline" fill="none" stroke="#065F7C" stroke-miterlimit="10" x1="250.9" y1="220.8" x2="250.9" y2="229.1"/>
+			<line display="inline" fill="none" stroke="#065F7C" stroke-miterlimit="10" x1="255.3" y1="220.8" x2="255.3" y2="229.1"/>
+		</g>
+		<g id="palette" display="none">
+			<rect x="375" y="31.7" fill="#065F7C" width="41.3" height="41.3"/>
+			<rect x="375" y="82.3" fill="#650E1C" width="41.3" height="41.3"/>
+			<rect x="375" y="138.7" fill="#615956" width="41.3" height="41.3"/>
+			<rect x="375" y="196.7" fill="#D0CCD0" width="41.3" height="41.3"/>
+			<rect x="375" y="252" fill="#EDEAE1" width="41.3" height="41.3"/>
+		</g>
+		</svg>
+
 	</div>
+	<h1 class="section-title">Our Group</h1>
+	<div><a class="fliparrow" href="javascript:;"><i class="fa fa-chevron-down"></i></a></div>
+	</div>
+</div>
+
+<?php // THIS IS THE ORIGIAL LOOP! JUST HAD TO ADD THIS SNIPPET AND THE ORIG QUERY AND DATA APPEARS IN THIS FOLLOWING SECTION!
+if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php endwhile; endif; ?>
 
 
-	<div class="group">
-		<div class="description">
-			<p>Marisa Cordeiro brought capoeira from Brazil to Chicago, founding Gingarte Capoeira in 1991.  Since then, our group has grown into a thriving community of over 100 students and performers, many of whom have been with the school for over a decade.
-			</p>
-		</div>
-		<hr>
-			<h2>group history</h2>
-				<p>Our group started as a few capoeiristas in a park in Washington Park on Chicago's south side.
-				</p>
-				<p>We have been housed at Jane Addams, in Hyde Park and in West Town.  Many of our longest students have been promoted to teachers and continue to volunteer their time to teach for the organization presently.
-				</p>
-				<p>You may have seen us performing around town in Millennium Park, Old Town School of Folk Music, Texas de Brasil, Carnivale, and other corporate events.
-				</p>
-			<h2>mestre marisa</h2>
-				<div class="marisa"><img src="imgs/teachers/marisa1.jpg" alt="mestre marisa thumbnail"></div>
-				<p>Our group trains and practices under the tutelage of Mestre Marisa Cordeiro, who ranks among the highest female capoeiristas in the United States. She is well respected both in the U.S. and Brazil as a pioneer for women in capoeira.				</p>
+<div class="group">
+	<!--  <div class="description">
+		<p><?php the_field('group_description'); ?></p>
+	</div> -->
+		<?php the_field('group_history'); ?>
+		<h2>mestre marisa</h2>
+			<div class="marisa">
+				<?php
+					$image = get_field('marisa_photo');
+					if( !empty($image) ): ?>
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					<?php endif; ?>
+				</div>
+			<?php the_field('marisa_bio'); ?>
 
-				<p>Mestre Marisa Cordeiro is the founder and executive director of Gingarte Capoeira and a shining symbol of the Brazilian community in Chicago. Born in Curvelo, Brazil, Marisa trained at the prestigious Cordão de Ouro Capoeira Academy in São Paulo with top instructors such as Mestre Suassuna, Mestre Canguru, and Mestre Urubu Malandro. She is one of the highest-ranking female capoeiristas in the world.
-				</p>
-				<p>Mestre Marisa first came to the United States in 1989 as a performer with the renowned international group Oba Oba. They performed throughout the United States and Latin America. Two years later, she returned to Chicago and established Gingarte Capoeira in 1991.
-				</p>
-		<h2>instructors</h2>
-			<a href="comingsoon.html"><div class="teacher"><h3>Profesor Tinta Forte</h3>
-					<div class="headshot"><img src="imgs/teachers/tinta5.jpg" alt="tinta forte thumbnail"></div>
-				<!--<p>Profesor Tinta Forte (Victor Murrell) has been training capoeira since 1999. Although the majority of his training has been in Chicago, he has also traveled for extensive periods of time in Brazil, training at a variety of Cordão de Ouro Academies. He received his 'profesor' cord in 2010 and is now teaching in Albuquerque, New Mexico.-->
-				</p></div></a>
-			<a href="comingsoon.html"><div class="teacher"><h3>Profesor Ligeirinho</h3>
-					<div class="headshot"><img src="imgs/teachers/pele-headshot.jpg" alt="ligerinho thumbnail"></div>
-				<!--<p>Profesor Ligeirinho (Pele Santiago) has been training with Gingarte Capoeira since 1999. He received his ‘profesor’ cord in 2010, and has traveled to Brazil and around the U.S., training with several Cordão de Ouro masters of capoeira. He presently teaches at the Gingarte academy as well as other locations in Chicago.-->
-				</p></div></a>
-			<a href="comingsoon.html"><div class="teacher"><h3>Instrutor Artista</h3>
-					<div class="headshot"><img src="imgs/teachers/artista.jpg" alt="artista thumbnail"></div>
-				<!--<p>Instrutor Artista started training capoeira with Gingarte in 1997. He is also an accomplished musician, giving rise to his nickname. He has been residing and teaching capoeira in Crystal Lake, IL, and he continues to commute between his home and the city to take classes at Gingarte’s academy. Along with a trip to Brazil in 2001, Artista has traveled to numerous capoeira events throughout the US, and he received his ‘instrutor’ cord in 2010.-->
-				</p></div></a>
-			<a href="comingsoon.html"><div class="teacher"><h3>Instrutora Bamba</h3>
-					<div class="headshot"><img src="imgs/teachers/bamba-berimbau.jpg" alt="bamba thumbnail"></div>
-				<!--<p>Instrutora Bamba began training capoeira with CM Marisa of Gingarte Capoeira in 1999. Since 2002 she has trained and worked extensively with CM Relampago of Canoa Grande in Igarassu, PE, Brazil (www.canoagrande.org). She received her ‘instrutora’ cordão from Gingarte Capoeira in 2010. Bamba teaches kids and adult capoeira classes at the academy in Chicago and continues to work with Canoa Grande after the disappearance of CM Relampago. She is also a full-time faculty member at UIC where she teaches Acting and Movement. She has shared her theater wisdom by acting as stage manager for many of Gingarte’s annual productions. You also can see her on stage here and there with the Physical Theatre Company Plasticene. (www.plasticene.com).-->
-				</p></div></a>
-			<a href="comingsoon.html"><div class="teacher"><h3>Instrutora Biriba</h3>
-					<div class="headshot"><img src="imgs/teachers/biriba-maculele.jpg" alt="biriba thumbnail"></div>
-				<!--<p>Instrutora Biriba ....-->
-				</p></div>
-			<a href="comingsoon.html"><div class="teacher"><h3>Instrutor Girafa</h3>
-						<div class="headshot"><img src="imgs/teachers/girafa30-214.jpg" alt="girafa thumbnail"></div></a>
-				<!--<p>Instrutor Girafa has been training with Gingarte Capoeira since 1998. Teaching since 2002, he is now instructing Gingarte classes primarily at the University of Chicago. He is also teaching capoeira through after-school programs at the University of Chicago Lab Schools and Ashburn Lutheran School. Girafa has implemented and led programs for Children’s Home + Aid and After School Matters, which are two organizations offering enrichment programs for inner-city youth. He has played pivotal roles as the group’s emcee, sound man, and stage manager as well. Girafa received his ‘instrutor’ cord in 2010.-->
-				</p></div></a>
-			<a href="comingsoon.html"><div class="teacher"><h3>Instrutor Manhoso</h3>
-					<div class="headshot"><img src="imgs/teachers/manhoso-millpk.jpg" alt="manhoso thumbnail"></div>
-				<!--<p>Instrutor Manhoso began training with Gingarte Capoeira in 2002. Having made trips to Rio de Janeiro and Sao Paulo, he helps teach classes at Gingarte’s academy. He also helps maintain Gingarte’s website and serves as the in-house IT advisor. He received his ‘instrutor’ cord in 2010.-->
-				</p></div></a>
-			<a href="comingsoon.html"><div class="teacher"><h3>Instrutor Poderoso</h3>
-					<div class="headshot"><img src="imgs/teachers/poder.jpg" alt="poderoso thumbnail"></div>
-				<!--<p>Instrutor Poderoso found capoeira in 2000, training initially with Capoeira Zoador in Tokyo, Japan. After returning to the U.S. in 2001, he joined Gingarte Capoeira Chicago, where he trained extensively until moving away for graduate school. Starting in 2004, he trained with capoeira groups around the country—including Roda De Fogo (United Capoeira Association), Senzala Seattle, and Mestre Espirro Mirim (Tucson Cordão de Ouro)—while still maintaining his connection to Gingarte. Poderoso returned home to Chicago in 2013, ready to learn more from Gingarte and share what he has learned elsewhere. He received his 'instrutor' cordão in 2013.-->
-				</p></div></a>
-			<a href="comingsoon.html"><div class="teacher"><h3>Instrutor Tamanduá</h3>
-					<div class="headshot"><img src="imgs/teachers/tam with atlas cropped.jpg" alt="tamanduá thumbnail"></div>
-				<!--<p>Instrutor Tamanduá started capoeira with Capoeira Mandinga in Detroit in 2003. He trained briefly with Cordão de Ouro in Des Moines before training with Gingarte Capoeira beginning in 2005. Since then he has traveled to capoeira events in Brasil, China, across the US and has taught classes in Beijing. Tamanduá has also been teaching regularly at Gingarte's academy and has officially become a member of Gingarte Capoeira Chicago. He received his 'instrutor' cordão in 2012. -->
-				</p></div></a>
-			<a href="comingsoon.html"><div class="teacher"><h3>Instrutor Urso Polar</h3>
-					<div class="headshot"><img src="imgs/teachers/urso-role.JPG" alt="urso polar thumbnail"></div>
-				<!--<p>Instrutor Urso Polar started training capoeira in 2002. After a 2.5 month stint in Brazil, he returned home to Chicago and joined Gingarte in the fall of 2003. His continued training has led him to attend numerous events here within the U.S., as well as Brazil. He received his "instrutor" cord in 2010 and teaches in the Gingarte academy in Chicago. As the group's videographer/editor, he also contributes by producing trailers used for grant submittals as well as promotional use via social media forums.-->
-				</p></div></a>
-		<div class="students">
-			<h2>our students - our family</h2>
-				<p>Gingarte students have volunteered countless hours to the art of Capoeira. The group could not function as it does without their tireless dedication to teaching, performing, and helping with the daily operations of our group throughout the Chicagoland area and US. This includes Professors and Instructors but also a core group of committed students - from beginners to advanced. Thank you teachers and students!</p>
-		</div>
+	<h2>instructors</h2>
 
-		<div class="troupe">
-			<h2>our performance group</h2>
-			<p>An integral part of Gingarte Capoeira Chicago is the Gingarte Capoeira Performance Company, created in 1996 under the direction of Marisa Cordeiro. Performances including Capoeira, Maculelê, Samba, Dança Guerrera, and Puxada de Rede are available for a wide range of audiences. </br><a href="perform.html">Click here</a> for more about booking us to perform.</p>
-		</div>
+	<?php //HOW TO DISPLAY CUSTOM POSTS from https://wp-types.com/documentation/user-guides/displaying-wordpress-custom-content/
+	$args = array( 'post_type' => 'teacher', 'posts_per_page' => 20 ); //Define your custom post type name in the arguments
+	$loop = new WP_Query( $args ); //Define the loop based on arguments
 
-	</div><!-- //end of "group"-->
-</div> <!-- / #bluebkgrd-->
+	//Display the contents
+	while ( $loop->have_posts() ) : $loop->the_post(); ?>
+	<div class="teacher"><a href="<?php the_field('bio_link'); ?>">
+
+	  <?php	echo '<div class="headshot">';
+	      $image = get_field('teacher_headshot');
+	      if( !empty($image) ): ?>
+	        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+	      <?php endif;
+	    echo '</div>';
+	  echo '</a>'; ?>
+
+		<a href="<?php the_field('bio_link'); ?>"><h3><?php the_title(); ?></h3></a>
+
+	<?php echo '</div>';
+	endwhile; ?>
+
+
+<div class="students">
+	<?php the_field('about_students'); ?>
+</div>
+
+</div><!-- //end of "group"-->
+
+<hr>
 
 <div class="section-collapsed">
 	<div class="toggle-chicago">
-		<div class="titleicon"><img src="imgs/abt-chicago.png"></div>
+		<div class="titleicon">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 360 360" enable-background="new 0 0 360 360" xml:space="preserve">
+			<g id="background" display="none">
+				<rect display="inline" fill="#065F7C" width="360" height="360"/>
+			</g>
+			<g id="origs" display="none">
+
+				<image display="inline" overflow="visible" width="581" height="309" xlink:href="4EF4FCCEAE737ECF.png"  transform="matrix(0.3643 0 0 0.3643 70.6763 175.835)">
+				</image>
+
+					<image display="inline" overflow="visible" width="640" height="637" xlink:href="4EF4FCCEAE737ECD.png"  transform="matrix(0.2568 0 0 0.2568 44.0088 51.8252)">
+				</image>
+			</g>
+			<g id="orig-berimbau" display="none">
+
+					<image display="inline" overflow="visible" width="200" height="443" xlink:href="4EF4FCCEAE737ED3.png"  transform="matrix(0.3887 0 0 0.3887 191.2285 33.4092)">
+				</image>
+			</g>
+			<g id="circle_frames">
+				<circle fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" cx="232.7" cy="126.6" r="105.3"/>
+				<circle fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" cx="127.3" cy="126.6" r="105.3"/>
+				<circle fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" cx="181.6" cy="232" r="105.3"/>
+			</g>
+			<g id="berimbau" display="none">
+				<circle display="inline" fill="#FFFFFF" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" cx="232.7" cy="126.6" r="105.3"/>
+				<path display="inline" fill="none" stroke="rgba(224,27,60,1)" stroke-width="5" stroke-linecap="round" stroke-miterlimit="10" d="
+					M193.3,204.2c0,0,63.4-49.1,71.6-107.4c4.5-32-2.8-62.4-2.8-62.4"/>
+				<polyline display="inline" fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" points="260.6,37 215.8,168.4 195.4,202.5 	"/>
+				<g display="inline">
+					<polygon points="207.1,148.9 277.7,210.9 204.8,151.5 		"/>
+				</g>
+
+					<ellipse display="inline" fill="none" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-miterlimit="10" cx="242.9" cy="183.5" rx="20.2" ry="19.1"/>
+				<path display="inline" fill="none" stroke="rgba(224,27,60,1)" stroke-width="0.6636" stroke-miterlimit="10" d="M240.9,188.4
+					c0.8-8.8,7.4-15.9,13.3-15.9c7.3,0,10.6,10.2,8,17c-2.4,6.3-6.8,11.7-13.1,10.7C243.1,199.3,240.3,194.2,240.9,188.4z"/>
+			</g>
+			<g id="brazil" display="none">
+
+					<circle display="inline" fill="#FFFFFF" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-miterlimit="10" cx="127.3" cy="126.6" r="105.3"/>
+
+					<path display="inline" fill="none" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+					M87.6,65.2L82.3,57l7.4,1.6l2.1-1.6l5.1-2l3-3.1h1.9v2.4c0,0,2.5,0.3,2.2,2.3s-2.1,3.2-1.5,5.6s0.3,4.1,1.5,4.8s2.5,1.2,2.5,1.2
+					h3.1l5-2.4l5.1,0.5l-1-1.8l3.4-1.2l0.7-0.9l3.4,2.2c0,0,2.4-0.2,2.7-0.2s3.5,0.2,3.5,0.2l2.6-2.6l-0.4-2.5l3.7-3l2.3,2.3v4.4
+					l1.9,3.6l2.6,0.7l-1.4,3.6l-4.6,4.4l0.3,2.7h2l0.9-3.3l8.3-0.3c0,0,1,2.7,0,3.6s-2.7,1.8-2.7,1.8h3.2l1.1-2.6l3.8-0.6l6.6,2.4
+					l2.2,1.6h1.8l1.5,1.9v2.5l0.9,0.9l2.9-1.1l8.5,2.2h5.7l13.3,9.8l5.2,1.1c0,0,4.5,5.6,3.5,9.4s-5.7,10.1-5.7,10.1l-7.9,9.3l-1.3,1.7
+					l-3.4,1.4l-0.9,1.6c0,0,0.3,8.9-0.4,11.9s-4,9.9-4,9.9l0.4,3.1l-5.9,7.5l-0.4,3.3c0,0-3.1,1-3.5,1.9s-1.1,1.4-1.1,1.4h-7l-4.2,1.1
+					l-2.6,2l-2.3,0.9l-5.2,3.5l-2.3,2.3l-2.4,1.4l-0.5,4.4c0,0,0.9,1.4,0.2,3.5s-3.5,5.4-3.5,5.4l-6,10.4l-3.8,2.6l-3.6,6l-1.5,0.8
+					l-0.5-3l1.6-1.8l-7.5-5.7l-0.8-2.3l-2.1,1.4l-2.4-3.2l-2.8-0.3c0,0,3-4.9,5.9-7.4s7.3-5.3,7.3-5.3l1.1-4.2c0,0-0.5-2-1.2-2.2
+					s-2.3-0.7-2.3-0.7l0.8-4.3l-1-2.9l-2.8,1l-1.5-6.9l-3.8-1l-4.4,0.6v-5.1l-1.4-4.7l2.3-6.9c0,0-0.2-2.9-1-3.4s-2.5-1.4-2.5-1.4v-3.5
+					h-7.6c0,0-1.8-3.3-1.2-4.1s0.8-2.3,0.8-2.3l-0.6-3.6l-4.2-1.6l-6.5-2l-2.3-1.6l-3.3-0.1l-4.1-4.6v-6.7l-6.7,1.1l-1.8,3l-3.4,1
+					l-1.3,1.7c0,0-5-0.9-6.2-0.5s-2.9-1.5-2.9-1.5l0.4-5.2c0,0-2,2.5-2.6,2.6s-5.4,0.2-5.4,0.2v-2l-2.9-0.3l0.9-2c0,0-5.5-4.7-4.8-6.1
+					s1-2.6,1-2.6l2.4-1.1c0,0,0.3-6.1,0.6-6.3s8-4.4,8-4.4l3.5,0.9l3.3-13L61.6,77l-2.1-1l0.3-3l2.9-0.4l-0.4-2.1l-1.1,0.1l-0.4-1.8
+					l7.5-1.8l0.4,1l2.6-2.7c0,0,0.3,2.6,1.1,3.4s2.8,2.4,2.8,2.4s4.7-0.8,6.4-1.7S87.6,65.2,87.6,65.2z"/>
+			</g>
+			<g id="chicago">
+				<circle fill="#FFFFFF" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-miterlimit="10" cx="181.6" cy="232" r="105.3"/>
+
+				<polyline fill="none" stroke="rgba(224,27,60,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+					80.9,262.8 83.1,262.8 87.2,261 87.2,250.9 91.3,245.6 102.6,245.6 104.7,250.9 104.7,261 121.1,261 121.1,262.8 126.2,262.8
+					126.2,257.1 134.2,257.1 134.2,252.3 140.4,252.3 140.4,257.1 142.6,254.8 142.6,248.6 154.1,248.6 154.1,254.8 165.4,254.8
+					165.4,257.9 169.5,257.9 169.5,248.5 176.5,248.5 176.5,241.4 178.3,240 178.3,225.9 181,224.9 181,223.2 186,223.2 186,225.2
+					189.5,226.8 189.5,240.9 193.4,243 193.4,261.5 194.8,257.4 200.7,257.4 200.7,230.9 203.4,230.9 203.4,209.9 205.2,209.9
+					205.2,193.4 214.4,193.4 214.4,209.3 218.1,209.3 218.1,211.1 220,211.1 220,230.9 221.8,230.9 221.8,259.1 229.4,259.1
+					229.4,244.4 243.5,244.4 243.5,256.8 246.2,256.8 248,229.1 258.2,229.1 260,242.3 273.7,242.3 273.7,247.3 285.9,247.3 	"/>
+				<line fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" x1="208.3" y1="176.7" x2="208.3" y2="193.4"/>
+				<line fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" x1="211.4" y1="176.7" x2="211.4" y2="193.4"/>
+				<line fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" x1="250.9" y1="220.8" x2="250.9" y2="229.1"/>
+				<line fill="none" stroke="rgba(224,27,60,1)" stroke-miterlimit="10" x1="255.3" y1="220.8" x2="255.3" y2="229.1"/>
+			</g>
+			<g id="palette" display="none">
+				<rect x="375" y="31.7" fill="#065F7C" width="41.3" height="41.3"/>
+				<rect x="375" y="82.3" fill="#650E1C" width="41.3" height="41.3"/>
+				<rect x="375" y="138.7" fill="#615956" width="41.3" height="41.3"/>
+				<rect x="375" y="196.7" fill="#D0CCD0" width="41.3" height="41.3"/>
+				<rect x="375" y="252" fill="#EDEAE1" width="41.3" height="41.3"/>
+			</g>
+			</svg>
+
+		</div>
 		<h1 class="section-title">A Home in Chicago</h1>
 		<div><a class="fliparrow" href="javascript:;"><i class="fa fa-chevron-down"></i></a></div>
 	</div>
 </div>
 
-
-
+<?php // RESETTING TO ORIG LOOP AGAIN to show content
+wp_reset_postdata(); ?>
 
 <div class="chicago">
-	<div class="description"><p>
-		Capoeira has the incredible power to provide focus, creativity and opportunity.  We strive to bring our programs to underserved communities in Chicago.  The struggle is strikingly and unfortunately similar to the struggle in Brazil, but capoeira's potential to provide a path towards success and education remains the same. </p>
-
-		<p>We also stay connected with Chicago's vibrant Brazilian community, by partnering with local cultural organizations as much as possible. </p>
-
-
-	</div>
-<hr>
-
-<h2>after-school programs</h2>
-	<p>We are dedicated to bringing capoeira to as many people as possible.  These are some of the many schools that we've worked with:  </p>
+	<!-- <div class="description">
+		<p><?php the_field('chicago_description'); ?></p>
+	</div> -->
+<div class="schoolprograms">
+	<?php the_field('after_school'); ?>
+</div>
 
 <div class="partnerlogos">
-	<div class="plogo">
-		<img src="imgs/partners/asm.png" alt="after school matters">
-	</div>
-	<div class="plogo">
-		<img src="imgs/partners/cps.jpg" alt="chicago public schools">
-	</div>
-	<div class="plogo">
-		<img src="imgs/partners/uofccharter.jpg" alt="U of C Charter Schools">
-	</div>
-	<div class="plogo">
-		<img src="imgs/partners/enlace.png" alt="enlace">
-	</div>
-	<div class="plogo">
-		<img src="imgs/partners/uofclab.jpg" alt="U of C Lab Schools">
-	</div>
-	<div class="plogo">
-		<img src="imgs/partners/youngaud.jpg" alt="Young Audiences">
-	</div>
-	<div class="plogo">
-		<img src="imgs/partners/chiarts.jpg" alt="Chicago High School for the Arts">
-	</div>
-	<div class="plogo">
-		<img src="imgs/partners/gallery37.jpg" alt="Gallery 37">
-	</div>
-	<div class="plogo">
-		<img src="imgs/partners/childrens.jpg" alt="Children's Home and Aid">
-	</div>
-	<div class="plogo">
-		<img src="imgs/partners/qcdc.jpg" alt="Quad Communities Development Corporation">
-	</div>
-	<div class="plogo">
-		<img src="imgs/partners/urbgateways.png" alt="Urban Gateways">
-	</div>
+	<?php //HOW TO DISPLAY CUSTOM POSTS from https://wp-types.com/documentation/user-guides/displaying-wordpress-custom-content/
+	$args = array( 'post_type' => 'schools', 'posts_per_page' => 30 ); //Define your custom post type name in the arguments
+	$loop = new WP_Query( $args ); //Define the loop based on arguments
+ ?>
+
+<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+	<?php	// Get ready to display each image within a the plogo div
+		echo '<div class="plogo">';
+		$image = get_field('school_logo');
+		if( !empty($image) ): // Check if there is a logo ?>
+
+		<!-- SHOW THE LOGO VIA ACF -->
+			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+	<?php else : // this didn't really work - to show nothing if there was no logo.
+		echo ''; ?>
+
+	<?php endif; echo '</div>'; // END THE CONDITION TO CHECK FOR ?>
+
+	<?php endwhile ?>
+
+
 </div>
 
-
-<div class="alsopartners">
-	<p>Also: Reavis Elementary, Cameron Elementary, Castellanos Elementary, Mark Sheridan Academy, Evanston?, Libraries?, UIC Jazz Camp
-	</p>
-</div>
-
-	<p>If you're interested in bringing capoeira to your school, please let us know here.  If you're not ready for a program, you can always have us do a demonstration!</p>
-
-
-<h2>board of Directors</h2>
-	<p>Our board meets regularly to help guide the overall vision of the group alongside Mestre Marisa, our Executive Director.  This is distinct from our daily operations.  </p>
-	<h3>Board President: James White</h3>
-	<h3>Board Treasurer: Patrick Cameron</h3>
-	<h3>Board Director: Emilios Chronopolous</h3>
-	<h3>Board Director: Kris Kopriva</h3>
-	<h3>Board Director: Carlyn So</h3>
-	<h3>Board Director: Rhea Yap</h3>
-	<p>If you are interested in joining our Board of Directors, we accept nominations once a year.  We look for members that hold a genuine interest in Capoeira and who can help expand our vision as a nonprofit.  </p>
-
-
-<h2>support our nonprofit</h2>
-	<p>As a completely volunteer-run organization, we are proud of our accomplishments.  		We have: </p>
-		<ul>
-		<li>Over 100 visits to our classes every month.</li>
-		<li>15+ long-term students (involved with Gingarte Capoeira for 10 to 20 years)</li>
-		<li>Brought over 100 resident artists from Brazil and other parts of the world to share their talents with our group.</li>
-		<li>Organized over 20 events with budgets of over $10K.</li>
-		<li>Performed hundreds of times throughout the Midwest and produced over 20 full-length shows with over 1500 cumliative attendees.</li>
-	</ul>
-
-	<div class="button">Donate to our 501c3</div>
-
-	<p>We have been generously sponsored throughout the years by countless partners.  These are just a few: </p>
-
-	<div class="partnerlogos">
-		<div class="plogo">
-			<img src="imgs/partners/united.jpg" alt="United Airlines">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/chgodcase.png" alt="chicago department of cultural affairs and special events">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/eriehouse.jpg" alt="Erie Neighborhood House">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/ihouse.png" alt="International House at the University of Chicago">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/scelec.png" alt="S and C Electric">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/iac.jpg" alt="Illinois Arts Council">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/driehaus.jpg" alt="Driehaus Foundation">
-		</div>
-
-		<div class="plogo">
-			<img src="imgs/partners/uictheater.png" alt="UIC Theater">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/oldtownmus.jpg" alt="Old Town School of Folk Music">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/driehaus.jpg" alt="DuSable Museum">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/msi.png" alt="Museum of Science and Industry">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/mca.png" alt="Museum of Contemporary Art">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/field.png" alt="Field Museum">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/millpk.png" alt="Millennium Park">
-		</div>
-		<div class="plogo">
-			<img src="imgs/partners/chgopkd.png" alt="Chicago Park District">
-		</div>
-
-	</div>
-
+<div class="mobile-only">
+	<?php // RESETTING TO ORIG LOOP AGAIN to show content
+	wp_reset_postdata(); ?>
 
 	<div class="alsopartners">
-		<p>Also: University of Chicago RSO, Chicago Samba School, Evanston Samba School, Swing Brasileiro, Ruth Page Center for the Arts, Union Church?, Easter Seals?,
-		</p>
+		<p><?php the_field('other_schools'); ?></p>
+	</div>
+</div>
+
+
+
+<div class="section-top-horzrule"><?php the_field('board_directors'); ?></div>
+
+<div class="section-top-horzrule"><?php the_field('support_group'); ?></div>
+
+	<div class="partnerlogos">
+		<?php //HOW TO DISPLAY CUSTOM POSTS from https://wp-types.com/documentation/user-guides/displaying-wordpress-custom-content/
+		$args = array( 'post_type' => 'partners', 'posts_per_page' => 30 ); //Define your custom post type name in the arguments
+		$loop = new WP_Query( $args ); //Define the loop based on arguments
+
+		//Display the contents
+		while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+		<?php	echo '<div class="plogo">';
+		    $image = get_field('partner_logo');
+		    if( !empty($image) ): ?>
+		      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		    <?php endif;
+		  echo '</div>';
+
+		endwhile; ?>
 	</div>
 
-	<div class="button">Please contact us on for coporate sponsorships and partnerships.</div>
+
+
+<div class="mobile-only">
+
+	<?php // RESETTING TO ORIG LOOP AGAIN to show content
+	wp_reset_postdata(); ?>
+
+	<div class="alsopartners">
+		<p><?php the_field('other_partners'); ?></p>
+	</div>
+</div>
+
+
+	<div class="button"><a href="mailto:info@gingartecapoeira.org">Become a sponsor</a></div>
 
 
 
@@ -309,9 +456,5 @@
 show students and Community Atmosphere!  Welcoming!  Embracing broader Brazilian community and social good.  The impacts capoeira can have on people / life.
 need to develop inclusive atmosphere, events & shows well-executed and demonstrates organization/efficiency, our board of directors, fundraisers-->
 
-
-
-
-<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo rawurlencode(get_permalink()); ?>&amp;layout=standard&amp;show-faces=true&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" id="facebook-like"></iframe>
 
 <?php get_footer(); ?>

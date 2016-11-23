@@ -1,7 +1,34 @@
 @font-face {
-  font-family: Ostrich;
-  src: url(OstrichSansInline-Regular.otf);
+  font-family: 'Montserrat';
+  src: url('montserrat/Montserrat-Light.otf') format('opentype');
+  font-weight: 300;
   font-weight: regular;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('montserrat/Montserrat-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('montserrat/Montserrat-SemiBold.otf') format('opentype');
+  font-weight: 500;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('montserrat/Montserrat-Bold.otf') format('opentype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('montserrat/Montserrat-UltraLight.otf') format('opentype');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('montserrat/Montserrat-Hairline.otf') format('opentype');
+  font-weight: 100;
 }
 
 /* Background pattern from subtlepatterns.com */
@@ -10,40 +37,54 @@ header {
   margin: 0 auto;
 }
 h1 {
-  font-family: Ostrich, Helvetica Neue, sans-serif;
-  font-weight: 100;
-  font-size: 4em;
-  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 h2 {
-  font-family: Ostrich, Helvetica Neue, sans-serif;
-  font-weight: 100;
-  font-size: 2em;
-  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 .brandhead h1 {
-  font-size: 2em;
+  margin: 0;
+  text-align: center;
+  font-size: 1.4em;
 }
-.brandhead h2 {
-  font-size: 4em;
-}
-
 .logo img {
-  width: 75px;
+  width: 90px;
+}
+.logo {
+  margin: 0 auto;
+}
+.mestremarisa {
+  font-size: 0.8em;
+}
+.mestremarisa h1 {
+  font-weight: 200;
 }
 
 body {
-  font-family: Source Sans Pro, Helvetica Neue, sans-serif;
+  font-family: Montserrat, Helvetica Neue, sans-serif;
   font-weight: 300;
   margin: 0;
+  color: rgba(56,49,50,1); /* MAIN GREY FONT */
 }
 
 .button {
-  border: 1px solid  rgba(3,94,123,1);
+  background-color: rgba(137,133,133,1); /* MENU GREY */
+  color: white;
+  border: 1px solid white;
   text-align: center;
   text-transform: uppercase;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1%;
 }
-
+.button:hover {
+  background-color: rgba(224,27,60,1); /* LOGO RED */
+}
+.button a {
+  color: white;
+}
 .middle .button {
   width: 50%;
   margin: 0 auto;
@@ -53,21 +94,16 @@ body {
 header {
   text-align: center;
 }
-.tagline {
-  font-size: 1.2em;
-}
-
-.menu-full {
-  display: none;
+.contents {
+  font-style: italic;
+  margin-bottom: 3%;
+  font-size: 0.8em;
 }
 
 
 a {
   text-decoration: none;
   color: black;
-}
-a:hover {
-  text-decoration: underline;
 }
 
 
@@ -88,39 +124,46 @@ COLLAPSIBLE SECTIONS:
 .back-top {
   display: none;
 }
-
+nav {
+  clear: both;
+}
 .menu-full {
   display: none;
-}
+  text-transform: uppercase;
 
+}
 .menu-bar {
-  background-color: rgba(3,94,123,1);
+  /* background-color: rgba(3,94,123,1);  OLD BLUE */
+  background-color: rgba(137,133,133,1); /* MENU GREY */
   text-align: center;
   padding: 15px 0;
   width: 100%;
   overflow: auto;
-  box-shadow: 1px 5px 5px rgba(1,1,1,1);
+  box-shadow: 1px 5px 5px rgba(1,1,1,0.7);
 }
 .menu-bar a {
   color: rgba(251,252,255,1);
+
 }
 .menu-icon {
   float: left;
   width: 10%;
 }
-.menu-bar .latest-news {
+.menu-bar .news-feature {
   width: 80%;
   float: left;
 }
-.menu-bar .latest-news a {
+.menu-bar .news-feature a {
   border: 1px solid white;
   padding: 1%;
+
+}
+.news-feature a:hover {
+  background-color: rgba(224,27,60,1); /* LOGO RED */
 }
 .arrow-icon {
   float: right;
   width: 10%;
-}
-.mobilemenu {
 }
 .mobilemenu-fixed {
   position: fixed;
@@ -131,12 +174,14 @@ COLLAPSIBLE SECTIONS:
 .dropdown {
   display: none;
   text-transform: uppercase;
-  font-size: 1.8em;
+  font-size: 1.2em;
+  line-height: 1.5em;
   text-align: left;
   width: 100%;
-  height: 300px;
+  height: 250px;
   clear: both;
-  background-color: rgba(3,94,123,0.95);
+  background-color: rgba(137,133,133,1); /* MENU GREY */
+  z-index: 1;
 }
 /* so the dropdown menu sticks with the menu bar location */
 .mobilemenu .dropdown {
@@ -145,24 +190,32 @@ COLLAPSIBLE SECTIONS:
 .mobilemenu-fixed .dropdown {
   position: static;
 }
-
 .dropdown a {
   color: rgba(251,252,255,1);
 }
+.dropdown li:hover {
+  /* highlight mobile menu items on hover */
+  background-color: rgba(224,27,60,1); /* LOGO RED */
+  width: 200px;
+
+}
+.dropdown .current-menu-item:hover {
+  /* but don't change background color behind current mobile menu item */
+  background-color: rgba(137,133,133,1); /* MENU GREY */
+}
+
+/* change dispaly of current mobile menu item, WP-generated class */
+.current-menu-item a {
+  color: rgba(56,49,50,1); /* MAIN GREY FONT */
+}
+
 .dropdown ul {
-  padding: 5% 11%;
   margin: 0;
+  padding-top: 30px;
 }
 .dropdown li {
   list-style-type: none;
 }
-.submenu {
-  text-transform: capitalize;
-  padding-left: 5%;
-  font-size: .5em;
-  overflow: scroll /* put this in the dropdown div*/
-}
-
 
 .container {
   width: 80%;
@@ -172,12 +225,20 @@ COLLAPSIBLE SECTIONS:
 /* -- FRONT PAGE IMG STYLING -- */
 .frontimg {
   clear: both;
-  height: 300px;
+  /*-- AS A BACKGROUND IMAGE -------------
   background-image: url("../imgs/holidayroda2012.jpg");
   background-size: cover;
   background-position: 50% 47%;
   position: relative;
-  z-index: -1;
+  z-index: -1; --*/
+}
+/*-- AS HTML IMG (lost the menu bar drop shadow with this) ----------- */
+.frontimg img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  position: static;
+  left: 20%;
 }
 
 .caption {
@@ -185,7 +246,6 @@ COLLAPSIBLE SECTIONS:
   margin: 0 auto;
   background-color: rgba(1,1,1,.4);
   color: white;
-  font-weight: 400;
   text-align: center;
   letter-spacing: 0.1em;
   position: absolute;
@@ -199,48 +259,54 @@ COLLAPSIBLE SECTIONS:
 
 /* -- FRONT PAGE NEWS STYLING -- */
 .items h2 {
-  font-size: 4em;
+  font-size: 2em;
   text-align: left;
-  margin-top: 0;
   margin-bottom: 0;
   line-height: 1;
   padding-left: 5%;
-  padding-bottom: 5%;
-  border-bottom: 3px double black;
+  padding-bottom: 3%;
+  border-bottom: 3px double rgba(137,133,133,1);
 }
 .items li {
-  font-size: 1.5em;
   text-align: left;
   list-style-type: circle;
-  font-size: 1.2em;
+}
+.items a:hover {
+  text-decoration: underline;
 }
 
 .smallnewstext {
-  font-size: .5em;
+  font-size: 0.5em;
 }
 
 .fvideo {
   width: 80%;
-  height: 200px;
+  height: 270px; /* this is what captures the caption text or not, so be careful. change on mobile too*/
   clear: both;
-  background-color: rgba(96,88,86,.3);
-  margin: 5% auto;
+  margin: 5% auto 10% auto;
+  font-size: 0.8em;
 }
 
 /* -- FRONT PAGE 3 FEATURES STYLING -- */
 .features {
   overflow: auto;
+  clear: both;
 }
 .features h2 {
   margin-top: 0;
   text-align: center;
-  font-size: 2em;
+}
+.first {
+}
+.first:hover, .middle:hover, .last:hover {
+  background-color: rgba(96,88,86,.2); /* MADEUP HOVER GREY*/
 }
 .capostar {
-  padding-top: 5%;
-  border: 1px solid rgba(96,88,86,.1);
   display: block;
   text-align: center;
+}
+.capostar svg {
+  width: 80px;
 }
 
 .last {
@@ -272,46 +338,79 @@ COLLAPSIBLE SECTIONS:
 .last {
   clear: both;
 }
+.frontpgcredits {
+  font-size: 0.8em;
+  text-align: center;
+  margin: 5% 0 0 0;
+}
+
+/* -- PAGINATION STYLING -- (a dot shows up if i add a background-color)*/
+.nav-previous {
+  float: left;
+  margin: 5% 0;
+}
+.nav-next {
+  float: right;
+  margin: 5% 0;
+
+}
+.pagination a {
+  color: rgba(224,27,60,1); /* LOGO RED */
+}
+.news-feature-item h3 {
+  margin-bottom: 0;
+}
+.news-feature-item p {
+  margin-top: 1%;
+}
+
 
 /* -- FOOTER STYLING -- */
 footer {
   clear: both;
-  background-color: rgba(3,94,123,1);
+  background-color: rgba(137,133,133,1); /* MENU GREY */
   color: rgba(251,252,255,1);
   text-align: center;
   font-size: 80%;
-  margin-top: 5%;
-  padding: 3% 3% 5% 3%;
+  padding: 3% 3% 2% 3%;
   letter-spacing: 1px;
+  margin-top: 3%;
 }
 
 footer a {
-    font-weight: 500;
-    color: rgba(251,252,255,1);
+  font-weight: 400;
+  color: rgba(251,252,255,1);
 }
-
-footer p {
-    margin-bottom: 0;
+footer a:hover {
+  text-decoration: underline;
 }
 
 .largerftr {
   display: none;
 }
 
-footer img {
-  width: 30px;
-}
 .buttonelist {
-  background-color: rgba(3,94,123,1);
-  padding: 2%;
   text-align: center;
   width: 50%;
   margin: 0 auto;
   border: 1px solid white;
 }
-
+.buttonelist:hover {
+  background-color: rgba(224,27,60,1); /* LOGO RED */
+}
+.buttonelist a:hover {
+  text-decoration: none;
+}
+.social { /* found size of div wrapping icons from web inspector and wrapped in my own to center on mobile */
+  width: 225px;
+  margin: 0 auto;
+}
 .author {
   font-size: 0.8em;
+  font-weight: 200;
+}
+.author a {
+  font-weight: 400;
 }
 
 
@@ -320,14 +419,33 @@ footer img {
 
 @media screen and (max-width: 410px) {
   .dropdown {
-    width: 50%;
-    height: 224px;
-    top: 387px;
-    font-size: 1.5em;
   }
+  .dropdown li:hover {
+  }
+  .brandtext {
+    display: none;
+  }
+
 }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 780px) {
+  .brandtext {
+    float: left;
+    padding: 50px 0 50px 50px;
+    width: 510px;
+  }
+  .brandhead h1 {
+    text-align: left;
+    font-size: 2em;
+  }
+  .logo {
+    padding: 50px 0 50px 50px;
+    float: left;
+  }
+  .contents {
+    float: left;
+    text-align: left;
+  }
   .dropdown {
     display: none;
     /*-- NEED TO TOGGLE MOBILE MENU AT THIS BREAKPOINT.  display:none; DOESN'T DO IT.--*/
@@ -354,13 +472,12 @@ footer img {
   }
   .menu-full {
     display: block;
-    background-color: rgba(3,94,123,1);
+    background-color: rgba(137,133,133,1); /* MENU GREY */
     text-align: center;
     overflow: auto;
-    font-family: Ostrich, Helvetica Neue, sans-serif;
-    font-size: 2em;
-    font-weight: 100;
-    box-shadow: 1px 5px 5px rgba(1,1,1,1);
+    font-family: Montserrat, Helvetica Neue, sans-serif;
+    font-size: 1.1em;
+    box-shadow: 1px 5px 5px rgba(1,1,1,0.7);
 }
   .menu-full ul { /* GETS RID OF THE WEIRD INVISIBLE BULLET INDENT FOR LISTS*/
     margin: 0;
@@ -373,15 +490,29 @@ footer img {
   .menu-full a {
     color: rgba(251,252,255,1);
   }
-  .menu-full .latest-news a {
-    border: 1px solid white;
-    padding: 0 1% 1% 1%;
+
+  .menu-full li:hover {
+    /* highlight menu items on hover */
+    background-color: rgba(224,27,60,1); /* LOGO RED */
+    padding: 1%;
   }
-  .menu-full .latest-news {
+  .menu-full .current-menu-item:hover {
+    /* but don't change background color behind current menu item */
+    background-color: rgba(137,133,133,1); /* MENU GREY */
+  }
+
+  /* highlight current menu item, WP-generated class */
+  .current-menu-item a {
+    background-color: rgba(137,133,133,1); /* MENU GREY */
+    color: rgba(56,49,50,1); /* MAIN GREY FONT */
+  }
+  .menu-full .news-feature a {
+    border: 1px solid white;
+    padding: 0.5% 1%;
+  }
+  .menu-full .news-feature {
     margin: 1% 0 2% 0;
   }
-
-
 
   .news .items {
     width: 42%;
@@ -390,6 +521,10 @@ footer img {
   }
   .news {
     overflow: auto;
+  }
+  .fvideo {
+    margin-bottom: 50px;
+    height: 200px;
   }
   .capostar {
     padding-top: 0;
@@ -410,14 +545,20 @@ footer img {
     float: left;
   }
 
+  /* -- PAGINATION -- */
+  .pagination {
+    width: 500px;
+  }
 
-
+  /* -- FOOTER -- */
   footer img {
     width: 50px;
   }
   footer {
     font-size: 1em;
-    padding-bottom: 2%;
+  }
+  .social {
+    width: 100%;
   }
   .mainftrinfo {
     width: 50%;
@@ -438,7 +579,7 @@ footer img {
     text-align: left;
   }
   .largerftr h4 a {
-    font-weight: 500;
+    font-weight: regular;
   }
   .buttonelist {
     width: auto;
@@ -448,5 +589,26 @@ footer img {
     text-align: center;
     padding-top: 5%;
     font-size: normal;
+  }
+}
+
+/* FOR HUGE SCREENS! */
+@media screen and (min-width: 1250px) {
+  .brandtext {
+    padding: 70px 0 50px 50px;
+    width: 820px;
+    font-size: 1.6em;
+}
+  .brandhead h1 {
+    text-align: left;
+  }
+  .logo {
+    padding: 50px 0 50px 50px;
+  }
+  .logo img {
+    width: 200px;
+  }
+  .logo {
+    margin: 0 auto;
   }
 }

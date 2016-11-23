@@ -1,17 +1,26 @@
-.container body {
-
+a {
+  color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
 }
-
+a:hover {
+}
+.breadcrumbs {
+  margin-top: 3%;
+}
+.container {
+  line-height: 1.4em;
+}
 .container h1 {
+  line-height: 1.4em;
+  text-align: center;
 }
 .container h2 {
-  font-size: 3em;
+  text-align: center;
+}
+.container h2 {
   clear: both;
 }
 .container h3 {
-  font-family: Ostrich, Helvetica Neue, sans-serif;
-  font-size: 1.5em;
-  font-weight: 300;
+  font-family: Montserrat, Helvetica Neue, sans-serif;
 }
 .container img {
   margin: 0 auto;
@@ -20,40 +29,118 @@
 .container caption {
   clear: both;
 }
+.cordoes img {
+  width: 100%;
+}
+.cordoes {
+  line-height: 0.2em;
+}
+.cord {
+  height: auto;
+  max-width: 500px;
+}
 .mainimg {
 }
 .mainimg img {
   width: 100%;
 }
 .initial {
-  font-size: 1.4em;
   overflow: auto;
-  border-bottom: 3px double rgba(3,94,123,1);
+  border-bottom: 3px double rgba(137,133,133,1); /* MENU GREY */
 	padding-bottom: 3%;
+  line-height: 1.5em;
 }
-.description {
-  width: 40%;
-  float: left;
-}
-.eventimg {
-  width: 40%;
-  float: right;
-}
-
 .eventimg img {
   width: 100%;
 }
+.eventimgcap {
+  font-size: 0.8em;
+}
 
-footer {
+.button {
+  background-color: rgba(137,133,133,1); /* MENU GREY */
+  border: 1px solid white;
+  text-align: center;
+  text-transform: uppercase;
+  width: 70%;
+  margin: 0 auto;
+}
+.button a {
+  color: white;
+}
+.button:hover {
+  background-color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
+}
+.buttonbook {
+  background-color: rgba(137,133,133,1); /* MENU GREY */
+  border: 1px solid white;
+  text-align: center;
+  text-transform: uppercase;
+  width: 500px;
+  margin: 0 auto;
+}
+.buttonbook a {
+  color: white;
+}
+.buttonbook:hover {
+  background-color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
+}
+.buttonbook h2 {
+}
+iframe {
+  margin: 5% 0 0 0;
+}
+
+.latest-news-item h3 {
+  margin: 6% 0 0 0;
+}
+.latest-news-item p {
+  margin: 0;
+  font-size: 0.8em;
+}
+.archive {
+  margin-top: 3%;
+}
+.keyword {
+  font-weight: 700;
 }
 
 /* -- MEDIA QUERIES START HERE -- */
 @media screen and (min-width: 770px) {
+
+  .initial p {
+    font-size: 1.2em;
+  }
   .grid4 {
     width: 30%;
     float: left;
   }
-
+  .container h2 {
+    text-align: left;
+  }
+  .description {
+    width: 50%;
+    float: left;
+  }
+  .eventimg {
+    width: 40%;
+    float: right;
+  }
+  .latest-news-item h3 {
+    margin: 3% 0 0 0;
+  }
+  .latest-news-item p {
+    font-size: 1em;
+  }
 }
+@media screen and (max-width: 770px) {
+  .button a {
+    /* not sure why font-size or padding or font-color doesn't work*/
+  }
+  .buttonbook {
+    width: 170px;
+  }
+  .buttonbook h2{
+  }
 
 }
