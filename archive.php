@@ -26,7 +26,8 @@
 
 			<!-- CAN'T BELIEVE I FIGURED IT OUT FOR CUSTOM TAXONOMY.  found a snippent from: https://css-tricks.com/forums/topic/wordpress-changing-stylesheets-depending-on-custom-taxonomy-terms/-->
 			<?php // If they're CORRIDOS, CONTEMP, OR ONE-LINE-COROS, ETC, Display "Go back to All Songs" and then list all links.
-			if ( is_tax( 'songs', array('term_name' => 'ladainha', 'corrido', 'contemporanea', 'one-line-coro', 'samba' ) ) ) : ?>
+			if ( is_tax( 'songs', array('orderby' => 'title',
+			'order' => 'ASC',	'term_name' => 'ladainha', 'corrido', 'contemporanea', 'one-line-coro', 'samba' ) ) ) : ?>
 
 			<p class="breadcrumbs">
 				<a href="<?php echo site_url(); ?>/resources/music/songs"><< Back to All Songs</a>
