@@ -1,5 +1,4 @@
-// ALL FUNCTIONS LUMPED TOGETHER
-var main = function() {
+// ALL FUNCTIONS LUMPED TOGETHER var main = function() {}   ... not really necessary bc of the bottom function. 
 
 
   // TOGGLING THE BRAZIL SECTION
@@ -18,9 +17,11 @@ var main = function() {
   // FIXED MENU BAR FROM PIRATA!
     //get the position of the header
   var headerTopOffset = $(".menu-bar").offset().top;
+  var menubarheight = $(".menu-bar").outerHeight(true); // from fewd
+  var picTopOffset = $(".frontimg").offset().top;
   $(window).scroll(function () {
       //if the position of the page is greater than where the header starts
-      if ($(window).scrollTop() > headerTopOffset) {
+      if ($(window).scrollTop() >= (picTopOffset - menubarheight)) {
           //make it sticky
           $(".mobilemenu").addClass("mobilemenu-fixed");
       } else {
@@ -29,12 +30,15 @@ var main = function() {
       }
   });
 
+  // headerTopOffset is 94 even on small screen.  should be two states. 
+
   // TOGGLING THE MOBILE MENU
   $(".menu-icon").click(function() {
     $(".dropdown").toggle();
   });
 
   // SMOOTH SCROLLING TO ANCHORS ON PAGE
+  // works in Chrome and Firefox but not in Safari (but only this function.  the others are fine.  )
   $(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -52,5 +56,4 @@ var main = function() {
 
 
 
-}
 $(document).ready(main);
