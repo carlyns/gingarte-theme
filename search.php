@@ -21,8 +21,14 @@
 			<li>
 				<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
 			</li>
-		<?php endwhile; endif; // THIS PLACEMENT MATTERS: in between the ul tag! ?>
 	</ul>
+
+
+<?php endwhile; else : ?>
+	<p>Sorry, no search results were found. </p>
+
+<?php endif; ?>
+
 
 </div>
 
