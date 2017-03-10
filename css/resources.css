@@ -42,6 +42,10 @@
 	margin: 0 auto 15% auto;
 	clear: both;
 }
+
+h2 {
+	font-family: Montserrat, sans-serif;
+}
 .trainbetter h2 {
 	text-align: center;
 }
@@ -53,6 +57,7 @@
 	font-size: 2.3em;
 }
 .resource {
+	font-family: Montserrat, sans-serif;
 	color: rgba(1,1,1,1);
 	padding-left: 5%;
 }

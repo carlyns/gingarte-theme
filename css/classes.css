@@ -17,7 +17,7 @@
   color: white;
 }
 .payment .button:hover {
-  background-color: rgba(56,49,50,1); /* DARK GREY */
+  background-color: rgba(224,27,60,1); /* LOGO RED */
 }
 .payment h1 {
   padding-bottom: 2%;
@@ -34,6 +34,7 @@
 }
 
 .option h5 {
+  font-family: Montserrat, sans-serif;
   font-size: 1em;
   font-weight: 300;
   margin-top: 0;
@@ -89,6 +90,7 @@
   font-size: 0.6em;
 }
 .stacked h3 {
+  font-family: Montserrat, sans-serif;
   text-align: left;
   font-size: 1.8em;
   font-weight: 300;
@@ -134,7 +136,8 @@
   overflow: auto;
 }
 .otherclass a {
-color: rgba(3,94,123,1); /* OLD BLUE */  text-decoration: none;
+  color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
+  text-decoration: none;
 }
 
 .description {
@@ -296,6 +299,7 @@ color: rgba(3,94,123,1); /* OLD BLUE */  text-decoration: none;
 	display: inline;
 	cursor: pointer;
   /* CHANGE TAB TITLE FONT STYLE */
+  font-family: Montserrat, sans-serif;
   font-weight: 300;
 }
 

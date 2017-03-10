@@ -24,10 +24,9 @@
 	<h2>Oops!  Looks like you've reached a page that doesn't exist.</h2>
 	<div class="mainimg">
 		<img src="<?php bloginfo( 'template_url' ); ?>/imgs/oops-pie.jpg" alt="page not found">
-		<!-- caption>Photo Credit: Unknown </caption-->
+		<caption>Photo Credit: ?, year?</caption>
 	</div>
 	<h2>Don't worry.  Try searching:</h2>
-	<?php get_search_form(); ?>
 
 </div>
 

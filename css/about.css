@@ -25,8 +25,6 @@ body {
 	margin: 0 auto;
 	clear: both;
 }
-/* to change the color of the SVG icons, go to html and Find & Replace the blue (3,94,123) for the red (224,27,60)*/
-
 .titleicon img {
 	width: 80px;
 	margin: 0 auto;
@@ -41,7 +39,7 @@ body {
 
 a .fa-chevron-down {
 	clear: both;
-	color: rgba(3,94,123,1); /* OLD BLUE */
+	color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
 }
 a:hover .fa-chevron-down {
 	text-decoration: none;
