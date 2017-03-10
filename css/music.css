@@ -1,5 +1,6 @@
 .breadcrumbs a {
-  color: rgba(3,94,123,1); /* OLD BLUE */}
+  color: rgba(224,27,60,1); /* LOGO RED */
+}
 
 .music {
   width: 80%;
@@ -65,7 +66,7 @@
   margin: 0.5%;
 }
 .songtagbox a:hover {
-  background-color: rgba(3,94,123,1); /* OLD BLUE */
+  background-color: rgba(224,27,60,1);
   text-decoration: none;
   padding: 0.5% 0.2%;
   color: white;

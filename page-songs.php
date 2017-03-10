@@ -71,7 +71,7 @@
 				<?php echo get_the_term_list( $post->ID, 'songs', '<div class="songtagbox">', '</div><div class="songtagbox">', '</div>' );
 				// Otherwise just use the_tags() and no need to pass first 2 args.
 				// $post btw retrieves the data of the current post in a loop, so it's a standard WP hook
-				?>
+?>
 
 			</span>
 

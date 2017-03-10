@@ -1,5 +1,6 @@
 a {
-  color: rgba(3,94,123,1); /* OLD BLUE */}
+  color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
+}
 a:hover {
 }
 .breadcrumbs {
@@ -17,6 +18,9 @@ a:hover {
 }
 .container h2 {
   clear: both;
+}
+.container h3 {
+  font-family: Montserrat, Helvetica Neue, sans-serif;
 }
 .container img {
   margin: 0 auto;
@@ -65,7 +69,7 @@ a:hover {
   color: white;
 }
 .button:hover {
-  background-color: rgba(3,94,123,1); /* OLD BLUE */
+  background-color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
 }
 .buttonbook {
   background-color: rgba(137,133,133,1); /* MENU GREY */
@@ -79,7 +83,7 @@ a:hover {
   color: white;
 }
 .buttonbook:hover {
-  background-color: rgba(3,94,123,1); /* OLD BLUE */
+  background-color: rgba(224,27,60,1); /* LOGO RASPBERRY RED */
 }
 .buttonbook h2 {
 }
