@@ -7,6 +7,7 @@
 </head>
 
 <body>
+	<?php include_once("analyticstracking.php") ?>
 <header>
 
 	<?php include ('brandhead.php'); ?>

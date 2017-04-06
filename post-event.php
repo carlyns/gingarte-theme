@@ -13,6 +13,7 @@ Description: Gives you an initial section for the main info and a side image for
 </head>
 
 <body>
+	<?php include_once("analyticstracking.php") ?>
 <header>
 	<?php include ('brandhead.php'); ?>
 
