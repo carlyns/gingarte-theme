@@ -70,7 +70,7 @@
 
 						<div class="stacked">
 
-							<a href="<?php echo site_url(); ?>/kids"><h3>For Kids</h3>
+							<a href="<?php echo site_url(); ?>/classes/kids"><h3>For Kids</h3>
 								<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forkids.jpg" alt="kids classes"></a>
 							<p>Children ages 3 and above are welcome to our classes.  </p>
 							<p>We partner with some local schools too - <a href="<?php echo site_url(); ?>/about">see our About page</a> to find out which ones!	</p>
@@ -84,7 +84,7 @@
 							<p>Use capoeira to clear your mind.  Take a break before cramming for that next final!  </p>
 							<p>We offer discounts to UofC students (with an ID).</p>
 
-							<a href="<?php echo site_url(); ?>/private"><h3>Private Lessons</h3>
+							<a href="<?php echo site_url(); ?>/classes/private"><h3>Private Lessons</h3>
 								<img src="<?php bloginfo( 'template_url' ); ?>/imgs/forprivate.jpg" alt="private lessons"></a>
 							<p>Our teachers can personalize training for you.  We can work with your schedule. </p>
 						</div>

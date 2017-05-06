@@ -32,7 +32,7 @@
 	$currentPage = (get_query_var('paged')) ? get_query_var('paged') : 1; //steamlined if statement asking if 'paged' is already an integer, then use that current page number.  otherwise use the number 1.
 
 	$args = array( // SETUP ARGS HERE TO PASS THRU NEW QUERY
-    'posts_per_page' => 6,
+    'posts_per_page' => 12,
 		'paged' => $currentPage, // returns posts on specific page, so need to pass current page as a dynamic value.  this is why $currentPage is defined above.
 		// "Querying by taxonomy" section was helpful for clear syntax: https://codex.wordpress.org/Taxonomies
 		'tax_query' => array( // tax_query is a WP hook
