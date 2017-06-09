@@ -1,5 +1,13 @@
 <div class="brandhead" id="top">
-  <div class="logo"><a href="<?php echo esc_url( home_url( '/' ) );	    ?>"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/25_logo.png"></a></div>
+  <div class="logo">
+    <a href="<?php echo esc_url( home_url( '/' ) );	    ?>">
+      <?php
+        $image = get_field('official_logo', 34 );
+        if( !empty($image) ): ?>
+      	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+      <?php endif; ?>
+    </a>
+  </div>
 
   <div class="brandtext">
     <div class="gingartetitle"><h1><?php bloginfo( 'name' ); ?></h1></div>

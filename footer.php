@@ -6,12 +6,74 @@
 		<?php the_field('our_locations',34); ?>
 
 
-<!-- FOOTER AREA to add widgets -->
 		<div class="social">
-			<?php if ( is_active_sidebar( 'main_footer' ) ) : ?>
-			<?php dynamic_sidebar( 'main_footer' ); ?>
-			<!-- ADD CLASSES TO REGISTER_SIDEBAR FUNCTION IN FUNCTIONS.PHP TO WRAP DIVS UNIQUELY.  Didn't really try to do this.  Instead of having two different sizes for the icons, I made them a universal 40px wide and fudged the centering on larger screens. -->
+
+			<!-- too bad this widget area didn't workout.  sfsi plugin stopped working - page never loaded ADD CLASSES TO REGISTER_SIDEBAR FUNCTION IN FUNCTIONS.PHP TO WRAP DIVS UNIQUELY-->
+			<?php // if ( is_active_sidebar( 'main_footer' ) ) : ?>
+			<?php // dynamic_sidebar( 'main_footer' ); ?>
+
+			<!-- Instead of having two different sizes for the icons, I made them a universal 40px wide and fudged the centering on larger screens. -->
+
+			<?php // first social icon
+				$image = get_field( 'social1' , 34 );
+				$sociallink = get_field( 'social1_link' , 34 );
+				$title = $image['title'];
+
+				if( !empty($image) ): ?>
+
+					<a href="<?php echo $sociallink ?>">
+						<img class="socialicon" src="<?php echo $image['url']; ?>" title="<?php echo $image['title']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</a>
 			<?php endif; ?>
+
+			<?php // second social icon
+				$image = get_field( 'social2' , 34 );
+				$sociallink = get_field( 'social2_link' , 34 );
+				$title = $image['title'];
+
+				if( !empty($image) ): ?>
+
+					<a href="<?php echo $sociallink ?>">
+						<img class="socialicon" src="<?php echo $image['url']; ?>" title="<?php echo $image['title']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</a>
+			<?php endif; ?>
+
+			<?php // third social icon
+				$image = get_field( 'social3' , 34 );
+				$sociallink = get_field( 'social3_link' , 34 );
+				$title = $image['title'];
+
+				if( !empty($image) ): ?>
+
+					<a href="<?php echo $sociallink ?>">
+						<img class="socialicon" src="<?php echo $image['url']; ?>" title="<?php echo $image['title']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</a>
+			<?php endif; ?>
+
+			<?php // fourth social icon
+				$image = get_field( 'social4' , 34 );
+				$sociallink = get_field( 'social4_link' , 34 );
+				$title = $image['title'];
+
+				if( !empty($image) ): ?>
+
+					<a href="<?php echo $sociallink ?>">
+						<img class="socialicon" src="<?php echo $image['url']; ?>" title="<?php echo $image['title']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</a>
+			<?php endif; ?>
+
+			<?php // fifth social icon
+				$image = get_field( 'social5' , 34 );
+				$sociallink = get_field( 'social5_link' , 34 );
+				$title = $image['title'];
+
+				if( !empty($image) ): ?>
+
+					<a href="<?php echo $sociallink ?>">
+						<img class="socialicon" src="<?php echo $image['url']; ?>" title="<?php echo $image['title']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</a>
+			<?php endif; ?>
+
 		</div>
 
 

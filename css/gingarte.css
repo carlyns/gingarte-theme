@@ -405,6 +405,14 @@ footer a:hover {
   width: 225px;
   margin: 0 auto;
 }
+.socialicon {
+  max-width: 40px;
+}
+  @media screen and (min-width: 780px) {
+    .socialicon {
+      max-width: 70px;
+    }
+  }
 .author {
   font-size: 0.8em;
   font-weight: 200;
