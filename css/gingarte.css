@@ -406,8 +406,11 @@ footer a:hover {
   width: 225px;
   margin: 0 auto;
 }
+.socialicon img {
+  width: 100%;
+}
 .socialicon {
-  width: 50px;
+  width: 40px;
 }
 .author {
   font-size: 0.8em;
@@ -555,7 +558,7 @@ footer a:hover {
   }
 
   /* -- FOOTER -- */
-  footer img {
+  .socialicon {
     width: 50px;
   }
   footer {
