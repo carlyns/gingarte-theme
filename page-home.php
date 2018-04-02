@@ -1,41 +1,11 @@
 <?php get_header(); ?>
 
-<!-- ADD THE STYLESHEET THAT MIGHT CHANGE BETWEEN PAGES HERE.-->
 
-
-<!-- GOOGLE ANALYTICS TRACKING.  TRACKING NUMBER STARTS WITH UA.
-
-HOWEVER, WORDPRESS HAS ITS OWN ANALYTICS FOR TRACKING POSTS.  SHOULD BE JUST AS GOOD AS GOOGLE ANALYTICS?  SEE WHAT HAPPENS IF I INCLUDE THIS SCRIPT ON INDEX AT LEAST?  WP BUSINESS PLAN CAN ADD MORE GOOGLE ANALYTICS FEATURES.
-
--->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-72902531-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<!-- GOOGLE ANALYTICS TRACKING: PHP ALTERNATIVE!  via https://analytics.google.com/analytics/web/?authuser=1#management/Settings/a72902531w110694745p115471852/%3Fm.page%3DTrackingCode%26_r.ghFlowId%3D6324039/
-
-Use the code above to create a file named "analyticstracking.php", and include the file on each PHP template page.
-Add the following line to each template page immediately after the opening <body> tag:
-<?php include_once("analyticstracking.php") ?>
-
-This is good for blog posts that you want to track, like scheduled events or blog entries.  Good for Gingarte and RESUSblog.  But then again, these are both Wordpress sites, which has its own Analytics.
-
-RESUS doesn't have php yet, so have to add the code manually.
--->
-
-
-
-
-	<title>Gingarte Capoeira Chicago</title>
 </head>
 
 <body>
+  <?php include_once("analyticstracking.php") ?>
+
 <header>
 
 	<?php include ('brandhead.php'); ?>

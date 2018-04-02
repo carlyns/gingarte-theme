@@ -1,10 +1,10 @@
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<!-- i've been adding this manually to specific pages in the <body> before the <header>  -->
+<!-- once i start using Google Tag Manager, i can replace this code with the GTM <body> tag which needs to go on specific pages as well.   -->
 
-  ga('create', 'UA-72902531-1', 'auto');
-  ga('send', 'pageview');
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVT9MMT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-</script>
+<!-- UA-72902531-1 -->
+<!-- probably should rename file to google tag manager to be more accurate -->

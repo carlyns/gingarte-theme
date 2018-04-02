@@ -24,6 +24,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/eventform.css">
 
 	<title>Event Registration | Gingarte Capoeira Chicago</title>
+	<!-- make sure this title tag is really necessary, since it's generated dynamically in the <header> -->
 
 </head>
 

@@ -6,7 +6,6 @@
 
 <!-- ADD THE STYLESHEET THAT MIGHT CHANGE BETWEEN PAGES HERE.-->
 
-<title><?php wp_title(); ?> | Gingarte Capoeira Chicago</title>
 </head>
 
 <body>

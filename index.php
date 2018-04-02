@@ -2,7 +2,6 @@
 
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/post.css">
 
-<title><?php wp_title(); ?> | Gingarte Capoeira Chicago</title>
 </head>
 
 <body>

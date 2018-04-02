@@ -9,7 +9,6 @@ Description: Integrated form and payment page.
 <!-- ADD THE STYLESHEET THAT MIGHT CHANGE BETWEEN PAGES HERE.-->
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/post.css">
 
-<title><?php wp_title(); ?> | Gingarte Capoeira Chicago</title>
 </head>
 
 <body>

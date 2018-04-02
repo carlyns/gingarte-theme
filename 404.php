@@ -3,10 +3,11 @@
 <!-- ADD THE STYLESHEET THAT MIGHT CHANGE BETWEEN PAGES HERE.-->
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/post.css">
 
-<title><?php wp_title(); ?> | Gingarte Capoeira Chicago</title>
 </head>
 
 <body>
+	<?php include_once("analyticstracking.php") ?>
+
 <header>
 	<?php include ('brandhead.php'); ?>
 	<div class="contents">
