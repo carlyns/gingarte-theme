@@ -6,7 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
 
-	<title><?php wp_title(); ?> | <?php bloginfo('name'); ?></title>
+
+	<title>
+
+		<?php
+		// if showing the Front Page,
+		if ( is_page( 'home' ) ) {
+
+  	// show this as the title
+			echo 'Gingarte Capoeira Chicago';
+		}
+
+		// else any other page,
+		else {
+		  // show the title of the page
+			wp_title(); ?> | <?php bloginfo('name');
+		} ?>
+
+	</title>
 
 
 	<?php wp_head(); ?>
