@@ -4,16 +4,16 @@ var main = function() {
 
   // TOGGLING the thanks for payment message.
   $(".paidbutton").click(function() {
-    $(".paidmsg").toggle();
-    $(".paidbutton").toggle();
-    $("form").toggle();
+    $(".paidmsg").toggle(500);
+    $(".paidbutton").toggle(500);
+    $("form").toggle(500);
   });
 
   // TOGGLING the expand payment.
   $(".paidmsg a").click(function() {
-    $("form").toggle();
-    $(".paidmsg").toggle();
-    $(".paidbutton").toggle();
+    $("form").toggle(500);
+    $(".paidmsg").toggle(500);
+    $(".paidbutton").toggle(500);
 
   });
 

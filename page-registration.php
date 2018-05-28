@@ -23,12 +23,23 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/gingarte.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/eventform.css">
 
+	<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NVT9MMT');</script>
+	<!-- End Google Tag Manager -->
+
+
 	<title>Event Registration | Gingarte Capoeira Chicago</title>
 	<!-- make sure this title tag is really necessary, since it's generated dynamically in the <header> -->
 
 </head>
 
 <body>
+	<?php include_once("analyticstracking.php") ?>
+
 <header>
 
 	<h1 id="top">Event Payment & Registration (2 STEPS!)</h1>
@@ -39,30 +50,34 @@
 	<div class="container">
 
 		<h2>Step 1.  Pay through PayPal:</h2>
-		<h4>Only attending a single day or workshop?  </br>You'll be paying at the door and you can go to Step 2.</h4>
 
 		<div class="paypalbox">
 
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="HLGEMHLP5JYWN">
+				<input type="hidden" name="hosted_button_id" value="AWJAYTNXAC8YU">
 				<table>
 				<tr><td><input type="hidden" name="on0" value="Pricing">Pricing</td></tr><tr><td><select name="os0">
-					<option value="Full Event - Adult">Full Event - Adult $130.00 USD</option>
-					<option value="Full Event - Kids">Full Event - Kids $65.00 USD</option>
+					<option value="Full Event - Adult">Full Event - Adult $100.00 USD</option>
+					<option value="Full Event - Youth">Full Event - Youth $50.00 USD</option>
 					<option value="Instructor Rate">Instructor Rate $110.00 USD</option>
 					<option value="Professor Rate">Professor Rate $75.00 USD</option>
+					<option value="Thursday / Friday PM / Sunday - Adult">Thursday / Friday PM / Sunday - Adult $35.00 USD</option>
+					<option value="Friday / Saturday - Adult">Friday / Saturday - Adult $60.00 USD</option>
+					<option value="Thursday / Friday PM / Sunday - Youth">Thursday / Friday PM / Sunday - Youth $17.50 USD</option>
+					<option value="Friday / Saturday - Youth">Friday / Saturday - Youth $30.00 USD</option>
 				</select> </td></tr>
+				<tr><td><input type="hidden" name="on1" value="Shirt Cut">Shirt Cut</td></tr><tr><td><select name="os1">
+					<option value="Women's">Women's </option>
+					<option value="Men's">Men's </option>
+					<option value="Kids">Kids </option>
+				</select> </td></tr>
+				<tr><td><input type="hidden" name="on2" value="Enter: XS, S, M, L, XL, XXL">Enter: XS, S, M, L, XL, XXL</td></tr><tr><td><input type="text" name="os2" maxlength="200"></td></tr>
 				</table>
 				<input type="hidden" name="currency_code" value="USD">
 				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 			</form>
-
-
-
-
-
 
 
 
@@ -87,7 +102,7 @@
 
 		<div>
 			<h2>Step 2. Submit the following form: </h2>
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezXlAGkzmn13YNAg4jrkfxPskqkfxQt94b8pna_D4eiIvvKQ/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLKM2qIU27mkue85QEsoID-ig4BcWCpWxCsM2PRnOJxF22MA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
 		</div>
 
@@ -107,17 +122,6 @@
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.min.js"></script>
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/eventform.js"></script>
 
-
-<script> // GOOGLE ANALYTICS TRACKING (STARTS WITH UA-)
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-36487733-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 
 </html>

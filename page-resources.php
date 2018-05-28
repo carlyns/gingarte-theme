@@ -24,7 +24,7 @@
 		 </div>
 
 		<div class="grid4">
-			<a href="<?php echo site_url(); ?>/resources/music"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/resource-berimbench-oscarD.jpg" alt="capoeira music">
+			<a href="<?php echo site_url(); ?>/resources/music"><img src="<?php bloginfo( 'template_url' ); ?>/imgs/resource-berimbenchSM-oscarD.jpg" alt="capoeira music">
 				<h2>capoeira music: instruments & songs</h2></a>
 			<!-- as a capoeira group, we regularly practice samba, orixa dance and music.  this is included in this section. -->
 		 </div>
